@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Rustam Arkharov](https://up.htmlacademy.ru/htmlcss/21/user/794021).
-* Наставник: `Неизвестно`.
+* Наставник: [Ксения Торкова](https://htmlacademy.ru/profile/id23249)
 
 ---
 
