@@ -81,24 +81,20 @@
       </fieldset>
     </form>
 
-    <div>
-      <span>Найдено: 3
-      </span>
-      <form>
-        <fieldset name="sorting">
-          <legend>Сортировка:</legend>
-          <input type="submit" name="sort-by-price"  value="по цене">
-          <input type="submit" name="sort-by-type"   value="по типу">
-          <input type="submit" name="sort-by-rating" value="по рейтингу">
-          <input type="submit" name="sort-by-ascending" value="сначала меньше">
-          <input class="active"
-            type="submit" name="sort-by-descending" value="сначала больше">
-          <!-- в двух последних - грамматически нужно убрать "by",
-          но единообразие важнее
-          -->
-        </fieldset>
-      </form>
-    </div>
+    <p>Найдено: 3</p>
+
+    <section>
+      <h2>Сортировка</h2>
+      <ul>
+        <li><a href="#">по цене</a></li>
+        <li><a href="#">по типу</a></li>
+        <li><a href="#">по рейтингу</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">сначала меньше</a></li>
+        <li><a href="#">сначала больше</a></li>
+      </ul>
+    </section>
 
     <section>
       <h2>Найденные гостиницы</h2>
