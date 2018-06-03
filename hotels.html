@@ -27,61 +27,62 @@
   </header>
 
   <main>
-    <form>
-      <fieldset name="features">
-        <legend>Инфраструктура</legend>
-        <p>
-          <label>Бассейн
-            <input type="checkbox" checked name="pool">
-          </label>
-        </p>
-        <p>
-          <label>Парковка
-            <input type="checkbox" name="parking">
-          </label>
-        </p>
-        <p>
-          <label>Wi-Fi
-            <input type="checkbox" name="wifi">
-          </label>
-        </p>
-      </fieldset>
+    <section>
+      <h2>Поиск по параметрам</h2>
+      <form>
+        <fieldset name="features">
+          <legend>Инфраструктура</legend>
+          <p>
+            <label>Бассейн
+              <input type="checkbox" checked name="pool">
+            </label>
+          </p>
+          <p>
+            <label>Парковка
+              <input type="checkbox" name="parking">
+            </label>
+          </p>
+          <p>
+            <label>Wi-Fi
+              <input type="checkbox" name="wifi">
+            </label>
+          </p>
+        </fieldset>
 
-      <fieldset name="housing-types">
-        <legend>Тип жилья</legend>
-        <p>
-          <label>Гостиница
-            <input type="checkbox" checked name="hotel">
-          </label>
-        </p>
-        <p>
-          <label>Мотель
-            <input type="checkbox" checked name="motel">
-          </label>
-        </p>
-        <p>
-          <label>Апартаменты
-            <input type="checkbox" checked name="apartments">
-          </label>
-        </p>
-      </fieldset>
+        <fieldset name="housing-types">
+          <legend>Тип жилья</legend>
+          <p>
+            <label>Гостиница
+              <input type="checkbox" checked name="hotel">
+            </label>
+          </p>
+          <p>
+            <label>Мотель
+              <input type="checkbox" checked name="motel">
+            </label>
+          </p>
+          <p>
+            <label>Апартаменты
+              <input type="checkbox" checked name="apartments">
+            </label>
+          </p>
+        </fieldset>
 
-      <fieldset name="cost">
-        <label>От
-          <input type="number" name="cost-min" value="0" min="0">
-        </label>
-        <label>До
-          <input type="number" name="cost-max" value="3000" min="0">
-        </label>
-        <span class=slider-cost id="slider-cost">
-          <!-- единственный элемент с классом, потому это элемент-заглушка,
-          без класса непонятно зачем он нужен-->
-        </span>
-        <input type="submit" name="show" value="показать">
-      </fieldset>
-    </form>
-
-    <p>Найдено: 3</p>
+        <fieldset name="cost">
+          <label>От
+            <input type="number" name="cost-min" value="0" min="0">
+          </label>
+          <label>До
+            <input type="number" name="cost-max" value="3000" min="0">
+          </label>
+          <span class=slider-cost id="slider-cost">
+            <!-- единственный элемент с классом, потому это элемент-заглушка,
+            без класса непонятно зачем он нужен-->
+          </span>
+          <input type="submit" name="show" value="показать">
+        </fieldset>
+      </form>
+    </section>
 
     <section>
       <h2>Сортировка</h2>
@@ -98,6 +99,7 @@
 
     <section>
       <h2>Найденные гостиницы</h2>
+      <p>Найдено: 3</p>
       <ul>
         <li>
           <h3>Amara Resort &amp; Spa</h3>
