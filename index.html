@@ -65,30 +65,29 @@
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие
         предложения гостиниц в Седоне</p>
       <form>
-        <h3>Поиск гостиницы в Седоне</h3>
-        <p>
-          <label>Дата заезда:
-            <input type="text" name="date-checkin" value="24.04.2017">
-            <img src="#" alt="иконка календаря">
-          </label>
-        </p>
-        <p>
-          <label>Дата выезда:
-            <input type="text" name="date-checkout" value="04.07.2017">
-            <img src="#" alt="иконка календаря">
-          </label>
-        </p>
-        <p>
-          <label>Взрослые:
-            <input type="number" name="adults" value="2" min="0" max="1000">
-          </label>
-        </p>
-        <p>
-          <label>Дети:
-            <input type="number" name="children" value="0" min="0" max="5000">
-          </label>
-        </p>
-        <input type="submit" name="find" value="Найти">
+        <label for="date-checkin">Дата заезда:</label>
+        <span>
+          <input type="text" name="date-checkin" id="date-checkin"
+            value="24.04.2017">
+          <button type="button">По календарю</button>
+        </span>
+
+        <label for="date-checkout">Дата выезда:</label>
+        <span>
+          <input type="text" name="date-checkout" id="date-checkout"
+            value="04.07.2017">
+          <button type="button">По календарю</button>
+        </span>
+
+        <label for="adults">Взрослые:</label>
+        <input type="number" name="adults" id="adults" min="0" max="1000"
+          value="2">
+
+        <label for="children">Дети:</label>
+        <input type="number" name="children" id="children" min="0" max="5000"
+          value="0">
+
+          <button type="submit" name="find">Найти</button>
       </form>
       <span class="map-surroundings">
       </span>
