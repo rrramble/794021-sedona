@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <title>Гостиницы в Седоне</title>
+  <meta charset="utf-8">
+  <title>Гостиницы в Седоне</title>
 </head>
 
 <body>
   <header>
-    <a href="index.html"><img src="#" alt="Логотип"></a>
+    <a href="index.html">На главную страницу<img src="#" alt="Логотип"></a>
     <nav>
       <ul>
         <li>
@@ -28,58 +28,51 @@
 
   <main>
     <section>
-      <h2>Поиск по параметрам</h2>
+      <h2 "visually-hidden">Поиск по параметрам</h2>
       <form>
         <fieldset name="features">
           <legend>Инфраструктура</legend>
-          <p>
-            <label>Бассейн
-              <input type="checkbox" checked name="pool">
-            </label>
-          </p>
-          <p>
-            <label>Парковка
-              <input type="checkbox" name="parking">
-            </label>
-          </p>
-          <p>
-            <label>Wi-Fi
-              <input type="checkbox" name="wifi">
-            </label>
-          </p>
+          <span>
+            <label for="pool" >Бассейн</label>
+            <input type="checkbox" name="pool" id="pool" checked>
+          </span>
+          <span>
+            <label for="parking">Парковка<label>
+              <input type="checkbox" name="parking" id="parking">
+          </span>
+          <span>
+            <label for="wifi">Wi-Fi</label>
+            <input type="checkbox" name="wifi" id="wifi">
+          </span>
         </fieldset>
 
-        <fieldset name="housing-types">
+        <fieldset name="housing">
           <legend>Тип жилья</legend>
-          <p>
-            <label>Гостиница
-              <input type="checkbox" checked name="hotel">
-            </label>
-          </p>
-          <p>
-            <label>Мотель
-              <input type="checkbox" checked name="motel">
-            </label>
-          </p>
-          <p>
-            <label>Апартаменты
-              <input type="checkbox" checked name="apartments">
-            </label>
-          </p>
+          <span>
+            <label for="hotel">Гостиница</label>
+            <input type="checkbox" name="hotel" checked>
+          </span>
+          <span>
+            <label for="motel">Мотель</label>
+            <input type="checkbox" name="motel" id="motel" checked>
+          </span>
+          <span>
+            <label for="apartments">Апартаменты</label>
+            <input type="checkbox" name="apartments" id="apartments" checked>
+          </span>
         </fieldset>
 
         <fieldset name="cost">
-          <label>От
-            <input type="number" name="cost-min" value="0" min="0">
-          </label>
-          <label>До
-            <input type="number" name="cost-max" value="3000" min="0">
-          </label>
-          <span class=slider-cost id="slider-cost">
-            <!-- единственный элемент с классом, потому это элемент-заглушка,
-            без класса непонятно зачем он нужен-->
+          <legend>Стоимость в сутки (р):</legend>
+          <label for="cost-min">От</label>
+          <input type="number" name="cost-min" id="cost-min" min="0" value="0">
+
+          <label for="cost-max">До</label>
+          <input type="number" name="cost-max" id="cost-max" min="0" value="3000">
+
+          <span class="slider-cost" id="slider-cost">
           </span>
-          <input type="submit" name="show" value="показать">
+          <button type="button" name="show">Показать</button>
         </fieldset>
       </form>
     </section>
