@@ -69,7 +69,7 @@
         <label for="cost-max">До</label>
         <input type="number" name="cost-max" id="cost-max" min="0" value="3000">
 
-        <span class="slider-cost" id="slider-cost">
+        <span class="cost-slider" id="cost-slider">
         </span>
         <button type="submit" name="show">Показать</button>
       </fieldset>
@@ -77,13 +77,19 @@
 
     <h2 class="visually-hidden">Сортировка</h2>
     <ul>
-      <li><button type="button">по цене</button></li>
-      <li><button type="button">по типу</button></li>
-      <li><button type="button">по рейтингу</button></li>
+      <li>
+        <a href="#">по цене</a>
+      </li>
+      <li>
+        <a href="#">по типу</a>
+      </li>
+      <li>
+        <a href="#">по рейтингу</a>
+      </li>
     </ul>
     <ul>
-      <li><button type="button">сначала меньше</button></li>
-      <li><button type="button">сначала больше</button></li>
+      <li><a href="#"><span class="visually-hidden">сначала меньше</span></a></li>
+      <li><a href="#"><span class="visually-hidden">сначала больше</span></a></li>
     </ul>
 
     <h2 class="visually-hidden">Результаты поиска</h2>
@@ -126,7 +132,7 @@
   </main>
 
   <footer>
-    <a>#visitSEDONA</a>
+    <a href="#">#visitSEDONA</a>
     <h2 class="visually-hidden">В социальных сетях</h2>
     <ul>
       <li>
