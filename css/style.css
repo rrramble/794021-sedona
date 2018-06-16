@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic');
+
 body {
-  font-family: "PTSans", "Arial", sans-serif;
+  font-family: "PTSans", "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
 }
 
@@ -14,3 +16,291 @@ body {
   overflow: hidden;
 }
 
+/*
+ * Навигация сайта
+ */
+
+.nav-site {
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.nav-site ul {
+  list-style: none;
+}
+
+.nav-site li {
+  display: inline;
+  background: white;
+}
+
+.nav-site a {
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.nav-site a, .nav-site a:visited {
+  color: black;
+}
+
+.nav-site a:hover {
+  color: #81b3d2;
+}
+
+.nav-site a:active {
+  color: #cccccc;
+}
+
+/* Меню навигации (Точность цветов пока не гарантируется!)
+ * #81b3d2 - голубой
+ * #231f20 - коричневый
+ * #999999 - светло серый
+ */
+
+/*
+ * Основная секция - основные резоны
+ */
+
+.reasons p {
+  background: white;
+  color: black;
+  font-size: 10px;
+}
+
+.reasons p b {
+  background: white;
+  color: black;
+  font-size: 16px;
+}
+
+.reasons .reason-main {
+  background: #81b3d2;
+  color: white;
+}
+
+.reasons .reason-main h3 {
+  font-size: 16px;
+  background: #81b3d2;
+  color: white;
+}
+
+.reasons .reason-main p {
+  font-size: 12px;
+  background: #81b3d2;
+  color: white;
+}
+
+/*
+ * Основная секция - второстепенные резоны
+ */
+
+.reasons .reason-secondary {
+  background: #f1f1f1;
+  color: black;
+}
+
+.reasons .reason-secondary h3 {
+  font-size: 16px;
+  background: #f1f1f1;
+  color: black;
+}
+
+.reasons .reason-secondary p {
+  font-size: 12px;
+  background: #f1f1f1;
+  color: black;
+}
+
+/*
+ * Основная секция - подсказки
+ */
+
+.hints {
+  background: white;
+  color: black;
+}
+
+.hints .hints-housing {
+  background-image: url("../img/svg/icon-home.svg");
+  background-repeat: no-repeat;
+  background: white;
+}
+
+.hints .hints-housing h3 {
+  font-size: 16px;
+  background: white;
+  color: black;
+}
+
+.hints .hints-housing p {
+  font-size: 12px;
+  background: white;
+  color: black;
+}
+
+.hints .hints-food {
+  background-image: url("../img/svg/icon-hamburger.svg");
+  background-repeat: no-repeat;
+  background: white;
+}
+
+.hints .hints-food h3 {
+  font-size: 16px;
+  background: white;
+  color: black;
+}
+
+.hints .hints-food p {
+  font-size: 12px;
+  background: white;
+  color: black;
+}
+
+.hints .hints-souvenir {
+  background-image: url("../img/svg/icon-souvenir.svg");
+  background-repeat: no-repeat;
+  background: white;
+}
+
+.hints .hints-souvenirs h3 {
+  font-size: 16px;
+  background: white;
+  color: black;
+}
+
+.hints .hints-souvenirs p {
+  font-size: 12px;
+  background: white;
+  color: black;
+}
+
+/*
+ * Поиск проживания
+ */
+
+ .find-hotel {
+  color: black;
+  background-image: white;
+ }
+
+.find-hotel p b {
+  color: black;
+  font-size: 18px;
+  background-image: white;
+}
+
+.find-hotel p {
+  color: black;
+  font-size: 12px;
+  background-image: white;
+}
+
+.find-hotel form {
+  font-size: 16px;
+  color: black;
+  background-color: rgba(256, 256, 256, 1);
+}
+
+.find-hotel form h3 {
+  font-size: 16px;
+  color: white;
+  background-color: #766257;
+}
+
+.find-hotel form h3:hover {
+  background-color: #604e44;
+}
+
+.find-hotel form h3:active {
+  color: #90857e;
+  background-color: #503e32;
+}
+
+
+
+
+.find-hotel form label {
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+  background-color: white;
+}
+
+.find-hotel form input {
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+  background-color: #f2f2f2;
+}
+
+.find-hotel form input::placeholder,
+.find-hotel form input:-ms-input-placeholder,
+.find-hotel form input::-ms-input-placeholder {
+  color: black;
+  font-weight: 12px;
+  text-transform: uppercase;
+}
+
+
+.find-hotel form button[type="submit"]{
+  color: white;
+  background-color: #82b3d3;
+}
+
+
+
+/*
+ * Footer
+ */
+
+footer {
+  color: black;
+  background-color: rgba(256, 256, 256, 1);
+}
+
+
+footer * {
+  justify-content: stretch;
+  align-items: ;
+}
+
+.footer-site {
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.footer-site ul {
+  list-style: none;
+}
+
+.footer-site li {
+  display: inline;
+  background: white;
+}
+
+.footer-site a {
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.footer-site a, .footer-site a:visited {
+  color: black;
+}
+
+.footer-site a:hover {
+  color: #81b3d2;
+}
+
+.footer-site a:active {
+  color: #cccccc;
+}
+
+.footer-site .copyright {
+  background-image: url("../img/svg/logo-htmlacademy.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}

@@ -9,7 +9,7 @@
 
 <body>
   <header>
-    <nav>
+    <nav class="nav-site">
       <a><img src="img/graphics/logotype.png" width="138" height="70" alt="Логотип"></a>
       <ul>
         <li>
@@ -31,50 +31,78 @@
   <main>
     <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
 
-    <section>
+    <section class="reasons">
       <h2 class="visually-hidden">Достопримечательности и особенности</h2>
-      <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-      <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-      <h3>Настоящий городок</h3>
-      <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
-      <img src="img/photo/town-wide.jpg" width="800" height="256" alt="Седона летом">
-      <h3>Там есть мост дьявола</h3>
-      <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-      <img src="img/photo/devil-bridge-small.jpg" width="800" height="256" alt="Мост дьявола">
-      <h3>Небольшая площадь</h3>
-      <p>Все достопримечательности находятся очень близко</p>
-      <h3>Красивая дорога</h3>
-      <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-      <h3>Мало туристов</h3>
-      <p>Большинство едет в Гранд Каньон и толпится там</p>
+      <div>
+        <p><b>Седона&nbsp;&mdash; небольшой городок в Аризоне, заслуживающий большего!</b></p>
+        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      </div>
+
+      <div class="reason-main">
+        <h3>Настоящий городок</h3>
+        <p>Седона&nbsp;&mdash; не аттракцион для туристов, там течет своя жизнь</p>
+        <img src="img/photo/town-wide.jpg" width="800" height="256" alt="Седона летом">
+      </div>
+
+      <div class="reason-main">
+        <h3>Там есть мост дьявола</h3>
+        <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        <img src="img/photo/devil-bridge-small.jpg" width="800" height="256" alt="Мост дьявола">
+      </div>
+
+      <div class="reason-secondary">
+        <h3>Небольшая площадь</h3>
+        <p>Все достопримечательности находятся очень близко</p>
+      </div>
+
+      <div class="reason-secondary">
+        <h3>Красивая дорога</h3>
+        <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+      </div>
+
+      <div class="reason-secondary">
+        <h3>Мало туристов</h3>
+        <p>Большинство едет в Гранд Каньон и толпится там</p>
+      </div>
     </section>
 
-    <section>
+    <section class="hints">
       <h2 class="visually-hidden">Советы: жилье, еда и сувениры</h2>
-      <h3>Жильё</h3>
-      <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-      <h3>Еда</h3>
-      <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-      <h3>Сувениры</h3>
-      <p>Не только китайского, но и местного производства!</p>
+
+      <div class="hints hints-housing">
+        <h3>Жильё</h3>
+        <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+      </div>
+
+      <div class="hints hints-food">
+        <h3>Еда</h3>
+        <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+      </div>
+
+      <div class="hints hints-souvenirs">
+        <h3>Сувениры</h3>
+        <p>Не только китайского, но и местного производства!</p>
+      </div>
     </section>
 
-    <section>
+    <section class="find-hotel">
       <h2 class="visually-hidden">Найти гостиницу</h2>
       <p><b>Заинтересовались?</b></p>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие
         предложения гостиниц в Седоне</p>
       <form action="https://echo.htmlacademy.ru" method="post">
+        <h3>Поиск гостиницы в Седоне</h3>
+        
         <label for="date-checkin">Дата заезда:</label>
         <span>
-          <input type="text" name="date-checkin" id="date-checkin"
+          <input class="date" type="text" name="date-checkin" id="date-checkin"
             placeholder="24 апреля 2017">
           <button type="button">По календарю</button>
         </span>
 
         <label for="date-checkout">Дата выезда:</label>
         <span>
-          <input type="text" name="date-checkout" id="date-checkout"
+          <input class="date" type="text" name="date-checkout" id="date-checkout"
             placeholder="4 июля 2017">
           <button type="button">По календарю</button>
         </span>
@@ -96,29 +124,38 @@
 
           <button type="submit" name="find">Найти</button>
       </form>
+      
       <img src="img/graphics/map-big.jpg" alt="Карта окрестностей Седоны">
     </section>
 
   </main>
 
-  <footer>
-    <a href="#">#visitSEDONA</a>
-    <h2 class="visually-hidden">В социальных сетях</h2>
-    <ul>
-      <li>
-        <a href="#">Твиттер</a>
-      </li>
-      <li>
-        <a href="#">Фейсбук</a>
-      </li>
-      <li>
-        <a href="#">Ютюб</a>
-      </li>
-    </ul>
-    <p>
-      Website by
-      <a href="https://htmlacademy.ru/intensive/htmlcss">Html Academy</a>
-    </p>
+  <footer class="footer-site">
+    <div>
+      <a href="#">#visitSEDONA</a>
+    </div>
+
+    <div>
+      <h2 class="visually-hidden">В социальных сетях</h2>
+      <ul>
+        <li>
+          <a href="#">Твиттер</a>
+        </li>
+        <li>
+          <a href="#">Фейсбук</a>
+        </li>
+        <li>
+          <a href="#">Ютюб</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="copyright">
+      <p>
+        Website by
+        <a href="https://htmlacademy.ru/intensive/htmlcss">Html Academy</a>
+      </p>
+    </div>
   </footer>
 
 </body>
