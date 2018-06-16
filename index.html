@@ -79,12 +79,27 @@
         </span>
 
         <label for="adults">Взрослые:</label>
-        <input type="number" name="adults" id="adults" min="0" max="1000"
-          value="2">
-
-        <label for="children">Дети:</label>
-        <input type="number" name="children" id="children" min="0" max="5000"
-          value="0">
+        <span>
+          <button type="button">
+            <span class="visually-hidden">Уменьшить</span>
+          </button>
+          <input type="number" name="adults" id="adults" min="0" max="1000"
+            value="2">
+          <button type="button">
+            <span class="visually-hidden">Увеличить</span>
+          </button>
+        </span>
+        <span>
+          <label for="children">Дети:</label>
+          <button type="button">
+            <span class="visually-hidden">Уменьшить</span>
+          </button>
+          <input type="number" name="children" id="children" min="0" max="5000"
+            value="0">
+          <button type="button">
+            <span class="visually-hidden">Увеличить</span>
+          </button>
+        </span>
 
           <button type="submit" name="find">Найти</button>
       </form>
