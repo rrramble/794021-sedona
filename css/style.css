@@ -27,6 +27,7 @@ body {
 }
 
 .nav-site .logo {
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -34,40 +35,38 @@ body {
 .nav-site ul {
   list-style: none;
   background: white;
-  margin: 0px;
-  padding: 0px;
 }
 
 .nav-site li {
-  color: black; /* Проверено! */
-  background: white;  /* Проверено! */
-  display: inline;
+  color: black; /* Проверено. */
+  background: white;  /* Проверено. */
+  display: inline-block;
 }
 
 .nav-site a,
 .nav-site a:visited {
-  color: black; /* Проверено! */
-  background: white; /* Проверено! */
-  font-size: 14px; /* Проверено! */
-  font-weight: bold; /* Проверено! */
+  color: black; /* Проверено. */
+  background: white; /* Проверено. */
+  font-size: 14px; /* Проверено. */
+  font-weight: bold; /* Проверено. */
   text-decoration: none;
 }
 
 .nav-site a:hover,
 .nav-site a:focus {
-  color: rgb(129, 179, 210); /* Проверено! */
+  color: rgb(129, 179, 210); /* Проверено. */
 }
 
 .nav-site a:active {
-  color: rgba(0, 0, 0, 0.302); /* Проверено! */
+  color: rgba(0, 0, 0, 0.302); /* Проверено. */
 }
 
 .nav-site a:not([href]) {
-  color: #766357; /* Проверено! */
+  color: #766357; /* Проверено. */
 }
 
 /*
- * Основная секция - основной фон
+ * Основная секция, основной фон
  */
 
 .background-main {
@@ -75,32 +74,35 @@ body {
   height: 773px;
   background-image:
     url("../img/graphics/welcome.png"),
+    url("../img/graphics/mountains-big-v.png"),
     url("../img/photo/mountains-big.jpg");
-  background-position-x:
-    center,
-    center;
+  background-position:
+    center 132px,
+    center bottom,
+    center top;
   background-repeat:
     no-repeat,
     no-repeat;
 }
 
 /*
- * Основная секция - основные причины
+ * Основная секция, основные доводы
  */
 
-.reasons p {
-  color: rgb(51, 51, 51); /* Проверено! */
+.reasons p b {
+  color: black; /* Проверено. */
   background: white;
-  font-size: 14px; /* Проверено! */
-  font-weight: normal; /* Проверено! */
+  font-size: 21px; /* Проверено. */
+  font-weight: bold; /* Проверено. */
   text-align: center;
+  line-height: 26px;
 }
 
-.reasons p b {
+.reasons p {
+  color: rgb(51, 51, 51); /* Проверено. */
   background: white;
-  color: black; /* Проверено! */
-  font-size: 21px; /* Проверено! */
-  font-weight: bold; /* Проверено! */
+  font-size: 14px; /* Проверено. */
+  font-weight: normal; /* Проверено. */
   text-align: center;
 }
 
@@ -110,18 +112,18 @@ body {
 }
 
 .reasons .reason-main h3 {
-  color: white; /* Проверено! */
+  color: white; /* Проверено. */
   background: #81b3d2; /* Проверен цвет. Не проверены эффекты. */
-  font-size: 21px; /* Проверено! */
-  font-weight: bold; /* Проверено! */
+  font-size: 21px; /* Проверено. */
+  font-weight: bold; /* Проверено. */
   text-align: center;
 }
 
 .reasons .reason-main p {
   color: white;
   background: #81b3d2; /* Проверен цвет. Не проверены эффекты. */
-  font-size: 14px; /* Проверено! */
-  font-weight: normal; /* Проверено! */
+  font-size: 14px; /* Проверено. */
+  font-weight: normal; /* Проверено. */
   text-align: center;
 }
 
@@ -130,22 +132,22 @@ body {
  */
 
 .reasons .reason-secondary {
-  background: #eeeeee; /* Проверено! */
+  background: #eeeeee; /* Проверено. */
 }
 
 .reasons .reason-secondary h3 {
-  color: black; /* Проверено! */
-  background: #eeeeee; /* Проверено! */
-  font-size: 21px; /* Проверено! */
-  font-weight: bold; /* Проверено! */
+  color: black; /* Проверено. */
+  background: #eeeeee; /* Проверено. */
+  font-size: 21px; /* Проверено. */
+  font-weight: bold; /* Проверено. */
   text-align: center;
 }
 
 .reasons .reason-secondary p {
-  color: black; /* Проверено! */
-  background: #eeeeee; /* Проверено! */
-  font-size: 14px; /* Проверено! */
-  font-weight: normal; /* Проверено! */
+  color: black; /* Проверено. */
+  background: #eeeeee; /* Проверено. */
+  font-size: 14px; /* Проверено. */
+  font-weight: normal; /* Проверено. */
   text-align: center;
 }
 
@@ -155,43 +157,49 @@ body {
 
 .hints {
   background: white; /* Проверено, но на глаз выглядит серее. Перепроверить. */
-  color: black; /* Проверено! */
+  color: black; /* Проверено. */
 }
 
 .hints h3 {
-  color: black; /* Проверено! */
-  background: white;
-  font-size: 21px; /* Проверено! */
-  font-weight: bold; /* Проверено! */
+  color: black; /* Проверено. */
+  background: rgba(255, 255, 255, 0);
+  font-size: 21px; /* Проверено. */
+  font-weight: bold; /* Проверено. */
   text-align: center;
+  padding-top: 75px;
 }
 
 .hints p {
-  color: black; /* Проверено! */
-  background: white;
-  font-size: 14px; /* Проверено! */
+  color: black; /* Проверено. */
+  background: rgba(255, 255, 255, 0);
+  font-size: 14px; /* Проверено. */
   text-align: center;
+  line-height: 21px;
 }
 
 .hints .hints-housing {
+  display: block;
+  background: white;
   background-image: url("../img/svg/icon-home.svg");
+  background-size: 75px 72px;
   background-repeat: no-repeat;
   background-position-x: center;
-  background: white;
 }
 
 .hints .hints-food {
+  background: white;
   background-image: url("../img/svg/icon-hamburger.svg");
+  background-size: 75px 72px;
   background-repeat: no-repeat;
   background-position-x: center;
-  background: white;
 }
 
 .hints .hints-souvenirs {
+  background: white;
   background-image: url("../img/svg/icon-souvenir.svg");
+  background-size: 75px 72px;
   background-repeat: no-repeat;
   background-position-x: center;
-  background: white;
 }
 
 /*
@@ -202,6 +210,8 @@ body {
   color: black;
   background-image: white;
   width: 568px;
+  margin-left: auto;
+  margin-right: auto;
  }
 
 .find-hotel p {
@@ -221,57 +231,73 @@ body {
   background-color: rgba(256, 256, 256, 1);
 }
 
-.find-hotel form h3 {
+.find-hotel form .btn-header {
   color: white;
-  background-color: #766357; /* Проверено! */
-  font-size: 21px; /* Проверено! */
+  background-color: #766357; /* Проверено. */
+  font-size: 21px; /* Проверено. */
   text-align: center;
   border: 0;
-  width: 568px; /* Проверено! */
-  height: 86px; /* Проверено! */
+  width: 568px; /* Проверено. */
+  height: 86px; /* Проверено. */
 }
 
-.find-hotel form h3:hover {
-  background-color: #604e43; /* Проверено! */
+.find-hotel form .btn-header:hover,
+.find-hotel form .btn-header:focus {
+  background-color: #604e43; /* Проверено. */
 }
 
-.find-hotel form h3:active {
-  color: rgba(255, 255, 255, 0.302); /* Проверено! */
+.find-hotel form .btn-header:active {
+  color: rgba(255, 255, 255, 0.302); /* Проверено. */
   background-color: #503e32;
 }
 
 .find-hotel form label {
-  font-size: 12px;
-  color: black;
-  font-weight: bold;
+  font-size: 14px; /* Проверено. */
+  color: black; /* Проверено. */
+  font-weight: bold; /* Проверено. */
   background-color: white;
 }
 
 .find-hotel form input {
-  font-size: 12px;
-  color: black;
-  font-weight: bold;
-  background-color: #f2f2f2;
+  font-size: 14px; /* Проверено. */
+  color: black; /* Проверено. */
+  font-weight: bold; /* Проверено. */
+  background-color: #f2f2f2; /* Проверено. */
+  border: 2px solid #f2f2f2;
+  line-height: 26px;
+}
+
+.find-hotel form input:hover {
+  background-color: #ebebeb; /* Проверено. */
+  border: 2px solid #ebebeb; /* Проверено. */
+}
+
+.find-hotel form input:focus {
+  background-color: #fff; /* Проверено. */
+  border: 2px solid #e5e5e5; /* Проверено. */
 }
 
 .find-hotel form input::placeholder,
 .find-hotel form input:-ms-input-placeholder,
 .find-hotel form input::-ms-input-placeholder {
-  color: black;
-  font-weight: 12px;
+  color: black; /* Проверено. */
+  font-size: 14px; /* Проверено. */
 }
 
 
 .find-hotel .btn-find {
+  display: block;
   color: white;
-  background-color: #81b3d2; /*Проверено!*/
-  font-size: 21px;    /*Проверено!*/
-  font-weight: bold;  /*Проверено!*/
-  width: 458px;   /*Проверено!*/
-  height: 58px;   /*Проверено!*/
+  background-color: #81b3d2; /*Проверено.*/
+  font-size: 21px;    /*Проверено.*/
+  font-weight: bold;  /*Проверено.*/
+  width: 458px;   /*Проверено.*/
+  height: 58px;   /*Проверено.*/
   border: 0;
   text-align: center;
-  text-transform: uppercase; /*Проверено!*/
+  text-transform: uppercase; /*Проверено.*/
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -282,15 +308,17 @@ body {
 
 .find-hotel .btn-find:hover,
 .find-hotel .btn-find:focus {
-  background-color: #669ec0; /*Проверено!*/
+  background-color: #669ec0; /*Проверено.*/
 }
 
 .find-hotel .btn-find:active {
-  color: rgba(255, 255, 255, 0.302); /*Проверено!*/
-  background-color: #5496bd; /*Проверено!*/
+  color: rgba(255, 255, 255, 0.302); /*Проверено.*/
+  background-color: #5496bd; /*Проверено.*/
 }
 
-
+main .map {
+  position: 50%;
+}
 
 /*
  * Footer
@@ -308,40 +336,106 @@ footer * {
 }
 
 .footer-site {
-  background-color: white;
-  color: black;
-  font-size: 12px;
-  font-weight: bold;
+  background-color: rgba(254, 254, 254, 0.9); /* Проверено */
+  width: 1200px;
+  height: 120px; /* Проверено */
 }
 
-.footer-site ul {
-  list-style: none;
-}
-
-.footer-site li {
-  display: inline;
-  background: white;
-}
-
-.footer-site a {
+.footer-site .hashtags a,
+.footer-site .hashtags a:visited,
+.footer-site .hashtags a:hover,
+.footer-site .hashtags a:focus {
+  color: black; /* Проверено */
+  font-size: 21px; /* Проверено  */
+  font-weight: bold; /* Проверено  */
+  line-height: 26px;
   text-decoration: none;
-  letter-spacing: 0.5px;
 }
 
-.footer-site a, .footer-site a:visited {
+.footer-site .social ul {
+  list-style: none;
+  background-color: rgba(254, 254, 254, 0.9); /* Проверено */
+}
+
+.footer-site .social li {
+  display: inline-block;
+}
+
+.footer-site .social li a {
   color: black;
+  text-decoration: none;
 }
 
-.footer-site a:hover {
-  color: #81b3d2;
+.footer-site .social li a div {
+  width: 46px; /* Проверено. Но у FB ширина 47px */
+  height: 48px; /* Проверено, но на макете 48,24 пикселей */
+  background-color: #81b3d2;
 }
 
-.footer-site a:active {
-  color: #cccccc;
+.footer-site .social a:hover div,
+.footer-site .social a:focus div {
+  background-color: #669ec0;
 }
 
-.footer-site .copyright {
+.footer-site .social a:active div {
+  background-color: #5496bd;
+}
+
+.footer-site .social .social-tw {
+  background-image: url("../img/svg/icon-tw.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-site .social .social-tw:active {
+  background-image: url("../img/svg/icon-tw-pressed.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-site .social .social-fb {
+  background-image: url("../img/svg/icon-fb.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-site .social .social-fb:active {
+  background-image: url("../img/svg/icon-fb-pressed.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-site .social .social-yt {
+  background-image: url("../img/svg/icon-yt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-site .social .social-yt:active {
+  background-image: url("../img/svg/icon-yt-pressed.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-site .copyright p {
+  color: black; /* Проверено */
+  font-size: 14px; /* Проверено */
+  font-style: normal; /* Проверено */
+}
+
+.footer-site .copyright .copyright-logo {
+  width: 115px; /* Проверено */
+  height: 41px; /* Проверено */
   background-image: url("../img/svg/logo-htmlacademy.svg");
   background-repeat: no-repeat;
   background-position: right;
+}
+
+.footer-site .copyright .copyright-logo:hover,
+.footer-site .copyright .copyright-logo:focus {
+  background-image: url("../img/svg/logo-htmlacademy-hover.svg");
+}
+
+.footer-site .copyright .copyright-logo:active {
+  background-image: url("../img/svg/logo-htmlacademy-pressed.svg");
 }

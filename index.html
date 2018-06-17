@@ -93,69 +93,90 @@
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие
         предложения гостиниц в Седоне</p>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <h3>Поиск гостиницы в Седоне</h3>
+        <h3 class="visually-hidden">Поиск гостиницы в Седоне</h3>
+        <button type="button" class="btn-header">
+          Поиск гостиницы в Седоне
+        </button>
         
-        <label for="date-checkin">Дата заезда:</label>
-        <span>
-          <input class="date" type="text" name="date-checkin" id="date-checkin"
-            placeholder="24 апреля 2017">
-          <button type="button">По календарю</button>
-        </span>
+        <div>
+          <label for="date-checkin">Дата заезда:</label>
+          <span>
+            <input class="date" type="text" name="date-checkin" id="date-checkin"
+              required placeholder="24 АПРЕЛЯ 2017">
+            <button type="button">По календарю</button>
+          </span>
+        </div>
 
-        <label for="date-checkout">Дата выезда:</label>
-        <span>
-          <input class="date" type="text" name="date-checkout" id="date-checkout"
-            placeholder="4 июля 2017">
-          <button type="button">По календарю</button>
-        </span>
+        <div>
+          <label for="date-checkout">Дата выезда:</label>
+          <span>
+            <input class="date" type="text" name="date-checkout" id="date-checkout"
+              required placeholder="4 ИЮЛЯ 2017">
+            <button type="button">По календарю</button>
+          </span>
+        </div>
 
-        <label for="adults">Взрослые:</label>
-        <span>
-          <button type="button">Уменьшить</button>
-          <input type="number" name="adults" id="adults" min="0" max="1000"
-            value="2">
-          <button type="button">Увеличить</button>
-        </span>
-        <span>
-          <label for="children">Дети:</label>
-          <button type="button">Уменьшить</button>
-          <input type="number" name="children" id="children" min="0" max="5000"
-            value="0">
-          <button type="button">Увеличить</button>
-        </span>
+        <div>
+          <label for="adults">Взрослые:</label>
+          <span>
+            <button type="button">Уменьшить</button>
+            <input type="number" name="adults" id="adults" min="0" max="1000"
+              value="2">
+            <button type="button">Увеличить</button>
+          </span>
+          <span>
+            <label for="children">Дети:</label>
+            <button type="button">Уменьшить</button>
+            <input type="number" name="children" id="children" min="0" max="5000"
+              value="0">
+            <button type="button">Увеличить</button>
+          </span>
+        </div>
 
-          <button class="btn-find" type="submit" name="find">Найти</button>
+        <button class="btn-find" type="submit" name="find">Найти</button>
       </form>
-      
-      <img src="img/graphics/map-big.jpg" alt="Карта окрестностей Седоны">
     </section>
 
+    <img class="map" src="img/graphics/map-big.jpg" alt="Карта окрестностей Седоны">
   </main>
 
   <footer class="footer-site">
-    <div>
+    <div class="hashtags">
       <a href="#">#visitSEDONA</a>
     </div>
 
-    <div>
+    <div class="social">
       <h2 class="visually-hidden">В социальных сетях</h2>
       <ul>
         <li>
-          <a href="#">Твиттер</a>
+          <a href="#">
+            <span class="visually-hidden">Твиттер</span>
+            <div class="social-tw"></div>
+          </a>
         </li>
+
         <li>
-          <a href="#">Фейсбук</a>
+          <a href="#">
+            <span class="visually-hidden">Фейсбук</span>
+            <div class="social-fb"></div>
+          </a>
         </li>
+
         <li>
-          <a href="#">Ютюб</a>
+          <a href="#">
+            <span class="visually-hidden">Ютюб</span>
+            <div class="social-yt"></div>
+          </a>
         </li>
       </ul>
     </div>
 
     <div class="copyright">
-      <p>
-        Website by
-        <a href="https://htmlacademy.ru/intensive/htmlcss">Html Academy</a>
+      <span>Website by</span>
+      <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <span class="visually-hidden">Html Academy</span>
+        <div class="copyright-logo"></div>
+      </a>
       </p>
     </div>
   </footer>
