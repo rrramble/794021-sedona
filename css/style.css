@@ -23,7 +23,6 @@ body {
  */
 
 .nav-site {
-  color: black;
   background-color: white;
 }
 
@@ -40,62 +39,68 @@ body {
 }
 
 .nav-site li {
-  background: white;
+  color: black; /* Проверено! */
+  background: white;  /* Проверено! */
   display: inline;
 }
 
-.nav-site a {
-  color: black;
-  background: white;
-  font-size: 14px;
-  font-weight: bold;
-  text-decoration: none;
-  line-height: 26px;
-}
-
+.nav-site a,
 .nav-site a:visited {
-  color: black;
+  color: black; /* Проверено! */
+  background: white; /* Проверено! */
+  font-size: 14px; /* Проверено! */
+  font-weight: bold; /* Проверено! */
+  text-decoration: none;
 }
 
 .nav-site a:hover,
 .nav-site a:focus {
-  color: #81b3d2;
+  color: rgb(129, 179, 210); /* Проверено! */
 }
 
 .nav-site a:active {
-  color: #cacaca;
+  color: rgba(0, 0, 0, 0.302); /* Проверено! */
 }
 
 .nav-site a:not([href]) {
-  color: #766357;
+  color: #766357; /* Проверено! */
 }
 
 /*
- * Основная секция - основное фото
+ * Основная секция - основной фон
  */
 
-.nav-site::after {
-  display: block;
+.background-main {
+  width: 1200px;
+  height: 773px;
   background-image:
-    url("../img/photo/mountains-big.jpg"),
-    url("../img/graphics/welcome.png");
+    url("../img/graphics/welcome.png"),
+    url("../img/photo/mountains-big.jpg");
+  background-position-x:
+    center,
+    center;
+  background-repeat:
+    no-repeat,
+    no-repeat;
 }
 
 /*
- * Основная секция - основные резоны
+ * Основная секция - основные причины
  */
 
 .reasons p {
+  color: rgb(51, 51, 51); /* Проверено! */
   background: white;
-  color: black;
-  font-size: 14px;
+  font-size: 14px; /* Проверено! */
+  font-weight: normal; /* Проверено! */
   text-align: center;
 }
 
 .reasons p b {
   background: white;
-  color: black;
-  font-size: 21px;
+  color: black; /* Проверено! */
+  font-size: 21px; /* Проверено! */
+  font-weight: bold; /* Проверено! */
   text-align: center;
 }
 
@@ -105,16 +110,18 @@ body {
 }
 
 .reasons .reason-main h3 {
-  font-size: 21px;
-  background: #81b3d2;
-  color: white;
+  color: white; /* Проверено! */
+  background: #81b3d2; /* Проверен цвет. Не проверены эффекты. */
+  font-size: 21px; /* Проверено! */
+  font-weight: bold; /* Проверено! */
   text-align: center;
 }
 
 .reasons .reason-main p {
-  font-size: 14px;
-  background: #81b3d2;
   color: white;
+  background: #81b3d2; /* Проверен цвет. Не проверены эффекты. */
+  font-size: 14px; /* Проверено! */
+  font-weight: normal; /* Проверено! */
   text-align: center;
 }
 
@@ -123,21 +130,22 @@ body {
  */
 
 .reasons .reason-secondary {
-  background: #f1f1f1;
-  color: black;
+  background: #eeeeee; /* Проверено! */
 }
 
 .reasons .reason-secondary h3 {
-  font-size: 16px;
-  background: #f1f1f1;
-  color: black;
+  color: black; /* Проверено! */
+  background: #eeeeee; /* Проверено! */
+  font-size: 21px; /* Проверено! */
+  font-weight: bold; /* Проверено! */
   text-align: center;
 }
 
 .reasons .reason-secondary p {
-  font-size: 12px;
-  background: #f1f1f1;
-  color: black;
+  color: black; /* Проверено! */
+  background: #eeeeee; /* Проверено! */
+  font-size: 14px; /* Проверено! */
+  font-weight: normal; /* Проверено! */
   text-align: center;
 }
 
@@ -146,68 +154,44 @@ body {
  */
 
 .hints {
+  background: white; /* Проверено, но на глаз выглядит серее. Перепроверить. */
+  color: black; /* Проверено! */
+}
+
+.hints h3 {
+  color: black; /* Проверено! */
   background: white;
-  color: black;
+  font-size: 21px; /* Проверено! */
+  font-weight: bold; /* Проверено! */
+  text-align: center;
+}
+
+.hints p {
+  color: black; /* Проверено! */
+  background: white;
+  font-size: 14px; /* Проверено! */
+  text-align: center;
 }
 
 .hints .hints-housing {
   background-image: url("../img/svg/icon-home.svg");
   background-repeat: no-repeat;
+  background-position-x: center;
   background: white;
-}
-
-.hints .hints-housing h3 {
-  font-size: 16px;
-  background: white;
-  color: black;
-  text-align: center;
-}
-
-.hints .hints-housing p {
-  font-size: 12px;
-  background: white;
-  color: black;
-  text-align: center;
 }
 
 .hints .hints-food {
   background-image: url("../img/svg/icon-hamburger.svg");
   background-repeat: no-repeat;
+  background-position-x: center;
   background: white;
 }
 
-.hints .hints-food h3 {
-  font-size: 16px;
-  background: white;
-  color: black;
-  text-align: center;
-}
-
-.hints .hints-food p {
-  font-size: 12px;
-  background: white;
-  color: black;
-  text-align: center;
-}
-
-.hints .hints-souvenir {
+.hints .hints-souvenirs {
   background-image: url("../img/svg/icon-souvenir.svg");
   background-repeat: no-repeat;
+  background-position-x: center;
   background: white;
-}
-
-.hints .hints-souvenirs h3 {
-  font-size: 16px;
-  background: white;
-  color: black;
-  text-align: center;
-}
-
-.hints .hints-souvenirs p {
-  font-size: 12px;
-  background: white;
-  color: black;
-  text-align: center;
 }
 
 /*
@@ -238,19 +222,21 @@ body {
 }
 
 .find-hotel form h3 {
-  font-size: 16px;
   color: white;
-  background-color: #766257;
+  background-color: #766357; /* Проверено! */
+  font-size: 21px; /* Проверено! */
   text-align: center;
   border: 0;
+  width: 568px; /* Проверено! */
+  height: 86px; /* Проверено! */
 }
 
 .find-hotel form h3:hover {
-  background-color: #604e44;
+  background-color: #604e43; /* Проверено! */
 }
 
 .find-hotel form h3:active {
-  color: #90857e;
+  color: rgba(255, 255, 255, 0.302); /* Проверено! */
   background-color: #503e32;
 }
 
@@ -273,7 +259,6 @@ body {
 .find-hotel form input::-ms-input-placeholder {
   color: black;
   font-weight: 12px;
-  text-transform: uppercase;
 }
 
 
@@ -286,6 +271,7 @@ body {
   height: 58px;   /*Проверено!*/
   border: 0;
   text-align: center;
+  text-transform: uppercase; /*Проверено!*/
 }
 
 
