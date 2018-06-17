@@ -217,6 +217,7 @@ body {
  .find-hotel {
   color: black;
   background-image: white;
+  width: 568px;
  }
 
 .find-hotel p {
@@ -241,6 +242,7 @@ body {
   color: white;
   background-color: #766257;
   text-align: center;
+  border: 0;
 }
 
 .find-hotel form h3:hover {
@@ -275,9 +277,31 @@ body {
 }
 
 
-.find-hotel form button[type="submit"]{
+.find-hotel .btn-find {
   color: white;
-  background-color: #82b3d3;
+  background-color: #81b3d2; /*Проверено!*/
+  font-size: 21px;    /*Проверено!*/
+  font-weight: bold;  /*Проверено!*/
+  width: 458px;   /*Проверено!*/
+  height: 58px;   /*Проверено!*/
+  border: 0;
+  text-align: center;
+}
+
+
+/* !!!
+       Странное поведение: если нажать на кнопку (active) но тут же отвести
+       мышь, то после этого hover не работает
+ */
+
+.find-hotel .btn-find:hover,
+.find-hotel .btn-find:focus {
+  background-color: #669ec0; /*Проверено!*/
+}
+
+.find-hotel .btn-find:active {
+  color: rgba(255, 255, 255, 0.302); /*Проверено!*/
+  background-color: #5496bd; /*Проверено!*/
 }
 
 
