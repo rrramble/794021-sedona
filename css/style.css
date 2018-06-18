@@ -450,3 +450,20 @@ footer * {
 .footer-site .copyright .copyright-logo:active {
   background-image: url("../img/svg/logo-htmlacademy-pressed.svg");
 }
+
+
+/*
+ *
+ * Секция для hotels.html
+ *
+ */
+
+/*
+ * Форма поиска
+ */
+
+.find-params {
+  width: 1200px;
+  height: 218px; /* Примерно */
+  background-image: url("../img/photo/mountains-blur.jpg");
+}
