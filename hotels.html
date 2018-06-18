@@ -10,7 +10,10 @@
 <body>
   <header>
     <nav class="nav-site">
-      <a href="index.html"><img src="img/graphics/logotype.png" width="138" height="70" alt="На главную страницу"></a>
+      <a href="index.html">
+        <img class="logo" src="img/graphics/logotype.png"
+          width="138" height="70" alt="На главную страницу">
+      </a>
       <ul>
         <li>
           <a href="#">Информация</a>
@@ -142,25 +145,45 @@
 
   </main>
 
-  <footer>
-    <a href="#">#visitSEDONA</a>
-    <h2 class="visually-hidden">В социальных сетях</h2>
-    <ul>
-      <li>
-        <a href="#">Твиттер</a>
-      </li>
-      <li>
-        <a href="#">Фейсбук</a>
-      </li>
-      <li>
-        <a href="#">Ютюб</a>
-      </li>
-    </ul>
-    <p>
-      Website by
-      <a href="https://htmlacademy.ru/intensive/htmlcss">Html Academy</a>
-    </p>
-  </footer>
+  <footer class="footer-site">
+    <div class="hashtags">
+      <a href="#">#visitSEDONA</a>
+    </div>
 
+    <div class="social">
+      <h2 class="visually-hidden">В социальных сетях</h2>
+      <ul>
+        <li>
+          <a href="#">
+            <span class="visually-hidden">Твиттер</span>
+            <div class="social-tw"></div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="visually-hidden">Фейсбук</span>
+            <div class="social-fb"></div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="visually-hidden">Ютюб</span>
+            <div class="social-yt"></div>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="copyright">
+      <span>Website by</span>
+      <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <span class="visually-hidden">Html Academy</span>
+        <div class="copyright-logo"></div>
+      </a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
