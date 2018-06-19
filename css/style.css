@@ -18,6 +18,7 @@ body {
   overflow: hidden;
 }
 
+
 /*
  * Навигация сайта
  */
@@ -61,6 +62,7 @@ body {
   color: #766357; /* Проверено. */
 }
 
+
 /*
  * Основная секция, основной фон
  */
@@ -80,6 +82,7 @@ body {
     no-repeat,
     no-repeat;
 }
+
 
 /*
  * Основная секция, основные доводы
@@ -147,6 +150,7 @@ body {
   text-align: center;
 }
 
+
 /*
  * Основная секция - подсказки
  */
@@ -197,6 +201,7 @@ body {
   background-repeat: no-repeat;
   background-position-x: center;
 }
+
 
 /*
  * Поиск проживания
@@ -331,6 +336,7 @@ main .map {
   position: 50%;
 }
 
+
 /*
  * Footer
  */
@@ -375,7 +381,7 @@ footer * {
 }
 
 .footer-site .social li a div {
-  width: 46px; /* Проверено. Но у FB ширина 47px */
+  width: 46px; /* Проверено. Но у иконки FB ширина 47px */
   height: 48px; /* Проверено, но на макете 48,24 пикселей */
   background-color: #81b3d2;
 }
@@ -455,6 +461,7 @@ footer * {
  *
  */
 
+
 /*
  * Форма поиска
  */
@@ -489,7 +496,6 @@ footer * {
   /*box-shadow: 0 0 3px #ff0000;*/
   background-color: transparent;
 }
-
 
 .find-params-form legend {
   font-size: 16px; /* Проверено */
@@ -610,39 +616,64 @@ footer * {
  *  Направление сортировки
  */
 
+.sort-direction ul {
+  display: flex;
+}
+
 .sort-direction li {
   list-style: none;
-  color: rgba(0, 0, 0, 0.3);
   background-color: white;
-  font-size: 12px;
 }
 
-.sort-direction a {
-  color: rgba(0, 0, 0, 0.3);
-  background-color: white;
-  font-size: 12px;
-  text-decoration: none;
-  border-bottom: 1px dotted #81b3d2;
+
+/*
+ * Стрелочки вниз (сортировка по возрастанию: от меньшего к большему)
+ */
+
+.sort-direction div.to-more{
+  width: 11px;
+  height: 10px;
+  background-image: url("../img/svg/icon-dir-up.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.sort-direction .current li {
-  color: #81b3d2;
+.sort-direction div.to-more:hover,
+.sort-direction div.to-more:focus {
+  background-image: url("../img/svg/icon-dir-up-hover.svg");
 }
 
-.sort-direction .current a {
-  color: #81b3d2;
-  border-bottom: 0;
+.sort-direction div.to-more:active {
+  background-image: url("../img/svg/icon-dir-up-pressed.svg");
 }
 
-.sort-direction a:hover,
-.sort-direction a:focus {
-  color: #81b3d2;
-  border-bottom: 0;
+.sort-direction li.current div.to-more {
+  background-image: url("../img/svg/icon-dir-up-pressed.svg");
 }
 
-.sort-direction a:active {
-  color: black;
-  border-bottom: 0;
+/*
+ * Стрелочки вверх (сортировка по убыванию: от большего к меньшему)
+ */
+
+.sort-direction div.to-less{
+  width: 11px;
+  height: 10px;
+  background-image: url("../img/svg/icon-dir-down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sort-direction div.to-less:hover,
+.sort-direction div.to-less:focus {
+  background-image: url("../img/svg/icon-dir-down-hover.svg");
+}
+
+.sort-direction div.to-less:active {
+  background-image: url("../img/svg/icon-dir-down-pressed.svg");
+}
+
+.sort-direction li.current div.to-less {
+  background-image: url("../img/svg/icon-dir-down-pressed.svg");
 }
 
 /*
