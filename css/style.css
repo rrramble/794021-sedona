@@ -352,10 +352,7 @@ footer * {
   height: 120px; /* Проверено */
 }
 
-.footer-site .hashtags a,
-.footer-site .hashtags a:visited,
-.footer-site .hashtags a:hover,
-.footer-site .hashtags a:focus {
+.footer-site .hashtags {
   color: black; /* Проверено */
   font-size: 21px; /* Проверено  */
   font-weight: bold; /* Проверено  */
@@ -464,6 +461,266 @@ footer * {
 
 .find-params {
   width: 1200px;
-  height: 218px; /* Примерно */
+  /* height: 218px;*/ /* Примерно */ 
+  background-color: #766357;
   background-image: url("../img/photo/mountains-blur.jpg");
+  background-size: 100%;
+  border-width: 0px;
+  padding-left: 73px;
+  padding-right: 73px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.find-params-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.find-params-form fieldset {
+  border: 0;
+}
+
+.find-params-form input[type="checkbox"] {
+  border-width: 0px;
+  outline: 2px solid white;
+  border-radius: 2px;
+  /*box-shadow: 0 0 3px #ff0000;*/
+  background-color: transparent;
+}
+
+
+.find-params-form legend {
+  font-size: 16px; /* Проверено */
+  font-weight: bold; /* Проверено */
+  color: white; /* Проверено */
+}
+
+.find-params-form label {
+  font-size: 14px; /* Проверено */
+  font-weight: normal; /* Проверено */
+  color: white; /* Проверено */
+}
+
+.find-params-form input[type="number"] {
+  font-size: 14px;
+  font-weight: normal;
+  background-color: transparent;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border: 0;
+}
+
+.find-params-form input[type="number"]::placeholder,
+.find-params-form input[type="number"]:-ms-input-placeholder,
+.find-params-form input[type="number"]::-ms-input-placeholder {
+  color: white;
+}
+
+.find-params-form button[type="submit"] {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 2px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.find-params-form button[type="submit"]:hover,
+.find-params-form button[type="submit"]:focus {
+  color: black;
+  background-color: white;
+}
+
+.hotels {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.results-count {
+  color: black;
+  background-color: white;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.sort-results {
+  color: black;
+  background-color: white;
+  font-weight: normal;
+}
+
+
+/*
+ *  Виды сортировки
+ */
+
+.sort-type h3 {
+  color: black;
+  background-color: white;
+  font-size: 12px;
+}
+
+.sort-type li {
+  list-style: none;
+  color: rgba(0, 0, 0, 0.3);
+  background-color: white;
+  font-size: 12px;
+}
+
+.sort-type a {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: white;
+  font-size: 12px;
+  text-decoration: none;
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.sort-type .current li {
+  color: #81b3d2;
+}
+
+.sort-type .current a {
+  color: #81b3d2;
+  border-bottom: 0;
+}
+
+.sort-type a:hover,
+.sort-type a:focus {
+  color: #81b3d2;
+  border-bottom: 0;
+}
+
+.sort-type a:active {
+  color: black;
+  border-bottom: 0;
+}
+
+
+/*
+ *  Направление сортировки
+ */
+
+.sort-direction li {
+  list-style: none;
+  color: rgba(0, 0, 0, 0.3);
+  background-color: white;
+  font-size: 12px;
+}
+
+.sort-direction a {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: white;
+  font-size: 12px;
+  text-decoration: none;
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.sort-direction .current li {
+  color: #81b3d2;
+}
+
+.sort-direction .current a {
+  color: #81b3d2;
+  border-bottom: 0;
+}
+
+.sort-direction a:hover,
+.sort-direction a:focus {
+  color: #81b3d2;
+  border-bottom: 0;
+}
+
+.sort-direction a:active {
+  color: black;
+  border-bottom: 0;
+}
+
+/*
+ *  Списки найденных гостиниц
+ */
+
+.hotel {
+  list-style: none;
+  color: black;
+  background-color: white;
+}
+
+.hotel-name {
+  font-size: 21px; /* проверено */
+  font-weight: bold; /* проверено */
+}
+
+.hotel-name a,
+.hotel-name a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.hotel-name a:hover,
+.hotel-name a:focus {
+  color: #81b3d2; /* проверено */
+}
+
+.hotel-name a:active {
+  color: rgba(0, 0, 0, 0.3); /* проверено */
+}
+
+.hotel p {
+  font-size: 14px; /* проверено */
+  font-weight: normal; /* проверено */
+  color: #333; /* проверено */
+}
+
+.hotel-details,
+.hotel-details:visited {
+  display: inline-block;
+  color: white; /* проверено */
+  background-color: #81b3d2; /* проверено */
+  text-decoration: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.hotel-details:hover,
+.hotel-details:focus {
+  background-color: #669ec0; /* проверено */
+}
+
+.hotel-details:active {
+  color: rgba(255, 255, 255, 0.3); /* проверено */
+  background-color: #5496bd; /* проверено */
+}
+
+.hotel-book-it,
+.hotel-book-it:visited {
+  display: inline-block;
+  color: white; /* проверено */
+  background-color: #766357; /* проверено */
+  text-decoration: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.hotel-book-it:hover,
+.hotel-book-it:focus {
+  background-color: #604e43; /* проверено */
+}
+
+.hotel-book-it:active {
+  color: rgba(255, 255, 255, 0.3); /* проверено */
+  background-color: #503e33; /* проверено */
 }

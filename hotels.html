@@ -34,123 +34,142 @@
   <main>
     <h2 class="visually-hidden">Поиск по параметрам</h2>
     <div class="find-params">
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <fieldset name="features">
-          <legend>Инфраструктура</legend>
+      <form class="find-params-form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="find-params-features" name="features">
+          <legend>Инфраструктура:</legend>
           <span>
-            <label for="pool" >Бассейн</label>
             <input type="checkbox" name="pool" id="pool" checked>
+            <label for="pool" >Бассейн</label>
           </span>
           <span>
+            <input type="checkbox" name="parking" id="parking">
             <label for="parking">Парковка</label>
-              <input type="checkbox" name="parking" id="parking">
           </span>
           <span>
-            <label for="wifi">Wi-Fi</label>
             <input type="checkbox" name="wifi" id="wifi">
+            <label for="wifi">Wi-Fi</label>
           </span>
         </fieldset>
 
         <fieldset name="housing">
-          <legend>Тип жилья</legend>
+          <legend>Тип жилья:</legend>
           <span>
-            <label for="hotel">Гостиница</label>
             <input type="checkbox" name="hotel" id="hotel" checked>
+            <label for="hotel">Гостиница</label>
           </span>
           <span>
-            <label for="motel">Мотель</label>
             <input type="checkbox" name="motel" id="motel" checked>
+            <label for="motel">Мотель</label>
           </span>
           <span>
-            <label for="apartments">Апартаменты</label>
             <input type="checkbox" name="apartments" id="apartments" checked>
+            <label for="apartments">Апартаменты</label>
           </span>
         </fieldset>
 
-        <fieldset name="cost">
-          <legend>Стоимость в сутки (р):</legend>
-          <label for="cost-min">От</label>
-          <input type="number" name="cost-min" id="cost-min" min="0" value="0">
+        <div>
+          <fieldset class="find-params-cost" name="cost">
+            <legend>Стоимость в сутки (р):</legend>
+            <label for="cost-min">От</label>
+            <input type="number" name="cost-min" id="cost-min" min="0" placeholder="0">
 
-          <label for="cost-max">До</label>
-          <input type="number" name="cost-max" id="cost-max" min="0" value="3000">
+            <label for="cost-max">До</label>
+            <input type="number" name="cost-max" id="cost-max" min="0" placeholder="3000">
 
-          <span class="cost-slider" id="cost-slider">
-          </span>
+            <span class="cost-slider" id="cost-slider">
+            </span>
+          </fieldset>
           <button type="submit" name="show">Показать</button>
-        </fieldset>
+        </div>
       </form>
     </div>
 
-    <h2 class="visually-hidden">Сортировка</h2>
-    <ul>
-      <li>
-        <a href="#">по цене</a>
-      </li>
-      <li>
-        <a href="#">по типу</a>
-      </li>
-      <li>
-        <a href="#">по рейтингу</a>
-      </li>
-    </ul>
-    <ul>
-      <li><a href="#"><span class="visually-hidden">сначала меньше</span></a></li>
-      <li><a href="#"><span class="visually-hidden">сначала больше</span></a></li>
-    </ul>
-
     <h2 class="visually-hidden">Результаты поиска</h2>
-    <p>Найдено: 3</p>
-    <ul>
-      <li>
-        <h3><a href="#">Amara Resort &amp; Spa</a></h3>
+    <p class="results-count">Найдено: 3</p>
+
+    <aside class="sort-results">
+      <div class="sort-type">
+        <h3>Сортировка</h3>
+        <ul>
+          <li class="current">
+            <a href="#">по цене</a>
+          </li>
+          <li>
+            <a href="#">по типу</a>
+          </li>
+          <li>
+            <a href="#">по рейтингу</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sort-direction">
+        <h3 class="visually-hidden">Направление сортировки</h3>
+        <ul>
+          <li>
+            <a href="#">
+              <span class="visually-hidden">сначала меньше</span>
+            </a>
+          </li>
+          <li class="current">
+            <a href="#">
+              <span class="visually-hidden">сначала больше</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <h3 class="visually-hidden">Найденные гостиницы</h3>
+    <ul class="hotels">
+      <li class="hotel">
+        <h3 class="hotel-name"><a href="#">Amara Resort &amp; Spa</a></h3>
         <img src="img/photo/housing-1.jpg" width="135" height="90" alt="Amara Resort and Spa">
         <p>Гостиница</p>
-        <span>
+        <p>
           <span class="visually-hidden">4 звезды</span>
           <span class="hotel-star-4"></span>
-        </span>
+        </p>
         <p>Рейтинг: 8,5</p>
         <p>От 4000 р.</p>
-        <a href="#">Подробнее</a>
-        <a href="#">Забронировать</a>
+        <a class="hotel-details" href="#">Подробнее</a>
+        <a class="hotel-book-it" href="#">Забронировать</a>
       </li>
 
-      <li>
-        <h3><a href="#">Desert Quail Inn</a></h3>
+      <li class="hotel">
+        <h3 class="hotel-name"><a href="#">Desert Quail Inn</a></h3>
         <img src="img/photo/housing-2.jpg" width="135" height="90" alt="Desert Quail Inn">
         <p>Мотель</p>
-        <span>
+        <p>
           <span class="visually-hidden">3 звезды</span>
           <span class="hotel-star-3"></span>
-        </span>
-        <p>Рейтинг: 8,9</p>
+        </p>
+        <p class="hotel-rating">Рейтинг: 8,9</p>
         <p>От 3000 р.</p>
-        <a href="#">Подробнее</a>
-        <a href="#">Забронировать</a>
+        <a class="hotel-details" href="#">Подробнее</a>
+        <a class="hotel-book-it" href="#">Забронировать</a>
       </li>
 
-      <li>
-        <h3><a href="#">Villas at Poco Diablo</a></h3>
+      <li class="hotel">
+        <h3 class="hotel-name"><a href="#">Villas at Poco Diablo</a></h3>
         <img src="img/photo/housing-3.jpg" width="135" height="90" alt="Villas at Poco Diablo">
         <p>Апартаменты</p>
-        <span>
+        <p>
           <span class="visually-hidden">2 звезды</span>
           <span class="hotel-star-2"></span>
-        </span>
+        </p>
         <p>Рейтинг: 9,2</p>
         <p>От 2000 р.</p>
-        <a href="#">Подробнее</a>
-        <a href="#">Забронировать</a>
+        <a class="hotel-details" href="#">Подробнее</a>
+        <a class="hotel-book-it" href="#">Забронировать</a>
       </li>
     </ul>
-
   </main>
 
   <footer class="footer-site">
-    <div class="hashtags">
-      <a href="#">#visitSEDONA</a>
-    </div>
+    <p class="hashtags">
+      #visitSEDONA
+    </p>
 
     <div class="social">
       <h2 class="visually-hidden">В социальных сетях</h2>
