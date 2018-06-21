@@ -4,7 +4,8 @@ body {
   font-family: "PTSans", "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   box-sizing: border-box;
-  width: 1200px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .visually-hidden {
@@ -290,18 +291,19 @@ body {
   font-size: 14px; /* Проверено. */
 }
 
-.find-hotel input ~ button.date div.date {
+.find-hotel button.date span.date {
+  display: inline-block;
   background-image: url("../img/svg/calendar.svg");
   width: 21px;
   height: 22px;
 }
 
-.find-hotel input ~ button.date div.date:hover,
-.find-hotel input ~ button.date div.date:focus {
+.find-hotel button.date span.date:hover,
+.find-hotel button.date span.date:focus {
   background-image: url("../img/svg/calendar-hover.svg");
 }
 
-.find-hotel input ~ button.date div.date:active {
+.find-hotel button.date span.date:active {
   background-image: url("../img/svg/calendar-pressed.svg");
 }
 
@@ -337,14 +339,14 @@ body {
 }
 
 main .map {
-  position: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
 /*
  * Footer
  */
-
 
 .footer-site {
   background-color: rgba(254, 254, 254, 0.9); /* Проверено */
@@ -368,23 +370,23 @@ main .map {
   display: inline-block;
 }
 
-.footer-site .social li a {
+.footer-site .social-link {
   color: black;
   text-decoration: none;
 }
 
-.footer-site .social li a div {
+.footer-site .social .social-btn {
   width: 46px; /* Проверено. Но у иконки FB ширина 47px */
   height: 48px; /* Проверено, но на макете 48,24 пикселей */
   background-color: #81b3d2;
 }
 
-.footer-site .social a:hover div,
-.footer-site .social a:focus div {
+.footer-site .social-link:hover .social-btn,
+.footer-site .social-link:focus .social-btn {
   background-color: #669ec0;
 }
 
-.footer-site .social a:active div {
+.footer-site .social-link:active div {
   background-color: #5496bd;
 }
 
