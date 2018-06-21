@@ -209,7 +209,7 @@ body {
 
  .find-hotel {
   color: black;
-  background-image: white;
+  background-color: white;
   width: 568px;
   margin-left: auto;
   margin-right: auto;
@@ -218,7 +218,7 @@ body {
 .find-hotel p {
   color: black;
   font-size: 12px;
-  background-image: white;
+  background-color: white;
   text-align: center;
 }
 
@@ -262,42 +262,46 @@ body {
 
 .find-hotel form input {
   font-size: 14px; /* Проверено. */
-  color: black; /* Проверено. */
+  color: black; /* Проверено. Но не реагирует */
   font-weight: bold; /* Проверено. */
+  text-transform: uppercase;
   background-color: #f2f2f2; /* Проверено. */
   border: 2px solid #f2f2f2;
-  line-height: 26px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
-.find-hotel form input:hover {
+.find-hotel input:hover {
   background-color: #ebebeb; /* Проверено. */
   border: 2px solid #ebebeb; /* Проверено. */
 }
 
-.find-hotel form input:focus {
+.find-hotel input:focus {
   background-color: #fff; /* Проверено. */
   border: 2px solid #e5e5e5; /* Проверено. */
 }
 
-.find-hotel form input::placeholder,
-.find-hotel form input:-ms-input-placeholder,
-.find-hotel form input::-ms-input-placeholder {
+.find-hotel input::placeholder,
+.find-hotel input:-ms-input-placeholder,
+.find-hotel input::-ms-input-placeholder {
   color: black; /* Проверено. */
   font-size: 14px; /* Проверено. */
 }
 
-.find-hotel form input ~ button.date div.date {
+.find-hotel input ~ button.date div.date {
   background-image: url("../img/svg/calendar.svg");
   width: 21px;
   height: 22px;
 }
 
-.find-hotel form input ~ button.date div.date:hover,
-.find-hotel form input ~ button.date div.date:focus {
+.find-hotel input ~ button.date div.date:hover,
+.find-hotel input ~ button.date div.date:focus {
   background-image: url("../img/svg/calendar-hover.svg");
 }
 
-.find-hotel form input ~ button.date div.date:active {
+.find-hotel input ~ button.date div.date:active {
   background-image: url("../img/svg/calendar-pressed.svg");
 }
 
@@ -341,16 +345,6 @@ main .map {
  * Footer
  */
 
-footer {
-  color: black;
-  background-color: rgba(256, 256, 256, 1);
-}
-
-
-footer * {
-  justify-content: stretch;
-  align-items: ;
-}
 
 .footer-site {
   background-color: rgba(254, 254, 254, 0.9); /* Проверено */
@@ -362,7 +356,6 @@ footer * {
   color: black; /* Проверено */
   font-size: 21px; /* Проверено  */
   font-weight: bold; /* Проверено  */
-  line-height: 26px;
   text-decoration: none;
 }
 
@@ -576,11 +569,17 @@ footer * {
   font-size: 12px;
 }
 
+.sort-type ul {
+  display: flex;
+}
+
 .sort-type li {
   list-style: none;
   color: rgba(0, 0, 0, 0.3);
   background-color: white;
   font-size: 12px;
+  padding-left: 17px;
+  padding-right: 17px;
 }
 
 .sort-type a {
