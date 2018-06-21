@@ -336,9 +336,9 @@ body {
   content: "";
   display: inline-block;
   border-width: 0px;
-  width: 20px; /* вообще не по макету, потом исправлю */
-  height: 3px; /* вообще не по макету, потом исправлю */
-  background-color: #666; /* вообще не по макету, потом исправлю */
+  width: 12px; /* Проверено. Но не сплошной цвет: возможно 11px; */
+  height: 3px; /* Проверено */
+  background-color: #a9a9a9; /* Проверено */
   padding: 0px;
   margin: 0px;
   z-index: 2;
@@ -352,9 +352,9 @@ body {
   content: "";
   display: inline-block;
   border-width: 0px;
-  width: 3px; /* вообще не по макету, потом исправлю */
-  height: 20px; /* вообще не по макету, потом исправлю */
-  background-color: #666; /* вообще не по макету, потом исправлю */
+  width: 3px; /* Проверено */
+  height: 12px; /* Проверено. Но не сплошной цвет: возможно 11px; */
+  background-color: #a9a9a9; /* Проверено */
   z-index: 2;
 }
 
@@ -366,12 +366,12 @@ body {
 .find-hotel .dec:focus::before,
 .find-hotel .inc:hover::before,
 .find-hotel .inc:focus::before {
-  background-color: black; /* вообще не по макету, потом исправлю */
+  background-color: black; /* Проверено */
 }
 
 .find-hotel .inc:hover::after,
 .find-hotel .inc:focus::after {
-  background-color: black; /* вообще не по макету, потом исправлю */
+  background-color: black; /* Проверено */
 }
 
 /*
@@ -379,12 +379,12 @@ body {
  */
 
 .find-hotel .dec:active::before,
-.find-hotel .incactive::before {
-  background-color: lightblue; /* вообще не по макету, потом исправлю */
+.find-hotel .inc:active::before {
+  background-color: #81b3d2; /* Проверено */
 }
 
 .find-hotel .inc:active::after {
-  background-color: lightblue; /* вообще не по макету, потом исправлю */
+  background-color: #81b3d2; /* Проверено */
 }
 
 /*
