@@ -307,6 +307,90 @@ body {
   background-image: url("../img/svg/calendar-pressed.svg");
 }
 
+
+/*
+ *
+ * кнопки "меньше" и "больше"
+ *
+ */
+
+/*
+ * фон для кнопок "уменьшеть" и "увеличить"
+ */
+
+.find-hotel .dec,
+.find-hotel .inc {
+  width: 40px; /* вообще не по макету, потом исправлю */
+  height: 40px; /* вообще не по макету, потом исправлю */
+  background-color: #f2f2f2; /* вообще не по макету, потом исправлю */
+  border-width: 0px;
+  padding: 0px;
+}
+
+/*
+ * горизонтальный "минус" для кнопок "уменьшить" и "увеличить"
+ */
+
+.find-hotel .dec::before,
+.find-hotel .inc::before {
+  content: "";
+  display: inline-block;
+  border-width: 0px;
+  width: 20px; /* вообще не по макету, потом исправлю */
+  height: 3px; /* вообще не по макету, потом исправлю */
+  background-color: #666; /* вообще не по макету, потом исправлю */
+  padding: 0px;
+  margin: 0px;
+  z-index: 2;
+}
+
+/*
+ * вертикальная часть для кнопки "увеличить"
+ */
+
+.find-hotel .inc::after {
+  content: "";
+  display: inline-block;
+  border-width: 0px;
+  width: 3px; /* вообще не по макету, потом исправлю */
+  height: 20px; /* вообще не по макету, потом исправлю */
+  background-color: #666; /* вообще не по макету, потом исправлю */
+  z-index: 2;
+}
+
+/*
+ * изменение цвета при наведении (фокусе)
+ */
+
+.find-hotel .dec:hover::before,
+.find-hotel .dec:focus::before,
+.find-hotel .inc:hover::before,
+.find-hotel .inc:focus::before {
+  background-color: black; /* вообще не по макету, потом исправлю */
+}
+
+.find-hotel .inc:hover::after,
+.find-hotel .inc:focus::after {
+  background-color: black; /* вообще не по макету, потом исправлю */
+}
+
+/*
+ * изменение цвета при нажатии
+ */
+
+.find-hotel .dec:active::before,
+.find-hotel .incactive::before {
+  background-color: lightblue; /* вообще не по макету, потом исправлю */
+}
+
+.find-hotel .inc:active::after {
+  background-color: lightblue; /* вообще не по макету, потом исправлю */
+}
+
+/*
+ * Кнопка "Найти"
+ */
+
 .find-hotel .btn-find {
   display: block;
   color: white;
@@ -322,12 +406,6 @@ body {
   margin-right: auto;
 }
 
-
-/* !!!
-       Странное поведение: если нажать на кнопку (active) но тут же отвести
-       мышь, то после этого hover не работает
- */
-
 .find-hotel .btn-find:hover,
 .find-hotel .btn-find:focus {
   background-color: #669ec0; /*Проверено.*/
@@ -338,6 +416,9 @@ body {
   background-color: #5496bd; /*Проверено.*/
 }
 
+/*
+ * Карта в нижней части формы поиска
+ */
 main .map {
   margin-left: auto;
   margin-right: auto;
