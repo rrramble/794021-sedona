@@ -89,7 +89,7 @@ body {
 
 .reasons .text-leading {
   color: black; /* Проверено. */
-  background: white;
+  background-color: white;
   font-size: 21px; /* Проверено. */
   font-weight: bold; /* Проверено. */
   line-height: 26px; /* Проверено. */
@@ -98,7 +98,7 @@ body {
 
 .reasons .text {
   color: rgb(51, 51, 51); /* Проверено. */
-  background: white;
+  background-color: white;
   font-size: 14px; /* Проверено. */
   font-weight: normal; /* Проверено. */
   line-height: 26px; /* Проверено. */
@@ -106,13 +106,13 @@ body {
 }
 
 .reason-main {
-  background: #81b3d2;
+  background-color: #81b3d2;
   color: white;
 }
 
 .reason-main h3 {
   color: white; /* Проверено. */
-  background: #81b3d2; /* Проверен цвет. Не проверены эффекты. */
+  background-color: #81b3d2; /* Проверен цвет. Не проверены эффекты. */
   font-size: 21px; /* Проверено. */
   font-weight: bold; /* Проверено. */
   line-height: 21px; /* Проверено. */
@@ -121,7 +121,7 @@ body {
 
 .reason-main p {
   color: white;
-  background: #81b3d2; /* Проверен цвет. Не проверены эффекты. */
+  background-color: #81b3d2; /* Проверен цвет. Не проверены эффекты. */
   font-size: 14px; /* Проверено. */
   font-weight: normal; /* Проверено. */
   line-height: 21px; /* Проверено. */
@@ -133,12 +133,12 @@ body {
  */
 
 .reason-secondary {
-  background: #eeeeee; /* Проверено. */
+  background-color: #eeeeee; /* Проверено. */
 }
 
 .reason-secondary h3 {
   color: black; /* Проверено. */
-  background: #eeeeee; /* Проверено. */
+  background-color: #eeeeee; /* Проверено. */
   font-size: 21px; /* Проверено. */
   font-weight: bold; /* Проверено. */
   line-height: 21px; /* Проверено. */
@@ -147,7 +147,7 @@ body {
 
 .reason-secondary p {
   color: black; /* Проверено. */
-  background: #eeeeee; /* Проверено. */
+  background-color: #eeeeee; /* Проверено. */
   font-size: 14px; /* Проверено. */
   font-weight: normal; /* Проверено. */
   line-height: 21px; /* Проверено. */
@@ -160,13 +160,13 @@ body {
  */
 
 .hints {
-  background: white; /* Проверено, но на глаз выглядит серее. Перепроверить. */
+  background-color: white; /* Проверено, но на глаз выглядит серее. Перепроверить. */
   color: black; /* Проверено. */
 }
 
 .hints h3 {
   color: black; /* Проверено. */
-  background: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
   font-size: 21px; /* Проверено. */
   font-weight: bold; /* Проверено. */
   line-height: 21px; /* Проверено. */
@@ -176,7 +176,7 @@ body {
 
 .hints p {
   color: black; /* Проверено. */
-  background: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
   font-size: 14px; /* Проверено. */
   line-height: 21px; /* Проверено. */
   text-align: center;
@@ -184,7 +184,7 @@ body {
 
 .hints .hints-housing {
   display: block;
-  background: white;
+  background-color: white;
   background-image: url("../img/svg/icon-home.svg");
   background-size: 75px 72px;
   background-repeat: no-repeat;
@@ -192,7 +192,7 @@ body {
 }
 
 .hints .hints-food {
-  background: white;
+  background-color: white;
   background-image: url("../img/svg/icon-hamburger.svg");
   background-size: 75px 72px;
   background-repeat: no-repeat;
@@ -200,7 +200,7 @@ body {
 }
 
 .hints .hints-souvenirs {
-  background: white;
+  background-color: white;
   background-image: url("../img/svg/icon-souvenir.svg");
   background-size: 75px 72px;
   background-repeat: no-repeat;
@@ -312,19 +312,22 @@ body {
   opacity: 1; /* Поверил */
 }
 
-.find-hotel button.date span.date {
+.find-hotel button.date {
   display: inline-block;
   background-image: url("../img/svg/calendar.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
   width: 21px;
   height: 22px;
+  border-width: 0;
 }
 
-.find-hotel button.date span.date:hover,
-.find-hotel button.date span.date:focus {
+.find-hotel button.date:hover,
+.find-hotel button.date:focus {
   background-image: url("../img/svg/calendar-hover.svg");
 }
 
-.find-hotel button.date span.date:active {
+.find-hotel button.date:active {
   background-image: url("../img/svg/calendar-pressed.svg");
 }
 
@@ -590,7 +593,6 @@ main .map {
   border-width: 0px;
   outline: 2px solid white;
   border-radius: 2px;
-  /*box-shadow: 0 0 3px #ff0000;*/
   background-color: transparent;
 }
 
@@ -616,12 +618,12 @@ main .map {
   padding-bottom: 10px;
   padding-left: 6px;
   padding-right: 6px;
-  border: 0;
+  border-width: 0;
 }
 
-.find-params-form input[type="number"]::placeholder,
 .find-params-form input[type="number"]:-ms-input-placeholder,
-.find-params-form input[type="number"]::-ms-input-placeholder {
+.find-params-form input[type="number"]::-ms-input-placeholder,
+.find-params-form input[type="number"]::placeholder {
   color: white;
 }
 
@@ -672,6 +674,7 @@ main .map {
   color: black;
   background-color: white;
   font-size: 12px;
+  line-height: 18px;
 }
 
 .sort-type ul {
@@ -680,9 +683,6 @@ main .map {
 
 .sort-type li {
   list-style: none;
-  color: rgba(0, 0, 0, 0.3);
-  background-color: white;
-  font-size: 12px;
   padding-left: 17px;
   padding-right: 17px;
 }
@@ -691,27 +691,25 @@ main .map {
   color: rgba(0, 0, 0, 0.3);
   background-color: white;
   font-size: 12px;
+  line-height: 18px;
   text-decoration: none;
   border-bottom: 1px dotted #81b3d2;
-}
-
-.sort-type .current li {
-  color: #81b3d2;
-}
-
-.sort-type .current a {
-  color: #81b3d2;
-  border-bottom: 0;
 }
 
 .sort-type a:hover,
 .sort-type a:focus {
   color: #81b3d2;
-  border-bottom: 0;
+  border-bottom: 1px dotted #81b3d2;
 }
 
 .sort-type a:active {
   color: black;
+  border-bottom: 0;
+}
+
+.sort-type-current a,
+.sort-type-current a:visited {
+  color: #81b3d2;
   border-bottom: 0;
 }
 
@@ -726,7 +724,6 @@ main .map {
 
 .sort-direction li {
   list-style: none;
-  background-color: white;
 }
 
 
@@ -734,24 +731,33 @@ main .map {
  * Стрелочки вниз (сортировка по возрастанию: от меньшего к большему)
  */
 
-.sort-direction div.to-more{
+.sort-direction a,
+.sort-direction a:visited {
+  display: inline-block;
   width: 11px;
   height: 10px;
-  background-image: url("../img/svg/icon-dir-up.svg");
+  text-decoration: none;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.sort-direction div.to-more:hover,
-.sort-direction div.to-more:focus {
+.sort-direction-to-more a {
+  background-image: url("../img/svg/icon-dir-up.svg");
+}
+
+.sort-direction-to-more a:hover,
+.sort-direction-to-more a:focus {
   background-image: url("../img/svg/icon-dir-up-hover.svg");
 }
 
-.sort-direction div.to-more:active {
+.sort-direction-to-more a:active {
   background-image: url("../img/svg/icon-dir-up-pressed.svg");
 }
 
-.sort-direction li.current div.to-more {
+.sort-direction-to-more a.current,
+.sort-direction-to-more a.current:focus,
+.sort-direction-to-more a.current:hover,
+.sort-direction-to-more a.current:active {
   background-image: url("../img/svg/icon-dir-up-pressed.svg");
 }
 
@@ -759,24 +765,23 @@ main .map {
  * Стрелочки вверх (сортировка по убыванию: от большего к меньшему)
  */
 
-.sort-direction div.to-less{
-  width: 11px;
-  height: 10px;
+.sort-direction-to-less a {
   background-image: url("../img/svg/icon-dir-down.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-.sort-direction div.to-less:hover,
-.sort-direction div.to-less:focus {
+.sort-direction-to-less a:hover,
+.sort-direction-to-less a:focus {
   background-image: url("../img/svg/icon-dir-down-hover.svg");
 }
 
-.sort-direction div.to-less:active {
+.sort-direction-to-less a:active {
   background-image: url("../img/svg/icon-dir-down-pressed.svg");
 }
 
-.sort-direction li.current div.to-less {
+.sort-direction-to-less a.current,
+.sort-direction-to-less a.current:focus,
+.sort-direction-to-less a.current:hover,
+.sort-direction-to-less a.current:active {
   background-image: url("../img/svg/icon-dir-down-pressed.svg");
 }
 
