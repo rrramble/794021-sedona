@@ -458,7 +458,7 @@ main .map {
   height: 120px; /* Проверено */
 }
 
-.footer-site .hashtags {
+.footer-hashtags {
   color: black; /* Проверено */
   font-size: 21px; /* Проверено  */
   font-weight: bold; /* Проверено  */
@@ -466,33 +466,32 @@ main .map {
   text-decoration: none;
 }
 
-.footer-site .social ul {
+.footer-social ul {
   list-style: none;
   background-color: rgba(254, 254, 254, 0.9); /* Проверено */
 }
 
-.footer-site .social li {
+.footer-social li {
   display: inline-block;
 }
 
-.footer-site .social-link {
+.footer-social a {
+  display: inline-block;
   color: black;
   text-decoration: none;
-}
-
-.footer-site .social .social-btn {
   width: 46px; /* Проверено. Но у иконки FB ширина 47px */
   height: 48px; /* Проверено, но на макете 48,24 пикселей */
-  background-color: #81b3d2;
+  background-color: #81b3d2; /* Проверено */
+
 }
 
-.footer-site .social-link:hover .social-btn,
-.footer-site .social-link:focus .social-btn {
-  background-color: #669ec0;
+.footer-social a:hover,
+.footer-social a:focus {
+  background-color: #669ec0; /* Проверено */
 }
 
-.footer-site .social-link:active div {
-  background-color: #5496bd;
+.footer-social a:active {
+  background-color: #5496bd; /* Проверено */
 }
 
 .footer-site .social-tw {
@@ -503,8 +502,6 @@ main .map {
 
 .footer-site .social-tw:active {
   background-image: url("../img/svg/icon-tw-pressed.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .footer-site .social-fb {
@@ -515,8 +512,6 @@ main .map {
 
 .footer-site .social-fb:active {
   background-image: url("../img/svg/icon-fb-pressed.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .footer-site .social-yt {
@@ -527,31 +522,32 @@ main .map {
 
 .footer-site .social-yt:active {
   background-image: url("../img/svg/icon-yt-pressed.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-.footer-site .copyright {
+.footer-copyright p {
   color: black; /* Проверено */
   font-size: 14px; /* Проверено */
   font-style: normal; /* Проверено */
-  line-height: 26px;
+  line-height: 26px; /* Проверено */
 }
 
-.footer-site .copyright-logo {
+.footer-copyright a,
+.footer-copyright a:visited {
+  display: inline-block;
   width: 115px; /* Проверено */
   height: 41px; /* Проверено */
+  text-decoration: none;
   background-image: url("../img/svg/logo-htmlacademy.svg");
   background-repeat: no-repeat;
   background-position: right;
 }
 
-.footer-site .copyright .copyright-logo:hover,
-.footer-site .copyright .copyright-logo:focus {
+.footer-copyright a:hover,
+.footer-copyright a:focus {
   background-image: url("../img/svg/logo-htmlacademy-hover.svg");
 }
 
-.footer-site .copyright .copyright-logo:active {
+.footer-copyright a:active {
   background-image: url("../img/svg/logo-htmlacademy-pressed.svg");
 }
 
@@ -831,6 +827,11 @@ main .map {
   padding-left: 16px; /* проверено */
   padding-right: 12px; /* проверено */
 
+}
+
+.hotel-rates {
+  cursor: pointer; /* ОЗНАЧАЕТ ли, что элемент интерактивный?
+                    (или что может быть таковым?) */
 }
 
 .hotel-details,
