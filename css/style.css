@@ -105,14 +105,14 @@ body {
 
 
 /*
- * Основная секция, основные доводы
+ * Секция доводов: заголовочная часть
  */
 
 .reasons {
   width: 100%;
 }
 
-.reason-heading {
+.reasons-summary {
   padding-top: 60px; /* примерно, вычисление через line-height*/
   padding-left: 282px;
   padding-right: 282px;
@@ -138,9 +138,35 @@ body {
   margin-bottom: 50px;
 }
 
+
+/*
+ * Секция доводов: перечисление доводов
+ */
+
+/*
+ * Основные доводы, имеющие собственные фотографии
+ */
+
+.reasons-main {
+  display: flex;
+  flex-direction: column;
+}
+
 .reason-main {
-  background-color: #81b3d2;
+  display: flex;
   color: white;
+  background-color: #81b3d2;
+}
+
+.reason-main-text {
+  padding-top: 24px; /* проверено +-1px */
+  padding-left: 46px; /* проверено +-1px */
+  padding-right: 46px; /* проверено +-1px */
+  padding-bottom: 24px; /* !!! не замерялось, симметрично с top */
+}
+
+.reason-main:nth-of-type(2n+1) .reason-main-text {
+  order: 2;
 }
 
 .reason-main h3 {
@@ -165,8 +191,16 @@ body {
  * Основная секция - второстепенные резоны
  */
 
+.reasons-secondary {
+  display: flex;
+}
+
 .reason-secondary {
   background-color: #eeeeee; /* Проверено. */
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  padding: 47px;
 }
 
 .reason-secondary h3 {
@@ -187,12 +221,62 @@ body {
   text-align: center;
 }
 
+.reason-main:nth-of-type(1) h3::after { /* оформление совпадает с тегом P, но по сути нумерация это часть заголовка */
+  content: "- № 1 -";
+  display: block;
+  font-size: 14px; /* Проверено. */
+  line-height: 21px; /* Проверено. */
+  padding-top: 24px;
+  font-weight: normal; /* Проверено. */
+  text-align: center;
+}
+
+.reason-main:nth-of-type(2) h3::after {
+  content: "- № 2 -";
+  display: block;
+  font-size: 14px; /* Проверено. */
+  line-height: 21px; /* Проверено. */
+  padding-top: 24px;
+  font-weight: normal; /* Проверено. */
+  text-align: center;
+}
+
+.reason-secondary:nth-of-type(1) h3::after {
+  content: "- № 3 -";
+  display: block;
+  font-size: 14px; /* Проверено. */
+  line-height: 21px; /* Проверено. */
+  padding-top: 24px;
+  font-weight: normal; /* Проверено. */
+  text-align: center;
+}
+
+.reason-secondary:nth-of-type(2) h3::after {
+  content: "- № 4 -";
+  display: block;
+  font-size: 14px; /* Проверено. */
+  line-height: 21px; /* Проверено. */
+  padding-top: 24px;
+  font-weight: normal; /* Проверено. */
+  text-align: center;
+}
+
+.reason-secondary:nth-of-type(3) h3::after {
+  content: "- № 5 -";
+  display: block;
+  font-size: 14px; /* Проверено. */
+  line-height: 21px; /* Проверено. */
+  padding-top: 24px;
+  font-weight: normal; /* Проверено. */
+  text-align: center;
+}
 
 /*
  * Основная секция - подсказки
  */
 
 .hints {
+  display: flex;
   background-color: white; /* Проверено, но на глаз выглядит серее. Перепроверить. */
   color: black; /* Проверено. */
 }
