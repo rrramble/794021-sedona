@@ -87,16 +87,17 @@ body {
  */
 
 .background-main {
-  width: 1200px;
-  height: 773px;
+  width: 1200px; /* проверено */
+  height: 510px; /* видимая область фона */
+  background-color: #766357;
   background-image:
     url("../img/graphics/welcome.png"),
     url("../img/graphics/mountains-big-v.png"),
     url("../img/photo/mountains-big.jpg");
   background-position:
-    center 132px,
+    center 75px, /* +- 2 проверено */
     center bottom,
-    center top;
+    center -56px; /* +- 2 проверено */
   background-repeat:
     no-repeat,
     no-repeat;
@@ -107,6 +108,16 @@ body {
  * Основная секция, основные доводы
  */
 
+.reasons {
+  width: 100%;
+}
+
+.reason-heading {
+  padding-top: 60px; /* примерно, вычисление через line-height*/
+  padding-left: 282px;
+  padding-right: 282px;
+}
+
 .reasons .text-leading {
   color: black; /* Проверено. */
   background-color: white;
@@ -114,6 +125,7 @@ body {
   font-weight: bold; /* Проверено. */
   line-height: 26px; /* Проверено. */
   text-align: center;
+  margin-bottom: 27px;
 }
 
 .reasons .text {
@@ -123,6 +135,7 @@ body {
   font-weight: normal; /* Проверено. */
   line-height: 26px; /* Проверено. */
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .reason-main {
