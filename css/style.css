@@ -1,7 +1,10 @@
+*  {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "PTSans", "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
-  box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -22,18 +25,37 @@ body {
  * Навигация сайта
  */
 
-.nav-site .logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.nav-site a.logo {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-site ul {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding-left: 73px;
+  padding-right: 73px;
+  padding-top: 14px;
+  padding-bottom: 16px;
 }
 
 .nav-site li {
-  display: inline-block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+.nav-site li:nth-child(-n+2) {
+  text-align: left;
+}
+
+.nav-site li:nth-last-child(-n+2) {
+  text-align: right;
 }
 
 .nav-site a,
