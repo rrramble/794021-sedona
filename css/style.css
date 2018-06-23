@@ -816,6 +816,7 @@ main .map {
 .hotel p {
   font-size: 14px; /* проверено */
   font-weight: normal; /* проверено */
+  line-height: 21px; /* проверено */
   color: #333; /* проверено */
 }
 
