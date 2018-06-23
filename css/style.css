@@ -147,7 +147,7 @@ body {
  * Основные доводы, имеющие собственные фотографии
  */
 
-.reasons-main {
+.reasons-list {
   display: flex;
   flex-direction: column;
 }
@@ -156,6 +156,10 @@ body {
   display: flex;
   color: white;
   background-color: #81b3d2;
+}
+
+.reason-main:nth-of-type(1) {
+  order: -1;
 }
 
 .reason-main-text {
@@ -271,14 +275,12 @@ body {
   text-align: center;
 }
 
-/*
- * Основная секция - подсказки
- */
-
 .hints {
   display: flex;
   background-color: white; /* Проверено, но на глаз выглядит серее. Перепроверить. */
-  color: black; /* Проверено. */
+  padding-top: 50px;
+  padding-bottom: 82px; /* +-1 */
+  order: -1;
 }
 
 .hints h3 {
@@ -299,29 +301,26 @@ body {
   text-align: center;
 }
 
-.hints .hints-housing {
+.hint {
   display: block;
   background-color: white;
+  background-size: 75px 72px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  padding-left: 47px;
+  padding-right: 47px;
+}
+
+.hint-housing {
   background-image: url("../img/svg/icon-home.svg");
-  background-size: 75px 72px;
-  background-repeat: no-repeat;
-  background-position-x: center;
 }
 
-.hints .hints-food {
-  background-color: white;
+.hint-food {
   background-image: url("../img/svg/icon-hamburger.svg");
-  background-size: 75px 72px;
-  background-repeat: no-repeat;
-  background-position-x: center;
 }
 
-.hints .hints-souvenirs {
-  background-color: white;
+.hint-souvenirs {
   background-image: url("../img/svg/icon-souvenir.svg");
-  background-size: 75px 72px;
-  background-repeat: no-repeat;
-  background-position-x: center;
 }
 
 
