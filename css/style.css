@@ -352,11 +352,6 @@ body {
  .find-hotel {
   background-color: white;
   width: 100%;
-  /*
-  width: 568px;
-  margin-left: auto;
-  margin-right: auto;
-  */
   padding-top: 50px;
   background-color: rgba(255, 255, 255, 0);
  }
@@ -404,7 +399,7 @@ body {
   border: 0;
   width: 100%;
   padding-top: 31px;
-  padding-bottom: 33px;
+  padding-bottom: 30px;
 }
 
 .find-hotel .btn-header:hover,
@@ -423,15 +418,27 @@ body {
   position: center top;
 }
 
-
 .find-hotel form {
+  display: flex;
+  flex-direction: column;
   background-color: rgba(255, 255, 255, 1);
   /*width: 568px; *//* ширина с тенью: 595px, высота с тенью: 419px */
   padding-top: 55px;
   padding-right: 55px;
   padding-left: 55px;
   padding-bottom: 55px;
-  box-shadow: 0 15px 10px 7px rgba(0, 0, 0, 0.2); /* пока условно, размеры не замерял */
+  box-shadow: 0 15px 10px 7px rgba(0, 0, 0, 0.15); /* пока условно, размеры не замерял */
+}
+
+.form-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.form-line:nth-of-type(n+2) {
+  margin-top: 30px;
 }
 
 .find-hotel label {
@@ -450,10 +457,11 @@ body {
   text-transform: uppercase; /* Проверено. */
   background-color: #f2f2f2; /* Проверено. */
   border: 2px solid #f2f2f2;
-  padding-top: 11px; /* Проверено. +-1 */
-  padding-bottom: 11px; /* Проверено. +-1 */
-  padding-left: 14px; /* Проверено. +-1 */
-  padding-right: 14px; /* Проверено. +-1 */
+  width: 346px;
+  padding-top: 4px; /* Проверено. +-1 */
+  padding-bottom: 6px; /* Проверено. +-1 */
+  padding-left: 11px; /* Проверено. +-1 */
+  padding-right: 45px; /* примерно 12 + ширина иконки 24 + 13 */
 }
 
 .find-hotel input.date:hover,
@@ -476,13 +484,15 @@ body {
 }
 
 .find-hotel button.date {
-  display: inline-block;
   background-image: url("../img/svg/calendar.svg");
   background-repeat: no-repeat;
   background-color: transparent;
-  width: 21px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   border-width: 0;
+  position: absolute;
+  right: 6px;
+  top: 7px;
 }
 
 .find-hotel button.date:hover,
