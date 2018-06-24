@@ -35,56 +35,54 @@
 
   <main>
     <h2 class="visually-hidden">Поиск по параметрам</h2>
-    <div class="find-params">
-      <form class="find-params-form" action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="find-params-features" name="features">
-          <legend>Инфраструктура:</legend>
-          <span>
-            <input type="checkbox" name="pool" id="pool" checked>
-            <label for="pool">Бассейн</label>
-          </span>
-          <span>
-            <input type="checkbox" name="parking" id="parking">
-            <label for="parking">Парковка</label>
-          </span>
-          <span>
-            <input type="checkbox" name="wifi" id="wifi">
-            <label for="wifi">Wi-Fi</label>
+    <form class="find-params-form" action="https://echo.htmlacademy.ru" method="get">
+      <fieldset class="find-params-features" name="features">
+        <legend>Инфраструктура:</legend>
+        <span class="find-params-line">
+          <input type="checkbox" name="pool" id="pool" checked>
+          <label for="pool">Бассейн</label>
+        </span>
+        <span class="find-params-line">
+          <input type="checkbox" name="parking" id="parking">
+          <label for="parking">Парковка</label>
+        </span>
+        <span class="find-params-line">
+          <input type="checkbox" name="wifi" id="wifi">
+          <label for="wifi">Wi-Fi</label>
+        </span>
+      </fieldset>
+
+      <fieldset class="find-params-housing" name="housing">
+        <legend>Тип жилья:</legend>
+        <span class="find-params-line">
+          <input type="checkbox" name="hotel" id="hotel" checked>
+          <label for="hotel">Гостиница</label>
+        </span>
+        <span class="find-params-line">
+          <input type="checkbox" name="motel" id="motel" checked>
+          <label for="motel">Мотель</label>
+        </span>
+        <span class="find-params-line">
+          <input type="checkbox" name="apartments" id="apartments" checked>
+          <label for="apartments">Апартаменты</label>
+        </span>
+      </fieldset>
+
+      <div class="find-params-cost">
+        <fieldset name="cost">
+          <legend>Стоимость в сутки (р):</legend>
+          <label for="cost-min">От</label>
+          <input class="cost" type="text" name="cost-min" id="cost-min" placeholder="0" size="6">
+
+          <label for="cost-max">До</label>
+          <input class="cost" type="text" name="cost-max" id="cost-max" placeholder="3000" size="6">
+
+          <span class="cost-slider" id="cost-slider">
           </span>
         </fieldset>
-
-        <fieldset name="housing">
-          <legend>Тип жилья:</legend>
-          <span>
-            <input type="checkbox" name="hotel" id="hotel" checked>
-            <label for="hotel">Гостиница</label>
-          </span>
-          <span>
-            <input type="checkbox" name="motel" id="motel" checked>
-            <label for="motel">Мотель</label>
-          </span>
-          <span>
-            <input type="checkbox" name="apartments" id="apartments" checked>
-            <label for="apartments">Апартаменты</label>
-          </span>
-        </fieldset>
-
-        <div>
-          <fieldset class="find-params-cost" name="cost">
-            <legend>Стоимость в сутки (р):</legend>
-            <label for="cost-min">От</label>
-            <input type="number" name="cost-min" id="cost-min" min="0" placeholder="0">
-
-            <label for="cost-max">До</label>
-            <input type="number" name="cost-max" id="cost-max" min="0" placeholder="3000">
-
-            <span class="cost-slider" id="cost-slider">
-            </span>
-          </fieldset>
-          <button type="submit" name="show">Показать</button>
-        </div>
-      </form>
-    </div>
+        <button type="submit" name="show">Показать</button>
+      </div>
+    </form>
 
     <h2 class="visually-hidden">Результаты поиска</h2>
     <p class="results-count">Найдено: 3</p>

@@ -675,24 +675,44 @@ main .map {
  * Форма поиска
  */
 
-.find-params {
-  width: 1200px;
-  /* height: 218px;*/ /* Примерно */ 
+.find-params-form {
+  max-width: 1200px;
   background-color: #766357;
   background-image: url("../img/photo/mountains-blur.jpg");
+  background-repeat: no-repeat;
   background-size: 100%;
   border-width: 0;
-  padding-left: 73px;
-  padding-right: 73px;
-  padding-top: 40px;
-  padding-bottom: 30px;
-}
-
-.find-params-form {
+  padding-left: 73px; /* проверено */
+  padding-right: 73px; /* проверено */
+  padding-top: 26px; /* !! примерно */
+  padding-bottom: 30px; /* проверено */
+  /* for inner Flex elements */
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
+
+.find-params-features {
+  margin: 0;
+  display: flex;
+  direction: column;
+}
+
+.find-params-housing {
+  margin: 0;
+  margin-left: 110px; /* !!! вообще не замерено, просто на глаз */
+  margin-right: auto;
+  display: flex;
+  direction: column;
+}
+
+ .find-params-line {
+  margin-top: 22px;
+ }
+
+ .find-params-line label {
+  margin-left: 14px;
+ }
 
 .find-params-form fieldset {
   border: 0;
@@ -717,28 +737,31 @@ main .map {
   color: white; /* Проверено */
 }
 
-.find-params-form input[type="number"] {
-  font-size: 14px;
-  font-weight: normal;
+.find-params-form input.cost {
+  font-size: 14px; /* проверено */
+  font-weight: normal; /* проверено */
+  line-height: 21px; /* проверено */
   background-color: transparent;
   color: white;
   opacity: 1;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px; /* (32 высота - 21 line-height) / 2 */
+  padding-bottom: 6px;
   padding-left: 6px;
   padding-right: 6px;
   border-width: 0;
 }
 
-.find-params-form input[type="number"]:-ms-input-placeholder,
-.find-params-form input[type="number"]::-ms-input-placeholder,
-.find-params-form input[type="number"]::placeholder {
+.find-params-form input.cost:-ms-input-placeholder,
+.find-params-form input.cost::-ms-input-placeholder,
+.find-params-form input.cost::placeholder {
   color: white;
 }
 
 .find-params-form button[type="submit"] {
-  font-size: 14px;
+  display: inline-block;
+  font-size: 14px; /* проверено */
   text-transform: uppercase;
+  line-height: 21px; /* проверено */
   color: white;
   background-color: transparent;
   border: 2px solid white;
@@ -747,6 +770,7 @@ main .map {
   padding-right: 32px;
   padding-top: 13px;
   padding-bottom: 13px;
+  text-align: center;
 }
 
 .find-params-form button[type="submit"]:hover,
@@ -774,6 +798,9 @@ main .map {
   font-weight: normal;
 }
 
+.find-params-cost {
+
+}
 
 /*
  *  Виды сортировки
