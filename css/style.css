@@ -351,11 +351,21 @@ body {
 
  .find-hotel {
   background-color: white;
+  width: 100%;
+  /*
   width: 568px;
   margin-left: auto;
   margin-right: auto;
+  */
   padding-top: 50px;
+  background-color: rgba(255, 255, 255, 0);
  }
+
+.find-hotel-container {
+  width: 568px; 
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .find-hotel p {
   -webkit-margin-before: 0; /* убрать ненужное наследие user-agent Chrome */
@@ -369,8 +379,6 @@ body {
   font-weight: bold; /* проверено */
   line-height: 36px; /* проверено */
   text-align: center;
-  padding-left: 30px; /* явно нет в макете */
-  padding-right: 30px; /* явно нет в макете */
   margin-bottom: 25px;
 }
 
@@ -382,8 +390,6 @@ body {
   line-height: 24px; /* проверено */
   text-align: center;
   display: inline-block;
-  padding-left: 85px;
-  padding-right: 85px;
   margin-bottom: 48px;
 }
 
@@ -396,7 +402,7 @@ body {
   text-transform: uppercase; /* Проверено. */
   text-align: center;
   border: 0;
-  width: 568px; /* Проверено. */
+  width: 100%;
   padding-top: 31px;
   padding-bottom: 33px;
 }
@@ -410,6 +416,13 @@ body {
   color: rgba(255, 255, 255, 0.302); /* Проверено. */
   background-color: #503e33; /* Проверено. */
 }
+
+.find-hotel img {
+  position: absolute;
+  z-index: -1;
+  position: center top;
+}
+
 
 .find-hotel form {
   background-color: rgba(255, 255, 255, 1);
