@@ -125,7 +125,7 @@
           </span>
         </div>
 
-        <div  class="form-line">
+        <div class="form-line">
           <label for="date-checkout">Дата выезда:</label>
           <span>
             <input class="date" type="text" name="date-checkout" id="date-checkout"
@@ -137,28 +137,32 @@
           </span>
         </div>
 
-        <div>
+        <div class="form-line">
           <label for="adults">Взрослые:</label>
-          <span>
-            <button class="dec dec-adults" type="button">
-              <span class="visually-hidden">Уменьшить</span>
-            </button>
-            <input type="number" name="adults" id="adults" min="0" max="1000"
-              value="2">
-            <button class="inc inc-adults" type="button">
-              <span class="visually-hidden">Увеличить</span>
-            </button>
-          </span>
-          <span>
-            <label for="children">Дети:</label>
-            <button class="dec dec-children" type="button">
-              <span class="visually-hidden">Уменьшить</span>
-            </button>
-            <input type="number" name="children" id="children" min="0" max="5000"
-              value="0">
-            <button class="inc inc-children" type="button">
-              <span class="visually-hidden">Увеличить</span>
-            </button>
+
+          <span class="form-line-inner">
+            
+            <span class="container-number">
+              <button class="dec dec-adults" type="button" name="dec-adults">
+                <span class="visually-hidden">Уменьшить</span>
+              </button>
+              <input class="number" type="text" name="adults" id="adults" value="2" size="3">
+              <button class="inc inc-adults" type="button" name="inc-adults">
+                <span class="visually-hidden">Увеличить</span>
+              </button>
+            </span>
+
+            <span class="container-number">
+              <label for="children">Дети:</label>
+              <button class="dec dec-children" type="button">
+                <span class="visually-hidden">Уменьшить</span>
+              </button>
+              <input class="number" type="text" name="children" id="children" value="0" size="3">
+              <button class="inc inc-children" type="button">
+                <span class="visually-hidden">Увеличить</span>
+              </button>
+            </span>
+
           </span>
         </div>
 

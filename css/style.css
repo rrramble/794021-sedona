@@ -87,7 +87,7 @@ body {
  */
 
 .background-main {
-  width: 1200px; /* проверено */
+  width: 100%; /* проверено */
   height: 508px; /* видимая область фона */
   background-color: #766357;
   background-image:
@@ -438,7 +438,7 @@ body {
 }
 
 .form-line:nth-of-type(n+2) {
-  margin-top: 30px;
+  margin-top: 29px;
 }
 
 .find-hotel label {
@@ -458,7 +458,7 @@ body {
   background-color: #f2f2f2; /* Проверено. */
   border: 2px solid #f2f2f2;
   width: 346px;
-  padding-top: 4px; /* Проверено. +-1 */
+  padding-top: 3px; /* Проверено. +-1 */
   padding-bottom: 6px; /* Проверено. +-1 */
   padding-left: 11px; /* Проверено. +-1 */
   padding-right: 45px; /* примерно 12 + ширина иконки 24 + 13 */
@@ -504,6 +504,28 @@ body {
   background-image: url("../img/svg/calendar-pressed.svg");
 }
 
+.find-hotel .form-line-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 346px;
+  position: relative;
+}
+
+.find-hotel input.number {
+  color: black; /* Проверено. Но не реагирует на плейсхолдер */
+  font-size: 14px; /* Проверено. */
+  font-weight: bold; /* Проверено. */
+  line-height: 26px; /* Проверено. */
+  text-transform: uppercase; /* Проверено. */
+  background-color: #f2f2f2; /* Проверено. */
+  border: 2px solid #f2f2f2;
+  padding-top: 6px; /* line-height 26, а высота input по макету 38. 6=(38-26)/2 */ 
+  padding-bottom: 6px; 
+  padding-left: auto;
+  padding-right: auto;
+  text-align: center;
+}
 
 /*
  *
@@ -511,18 +533,35 @@ body {
  *
  */
 
+.find-hotel .container-number {
+  display: flex;
+  align-items: center;
+}
+
+
 /*
  * фон для кнопок "уменьшить" и "увеличить"
  */
 
-.find-hotel .dec,
-.find-hotel .inc {
+.find-hotel button.dec,
+.find-hotel button.inc {
   width: 38px; /* проверено */
-  height: 38px; /* проверено */
+  height: 40px; /* проверено */
   background-color: #f2f2f2; /* проверено */
   border-width: 0;
   padding: 0;
 }
+
+.find-hotel .dec {
+  left: 0;
+  top: 10px;
+}
+
+.find-hotel .inc {
+  right: 0;
+  top: 10px;
+}
+
 
 /*
  * горизонтальный "минус" для кнопок "уменьшить" и "увеличить"
@@ -599,10 +638,11 @@ body {
   border: 0;
   text-align: center;
   text-transform: uppercase; /*Проверено.*/
+  margin-top: 52px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 17px;
+  padding-bottom: 16px;
 }
 
 .find-hotel .btn-find:hover,
@@ -963,15 +1003,18 @@ main .map {
 .footer-site {
   display: flex;
   background-color: rgba(254, 254, 254, 0.9); /* Проверено */
-  width: 1200px;
+  width: 100%;
   margin: 0;
+  margin-top: 75px;
   padding-top: 36px; /* ! до иконок соц.сетей */
   padding-bottom: 36px; /* ! зеркально к верхнему отступу */
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .footer-hashtags {
-  max-width: 400px;
+  flex-basis: 250px;
+  flex-shrink: 1;
+  flex-grow: 1;
   color: black; /* Проверено */
   font-size: 21px; /* Проверено  */
   font-weight: bold; /* Проверено  */
@@ -982,19 +1025,25 @@ main .map {
   padding-bottom: 0;
   padding-left: 10px;
   padding-right: 10px;
-  /* for inner FLEX-elements: */
+  /* for inner flex elements */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .footer-social {
-  max-width: 400px;
+  flex-basis: 250px;
+  flex-shrink: 1;
+  flex-grow: 1;
   text-align: center;
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 10px;
   padding-right: 10px;
+  /* for inner flex elements */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-social ul {
@@ -1057,14 +1106,15 @@ main .map {
 }
 
 .footer-copyright {
-  max-width: 400px;
+  flex-basis: 250px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* for inner flex elements */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .footer-copyright p {
