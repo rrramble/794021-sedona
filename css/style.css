@@ -38,8 +38,8 @@ body {
   justify-content: space-between;
   width: 100%;
   margin: 0;
-  padding-left: 73px;
-  padding-right: 73px;
+  padding-left: 72px;
+  padding-right: 72px;
   padding-top: 14px;
   padding-bottom: 16px;
 }
@@ -88,16 +88,16 @@ body {
 
 .background-main {
   width: 1200px; /* проверено */
-  height: 510px; /* видимая область фона */
+  height: 508px; /* видимая область фона */
   background-color: #766357;
   background-image:
     url("../img/graphics/welcome.png"),
     url("../img/graphics/mountains-big-v.png"),
     url("../img/photo/mountains-big.jpg");
   background-position:
-    center 75px, /* +- 2 проверено */
-    center bottom,
-    center -56px; /* +- 2 проверено */
+    center 76px, /* проверено */
+    center bottom, /* !! нужно на 1px выше! */
+    center -56px; /* проверено */
   background-repeat:
     no-repeat,
     no-repeat;
@@ -113,7 +113,7 @@ body {
 }
 
 .reasons-summary {
-  padding-top: 60px; /* примерно, вычисление через line-height*/
+  padding-top: 39px; /* Через pixel-perfect */
   padding-left: 282px;
   padding-right: 282px;
 }
@@ -150,12 +150,14 @@ body {
 .reasons-list {
   display: flex;
   flex-direction: column;
+  padding-top: 1px;
 }
 
 .reason-main {
   display: flex;
   color: white;
   background-color: #81b3d2;
+  height: 256px; /* Точный размер из за конкретной высоты фотографии */
 }
 
 .reason-main:nth-of-type(1) {
@@ -163,13 +165,13 @@ body {
 }
 
 .reason-main-text {
-  padding-top: 24px; /* проверено +-1px */
-  padding-left: 46px; /* проверено +-1px */
-  padding-right: 46px; /* проверено +-1px */
-  padding-bottom: 24px; /* !!! не замерялось, симметрично с top */
+  padding-top: 26px; /* проверено +-1px */
+  padding-left: 50px; 
+  padding-right: 50px; 
+  padding-bottom: 26px; /* !!! не замерялось, симметрично с top */
 }
 
-.reason-main:nth-of-type(2n+1) .reason-main-text {
+.reason-main:nth-of-type(2n) .reason-main-text {
   order: 2;
 }
 
@@ -180,6 +182,10 @@ body {
   font-weight: bold; /* Проверено. */
   line-height: 21px; /* Проверено. */
   text-align: center;
+  padding-top: 1px;
+  padding-left: 55px;
+  padding-right: 55px;
+  margin-bottom: 22px;
 }
 
 .reason-main p {
@@ -197,14 +203,17 @@ body {
 
 .reasons-secondary {
   display: flex;
+  padding-top: 28px;
+  padding-bottom: 48px;
+  background-color: #eeeeee; /* Проверено. */
 }
 
 .reason-secondary {
-  background-color: #eeeeee; /* Проверено. */
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0;
-  padding: 47px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .reason-secondary h3 {
@@ -214,6 +223,9 @@ body {
   font-weight: bold; /* Проверено. */
   line-height: 21px; /* Проверено. */
   text-align: center;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-bottom: 22px;
 }
 
 .reason-secondary p {
@@ -277,23 +289,36 @@ body {
 
 .hints {
   display: flex;
+  align-items: baseline;
   background-color: white; /* Проверено, но на глаз выглядит серее. Перепроверить. */
-  padding-top: 50px;
-  padding-bottom: 82px; /* +-1 */
+  padding-top: 57px; /* по самой верхней иконке: сувениру ; */
+  padding-bottom: 70px; /* +-1 */
   order: -1;
 }
 
-.hints h3 {
+.hint {
+  display: block;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  padding-left: 47px;
+  padding-right: 47px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+.hint h3 {
   color: black; /* Проверено. */
-  background-color: rgba(255, 255, 255, 0);
   font-size: 21px; /* Проверено. */
   font-weight: bold; /* Проверено. */
   line-height: 21px; /* Проверено. */
   text-align: center;
-  padding-top: 75px;
+  margin-top: 105px;
+  margin-bottom: 24px;
 }
 
-.hints p {
+.hint p {
   color: black; /* Проверено. */
   background-color: rgba(255, 255, 255, 0);
   font-size: 14px; /* Проверено. */
@@ -301,26 +326,22 @@ body {
   text-align: center;
 }
 
-.hint {
-  display: block;
-  background-color: white;
-  background-size: 75px 72px;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  padding-left: 47px;
-  padding-right: 47px;
-}
-
 .hint-housing {
+  background-size: 75px 74px; /* проверено */
   background-image: url("../img/svg/icon-home.svg");
+  background-position: center 2px;
 }
 
 .hint-food {
+  background-size: 74px 72px; /* проверено */
   background-image: url("../img/svg/icon-hamburger.svg");
+  background-position: center 3px;
 }
 
 .hint-souvenirs {
+  background-size: 64px 76px; /* проверено */
   background-image: url("../img/svg/icon-souvenir.svg");
+  background-position: center top;
 }
 
 
@@ -333,7 +354,13 @@ body {
   width: 568px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 50px;
  }
+
+.find-hotel p {
+  -webkit-margin-before: 0; /* убрать ненужное наследие user-agent Chrome */
+  -webkit-margin-after: 0; /* убрать ненужное наследие user-agent Chrome */
+}
 
 .find-hotel .text-leading {
   color: black; /* проверено */
@@ -342,6 +369,9 @@ body {
   font-weight: bold; /* проверено */
   line-height: 36px; /* проверено */
   text-align: center;
+  padding-left: 30px; /* явно нет в макете */
+  padding-right: 30px; /* явно нет в макете */
+  margin-bottom: 25px;
 }
 
 .find-hotel .text {
@@ -351,6 +381,10 @@ body {
   font-weight: normal; /* проверено */
   line-height: 24px; /* проверено */
   text-align: center;
+  display: inline-block;
+  padding-left: 85px;
+  padding-right: 85px;
+  margin-bottom: 48px;
 }
 
 .find-hotel .btn-header {
@@ -364,7 +398,7 @@ body {
   border: 0;
   width: 568px; /* Проверено. */
   padding-top: 31px;
-  padding-bottom: 31px;
+  padding-bottom: 33px;
 }
 
 .find-hotel .btn-header:hover,
@@ -564,110 +598,6 @@ body {
 main .map {
   margin-left: auto;
   margin-right: auto;
-}
-
-
-/*
- * Footer
- */
-
-.footer-site {
-  background-color: rgba(254, 254, 254, 0.9); /* Проверено */
-  width: 1200px;
-  height: 120px; /* Проверено */
-}
-
-.footer-hashtags {
-  color: black; /* Проверено */
-  font-size: 21px; /* Проверено  */
-  font-weight: bold; /* Проверено  */
-  line-height: 26px; /* Проверено  */
-  text-decoration: none;
-}
-
-.footer-social ul {
-  list-style: none;
-  background-color: rgba(254, 254, 254, 0.9); /* Проверено */
-}
-
-.footer-social li {
-  display: inline-block;
-}
-
-.footer-social a {
-  display: inline-block;
-  color: black;
-  text-decoration: none;
-  width: 46px; /* Проверено. Но у иконки FB ширина 47px */
-  height: 48px; /* Проверено, но на макете 48,24 пикселей */
-  background-color: #81b3d2; /* Проверено */
-
-}
-
-.footer-social a:hover,
-.footer-social a:focus {
-  background-color: #669ec0; /* Проверено */
-}
-
-.footer-social a:active {
-  background-color: #5496bd; /* Проверено */
-}
-
-.footer-site .social-tw {
-  background-image: url("../img/svg/icon-tw.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.footer-site .social-tw:active {
-  background-image: url("../img/svg/icon-tw-pressed.svg");
-}
-
-.footer-site .social-fb {
-  background-image: url("../img/svg/icon-fb.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.footer-site .social-fb:active {
-  background-image: url("../img/svg/icon-fb-pressed.svg");
-}
-
-.footer-site .social-yt {
-  background-image: url("../img/svg/icon-yt.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.footer-site .social-yt:active {
-  background-image: url("../img/svg/icon-yt-pressed.svg");
-}
-
-.footer-copyright p {
-  color: black; /* Проверено */
-  font-size: 14px; /* Проверено */
-  font-style: normal; /* Проверено */
-  line-height: 26px; /* Проверено */
-}
-
-.footer-copyright a,
-.footer-copyright a:visited {
-  display: inline-block;
-  width: 115px; /* Проверено */
-  height: 41px; /* Проверено */
-  text-decoration: none;
-  background-image: url("../img/svg/logo-htmlacademy.svg");
-  background-repeat: no-repeat;
-  background-position: right;
-}
-
-.footer-copyright a:hover,
-.footer-copyright a:focus {
-  background-image: url("../img/svg/logo-htmlacademy-hover.svg");
-}
-
-.footer-copyright a:active {
-  background-image: url("../img/svg/logo-htmlacademy-pressed.svg");
 }
 
 
@@ -1000,4 +930,144 @@ main .map {
 .hotel-book-it:active {
   color: rgba(255, 255, 255, 0.3); /* проверено */
   background-color: #503e33; /* проверено */
+}
+
+
+/*
+ * Footer
+ */
+
+.footer-site {
+  display: flex;
+  background-color: rgba(254, 254, 254, 0.9); /* Проверено */
+  width: 1200px;
+  margin: 0;
+  padding-top: 36px; /* ! до иконок соц.сетей */
+  padding-bottom: 36px; /* ! зеркально к верхнему отступу */
+  justify-content: space-around;
+}
+
+.footer-hashtags {
+  max-width: 400px;
+  color: black; /* Проверено */
+  font-size: 21px; /* Проверено  */
+  font-weight: bold; /* Проверено  */
+  line-height: 26px; /* Проверено  */
+  text-decoration: none;
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* for inner FLEX-elements: */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social {
+  max-width: 400px;
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.footer-social ul {
+  list-style: none;
+  background-color: rgba(254, 254, 254, 0.9); /* Проверено */
+  padding: 0;
+  display: flex;
+}
+
+.footer-social li:not(:last-of-type) {
+  margin-right: 8px
+}
+
+.footer-social a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  width: 46px; /* Проверено. Но у иконки FB ширина 47px */
+  height: 48px; /* Проверено, но на макете 48,24 пикселей */
+  background-color: #81b3d2; /* Проверено */
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+  background-color: #669ec0; /* Проверено */
+}
+
+.footer-social a:active {
+  background-color: #5496bd; /* Проверено */
+}
+
+.footer-site .social-tw {
+  background-image: url("../img/svg/icon-tw.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-site .social-tw:active {
+  background-image: url("../img/svg/icon-tw-pressed.svg");
+}
+
+.footer-site .social-fb {
+  background-image: url("../img/svg/icon-fb.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-site .social-fb:active {
+  background-image: url("../img/svg/icon-fb-pressed.svg");
+}
+
+.footer-site .social-yt {
+  background-image: url("../img/svg/icon-yt.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-site .social-yt:active {
+  background-image: url("../img/svg/icon-yt-pressed.svg");
+}
+
+.footer-copyright {
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.footer-copyright p {
+  color: black; /* Проверено */
+  font-size: 14px; /* Проверено */
+  font-style: normal; /* Проверено */
+  line-height: 26px; /* Проверено */
+  margin-right: 8px;
+}
+
+.footer-copyright a,
+.footer-copyright a:visited {
+  display: inline-block;
+  width: 115px; /* Проверено */
+  height: 41px; /* Проверено */
+  text-decoration: none;
+  background-image: url("../img/svg/logo-htmlacademy.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.footer-copyright a:hover,
+.footer-copyright a:focus {
+  background-image: url("../img/svg/logo-htmlacademy-hover.svg");
+}
+
+.footer-copyright a:active {
+  background-image: url("../img/svg/logo-htmlacademy-pressed.svg");
 }
