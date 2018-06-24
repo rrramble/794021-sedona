@@ -30,24 +30,27 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
 }
 
 .nav-site ul {
   list-style: none;
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   margin: 0;
   padding-left: 72px;
   padding-right: 72px;
   padding-top: 14px;
   padding-bottom: 16px;
+  background: white;
+  /* for inner Felx elements */
+  display: flex;
+  justify-content: space-between;
 }
 
 .nav-site li {
-  flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 0;
+  flex-basis: 241px;
+  z-index: 2;
 }
 
 .nav-site li:nth-child(-n+2) {
@@ -58,10 +61,20 @@ body {
   text-align: right;
 }
 
+.nav-site li:nth-of-type(2) {
+  /* найти формулу: чтобы от начала до середины списка подпадало под это условие; */
+  margin-right: auto;
+}
+
+.nav-site li:nth-of-type(3) {
+  /* найти формулу: чтобы от середины до конца списка подпадало под это условие; */
+  margin-left: auto;
+}
+
 .nav-site a,
 .nav-site a:visited {
   color: black; /* Проверено. */
-  background-color: white; /* Проверено. */
+  background-color: transparent; /* Проверено. */
   font-size: 14px; /* Проверено. */
   line-height: 26px;
   font-weight: bold; /* Проверено. */
