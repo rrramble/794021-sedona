@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru"> 
 <head>
   <meta charset="utf-8">
   <title>Гостиницы в Седоне</title>
@@ -55,8 +55,8 @@
       <fieldset class="find-params-housing" name="housing">
         <legend>Тип жилья:</legend>
         <span class="find-params-line">
-          <input type="checkbox" name="hotel" id="hotel" checked>
-          <label for="hotel">Гостиница</label>
+          <input type="checkbox" name="hotels-list-item" id="hotels-list-item" checked>
+          <label for="hotels-list-item">Гостиница</label>
         </span>
         <span class="find-params-line">
           <input type="checkbox" name="motel" id="motel" checked>
@@ -119,47 +119,78 @@
 
     <div>
       <h3 class="visually-hidden">Найденные гостиницы</h3>
-      <ul class="hotels">
-        <li class="hotel">
-          <h3 class="hotel-name"><a href="#">Amara Resort &amp; Spa</a></h3>
+      <ul class="hotels-list">
+        <li class="hotels-list-item hotels-container">
+          <div class="hotels-list-item-text">
+            <h3 class="hotels-list-item-name"><a href="#">Amara Resort &amp; Spa</a></h3>
+
+            <span>
+              <p>Гостиница</p>
+              <p class="hotels-list-item-rates">От 4000 р.</p>
+            </span>
+
+            <span>
+              <a class="hotels-list-item-details" href="#">Подробнее</a>
+              <a class="hotels-list-item-book-it" href="#">Забронировать</a>
+            </span>
+          </div>        
+          
+          <div>
+            <p class="hotels-list-item-star-4">
+              <span class="visually-hidden">4 звезды</span>
+            </p>
+            <p class="hotels-list-item-rating">Рейтинг: 8,5</p>
+          </div>
           <img src="img/photo/housing-1.jpg" width="135" height="90" alt="Amara Resort and Spa">
-          <p>Гостиница</p>
-          <p>
-            <span class="visually-hidden">4 звезды</span>
-            <span class="hotel-star-4"></span>
-          </p>
-          <p class="hotel-rating">Рейтинг: 8,5</p>
-          <p class="hotel-rates">От 4000 р.</p>
-          <a class="hotel-details" href="#">Подробнее</a>
-          <a class="hotel-book-it" href="#">Забронировать</a>
         </li>
 
-        <li class="hotel">
-          <h3 class="hotel-name"><a href="#">Desert Quail Inn</a></h3>
+        <li class="hotels-list-item hotels-container">
+          <div class="hotels-list-item-text">
+            <h3 class="hotels-list-item-name"><a href="#">Desert Quail Inn</a></h3>
+
+            <span>
+              <p>Мотель</p>
+              <p class="hotels-list-item-rates">От 3000 р.</p>
+            </span>
+
+            <span>
+              <a class="hotels-list-item-details" href="#">Подробнее</a>
+              <a class="hotels-list-item-book-it" href="#">Забронировать</a>
+            </span>
+          </div>
+          <div>
+            <p class="hotels-list-item-star-3">
+              <span class="visually-hidden">3 звезды</span>
+            </p>
+            <p class="hotels-list-item-rating">Рейтинг: 8,9</p>
+          </div>
+
           <img src="img/photo/housing-2.jpg" width="135" height="90" alt="Desert Quail Inn">
-          <p>Мотель</p>
-          <p>
-            <span class="visually-hidden">3 звезды</span>
-            <span class="hotel-star-3"></span>
-          </p>
-          <p class="hotel-rating">Рейтинг: 8,9</p>
-          <p class="hotel-rates">От 3000 р.</p>
-          <a class="hotel-details" href="#">Подробнее</a>
-          <a class="hotel-book-it" href="#">Забронировать</a>
         </li>
 
-        <li class="hotel">
-          <h3 class="hotel-name"><a href="#">Villas at Poco Diablo</a></h3>
+        <li class="hotels-list-item hotels-container">
+          <div class="hotels-list-item-text">
+            <h3 class="hotels-list-item-name"><a href="#">Villas at Poco Diablo</a></h3>
+
+            <span>
+              <p>Апартаменты</p>
+              <p class="hotels-list-item-rates">От 2000 р.</p>
+            </span>
+
+            <span>
+              <a class="hotels-list-item-details" href="#">Подробнее</a>
+              <a class="hotels-list-item-book-it" href="#">Забронировать</a>
+            </span>
+          </div>
+
+          <div>
+            <p class="hotels-list-item-star-2">
+              <span class="visually-hidden">2 звезды</span>
+            </p>
+            <p class="hotels-list-item-rating">Рейтинг: 9,2</p>
+          </div>
+
           <img src="img/photo/housing-3.jpg" width="135" height="90" alt="Villas at Poco Diablo">
-          <p>Апартаменты</p>
-          <p>
-            <span class="visually-hidden">2 звезды</span>
-            <span class="hotel-star-2"></span>
-          </p>
-          <p class="hotel-rating">Рейтинг: 9,2</p>
-          <p class="hotel-rates">От 2000 р.</p>
-          <a class="hotel-details" href="#">Подробнее</a>
-          <a class="hotel-book-it" href="#">Забронировать</a>
         </li>
       </ul>
     </div>

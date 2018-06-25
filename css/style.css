@@ -440,6 +440,7 @@ body {
   padding-right: 55px;
   padding-left: 55px;
   padding-bottom: 55px;
+  margin-bottom: 75px;
   box-shadow: 0 15px 10px 7px rgba(0, 0, 0, 0.15); /* пока условно, размеры не замерял */
 }
 
@@ -943,6 +944,7 @@ main .map {
   background-color: white;
   justify-content: space-between;
   align-items: baseline;
+  background-color: rgb(254, 254, 254); /* цвет проверено, но прозречность нет !!*/
 }
 
 .results-count {
@@ -951,7 +953,6 @@ main .map {
   font-weight: bold;
   line-height: 26px;
   margin: 0;
-  margin-right: 50px;
 }
 
 
@@ -961,26 +962,30 @@ main .map {
 
 .hotels-summary-sort h3 {
   color: black;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 12px; /* проверено */
+  line-height: 18px; /* проверено */
   margin: 0;
-  margin-left: 40px;
-  margin-right: auto;
+  margin-left: 49px;
 }
 
 .sort-types {
   margin: 0;
-  margin-left: auto;
+  margin-left: 34px;
+  margin-right: auto;
   /*margin-right: auto;*/
   padding: 0;
-  /* для внутренних Flex-elementov */
+  /* для внутренних Flex-элементов */
   display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
 }
 
 .sort-types li {
   list-style: none;
-  padding-left: 17px;
-  padding-right: 17px;
+}
+
+.sort-types li:nth-of-type(n+2) {
+  margin-left: 43px;
 }
 
 .sort-types a {
@@ -1016,12 +1021,17 @@ main .map {
 
 .sort-direction {
   display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
 }
 
 .sort-direction li {
   list-style: none;
 }
 
+.sort-direction li:nth-last-of-type(n+2) {
+  margin-right: 12px; /* проверено  */
+}
 
 /*
  * Стрелочки вниз (сортировка по возрастанию: от меньшего к большему)
@@ -1081,50 +1091,85 @@ main .map {
   background-image: url("../img/svg/icon-dir-down-pressed.svg");
 }
 
+
 /*
- *  Списки найденных гостиниц
+ *  Список найденных гостиниц
  */
 
-.hotels {
+.hotels-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  background-color: rgb(254, 254, 254); /* цвет проверен, но прозречность нет !!*/
 }
 
-.hotel {
-  list-style: none;
+.hotels-list-item {
+  border-top: 1px solid rgb(229, 229, 229); /* цвет проверен, но прозречность нет !!*/
+  padding-bottom: 30px; /* проверено */
+  /* для внутренних flex-элементов */
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-top: 25px;
+}
+
+.hotels-list-item:last-of-type {
+  border-bottom: 1px solid rgb(229, 229, 229); /* цвет проверен, но прозречность нет !!*/
+  padding-bottom: 31px; /* реально у последнего элемента фотошоп показал до границы не 30, а 31*/
+}
+
+.hotels-list-item img {
+  order: -1;
+  margin-top: 5px; /* ошибка в макете? выровнено по верхнему краю наименования отеля,
+                     но если наименование будет с верхними выносными элементами, 
+                     например в букве "Й" то выравнивание собьется */
+}
+
+.hotels-list-item-text {
+  margin-left: 30px;
+  margin-right: auto;
+  /* для внутренних flex-элементов */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.hotels-list-item-name {
   color: black;
-  background-color: white;
-}
-
-.hotel-name {
   font-size: 21px; /* проверено */
   font-weight: bold; /* проверено */
+  margin: 0;
 }
 
-.hotel-name a,
-.hotel-name a:visited {
+.hotels-list-item-name a,
+.hotels-list-item-name a:visited {
   color: black;
   text-decoration: none;
 }
 
-.hotel-name a:hover,
-.hotel-name a:focus {
+.hotels-list-item-name a:hover,
+.hotels-list-item-name a:focus {
   color: #81b3d2; /* проверено */
 }
 
-.hotel-name a:active {
+.hotels-list-item-name a:active {
   color: rgba(0, 0, 0, 0.3); /* проверено */
 }
 
-.hotel p {
+.hotels-list-item-name + span {
+  display: flex;
+}
+
+.hotels-list-item p {
   font-size: 14px; /* проверено */
   font-weight: normal; /* проверено */
   line-height: 21px; /* проверено */
   color: #333; /* проверено */
+  margin: 0;
 }
 
-.hotel .hotel-rating {
+.hotels-list-item .hotels-list-item-rating {
   display: inline-block;
   color: #666; /* проверено */
   font-size: 14px; /* проверено */
@@ -1137,13 +1182,14 @@ main .map {
 
 }
 
-.hotel-rates {
+.hotels-list-item .hotels-list-item-rates {
+  margin-left: 36px;
   cursor: pointer; /* ОЗНАЧАЕТ ли, что элемент интерактивный?
                     (или что может быть таковым?) */
 }
 
-.hotel-details,
-.hotel-details:visited {
+.hotels-list-item-details,
+.hotels-list-item-details:visited {
   display: inline-block;
   color: white; /* проверено */
   background-color: #81b3d2; /* проверено */
@@ -1155,35 +1201,36 @@ main .map {
   padding-right: 8px;
 }
 
-.hotel-details:hover,
-.hotel-details:focus {
+.hotels-list-item-details:hover,
+.hotels-list-item-details:focus {
   background-color: #669ec0; /* проверено */
 }
 
-.hotel-details:active {
+.hotels-list-item-details:active {
   color: rgba(255, 255, 255, 0.3); /* проверено */
   background-color: #5496bd; /* проверено */
 }
 
-.hotel-book-it,
-.hotel-book-it:visited {
+.hotels-list-item-book-it,
+.hotels-list-item-book-it:visited {
   display: inline-block;
   color: white; /* проверено */
   background-color: #766357; /* проверено */
   text-decoration: none;
   font-weight: bold; /* проверено */
+  margin-left: 6px;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.hotel-book-it:hover,
-.hotel-book-it:focus {
+.hotels-list-item-book-it:hover,
+.hotels-list-item-book-it:focus {
   background-color: #604e43; /* проверено */
 }
 
-.hotel-book-it:active {
+.hotels-list-item-book-it:active {
   color: rgba(255, 255, 255, 0.3); /* проверено */
   background-color: #503e33; /* проверено */
 }
@@ -1198,7 +1245,6 @@ main .map {
   background-color: rgba(254, 254, 254, 0.9); /* Проверено */
   width: 100%;
   margin: 0;
-  margin-top: 75px;
   padding-top: 36px; /* ! до иконок соц.сетей */
   padding-bottom: 36px; /* ! зеркально к верхнему отступу */
   justify-content: space-between;
@@ -1311,7 +1357,7 @@ main .map {
 }
 
 .footer-copyright p {
-  color: black; /* Проверено */
+  color: black;  /* Проверено */
   font-size: 14px; /* Проверено */
   font-style: normal; /* Проверено */
   line-height: 26px; /* Проверено */
