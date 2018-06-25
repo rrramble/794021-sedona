@@ -428,7 +428,6 @@ body {
 .find-hotel img {
   position: absolute;
   z-index: -1;
-  position: center top;
 }
 
 .find-hotel form {
@@ -536,8 +535,6 @@ body {
   border: 2px solid #f2f2f2;
   padding-top: 6px; /* line-height 26, а высота input по макету 38. 6=(38-26)/2 */ 
   padding-bottom: 6px; 
-  padding-left: auto;
-  padding-right: auto;
   text-align: center;
 }
 
@@ -720,7 +717,7 @@ main .map {
 .find-params-features {
   margin: 0;
   display: flex;
-  direction: column;
+  flex-direction: column;
 }
 
 .find-params-housing {
@@ -728,7 +725,7 @@ main .map {
   margin-left: 110px; /* !!! вообще не замерено, просто на глаз */
   margin-right: auto;
   display: flex;
-  direction: column;
+  flex-direction: column;
 }
 
  .find-params-line {
@@ -1139,7 +1136,7 @@ main .map {
   color: rgba(0, 0, 0, 0.3); /* проверено */
 }
 
-.hotels-list-item-name + span {
+.hotels-list-item-name + div {
   display: flex;
 }
 
