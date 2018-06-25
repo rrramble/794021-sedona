@@ -782,69 +782,48 @@ main .map {
   color: white;
 }
 
-.find-params-form button[type="submit"] {
-  display: inline-block;
-  font-size: 14px; /* проверено */
-  text-transform: uppercase;
-  line-height: 21px; /* проверено */
-  color: white;
-  background-color: transparent;
-  border: 2px solid white;
-  border-radius: 2px;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  text-align: center;
-}
-
-.find-params-form button[type="submit"]:hover,
-.find-params-form button[type="submit"]:focus {
-  color: black;
-  background-color: white;
-}
 
 
 /*
  * Цена: поля ввода и слайдер
  */
 
-.find-params-cost {
-  width: 330px;
-  margin-right: 0;
-  margin-left: auto;
+/*!!!!!!!!!! */
+
+.filter-range {
+  width: 314px;
   color: white;
   text-transform: uppercase;
 }
 
-.find-params-cost-title {
-  font-size: 16px;
+.filter-range-title {
+  margin-bottom: 9px;
+  font-size: 14px;
   font-weight: bold;
   line-height: 21px;
-  margin-bottom: 9px;
 }
 
-.price-inputs {
+.price-controls {
   position: relative;
-  height: 36px; /* проверить */
+  height: 36px;
   margin-bottom: 20px;
-  border: 2px solid white;
-  border-radius: 2px;
   font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
 }
 
-.price-inputs::after {
+.price-controls::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   width: 2px;
   height: 22px;
-  background: white;
+  background: #ffffff;
   transform: translate(-50%, -50%);
 }
 
-.price-inputs label {
+.price-controls label {
   display: inline-block;
   font-size: 14px;
   line-height: 38px;
@@ -852,26 +831,23 @@ main .map {
   cursor: pointer;
 }
 
-.price-inputs .price-min,
-.price-inputs .price-max {
+.price-controls .min-price,
+.price-controls .max-price {
   width: 90px;
   padding-left: 65px;
 }
 
-.price-inputs input {
+.price-controls input {
   width: 50px;
   margin: 0;
-
-  color: inherit;
+  color: white;
   font: inherit;
-
   background: none;
   border: none;
 }
 
 .range-controls {
   position: relative;
-
   margin-bottom: 32px;
 }
 
@@ -883,42 +859,45 @@ main .map {
 .range-controls .bar {
   width: 80%;
   height: 2px;
-  background: white;
+  background: #ffffff;
 }
 
-.range-slider {
+.range-toggle {
   position: absolute;
   top: -9px;
-
   width: 4px;
   height: 4px;
-
   background: #ababab;
-  border: 8px solid white;
+  border: 8px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
 }
 
-.range-slider:hover {
+.range-toggle:hover {
   background: #1c4f80;
 }
 
-.range-slider-min {
+.range-toggle-min {
   left: 0;
 }
 
-.range-slider-max {
+.range-toggle-max {
   left: 80%;
 }
 
 .btn-transparent {
   display: block;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
   padding: 6px 35px;
 
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 14px; /* проверено */
+  line-height: 21px; /* проверено */
+  font-weight: normal; /* проверено */
   color: #ffffff;
   text-transform: uppercase;
 
@@ -929,9 +908,12 @@ main .map {
 }
 
 .btn-transparent:hover {
-  color: #000000;
-  background: #ffffff;
+  color: black;
+  background: white;
 }
+
+
+/*!!!!!!!!!!!*/
 
 
 /*

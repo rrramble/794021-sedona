@@ -68,21 +68,26 @@
         </span>
       </fieldset>
 
-      <div class="find-params-cost">
-        <div class="price-filter-title">Стоимость в сутки (р):</div>
-        <div class="price-inputs">
-          <label class="price-min">от <input type="text" name="price-min" value="0"></label>
-          <label class="price-max">до <input type="text" name="price-max" value="3000"></label>
-        </div>
-        <div class="range-controls">
-          <div class="scale">
-            <div class="bar"></div>
-          </div>
-          <div class="range-slider range-slider-min"></div>
-          <div class="range-slider range-slider-max"></div>
-        </div>
-        <button class="btn-transparent" type="submit">Показать</button>
+<!-- -->
+    <div class="filter-range">
+      <div class="filter-range-title">Стоимость в сутки (р):</div>
+      <div class="price-controls">
+        <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+        <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
       </div>
+      <div class="range-controls">
+        <div class="scale">
+          <div class="bar"></div>
+        </div>
+        <div class="range-toggle range-toggle-min"></div>
+        <div class="range-toggle range-toggle-max"></div>
+      </div>
+      <button class="btn-transparent" type="submit">Показать</button>
+    </div>
+<!-- -->
+
+
+
     </form>
 
     <div class="hotels-container hotels-summary-sort">
