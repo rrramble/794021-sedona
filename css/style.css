@@ -683,20 +683,31 @@ main .map {
  *
  */
 
+.hotels-container {
+  max-width: 1200px;
+  width: 100%;
+  padding-left: 73px; /* проверено */
+  padding-right: 73px; /* проверено */
+
+  /* если он не будет flex-элементом */
+  display: inline-block;
+
+  /* если он будет flex-элементом */
+  flex-basis: 1200px;
+  flex-shrink: 1;
+}
+
 
 /*
  * Форма поиска
  */
 
 .find-params-form {
-  max-width: 1200px;
   background-color: #766357;
   background-image: url("../img/photo/mountains-blur.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   border-width: 0;
-  padding-left: 73px; /* проверено */
-  padding-right: 73px; /* проверено */
   padding-top: 26px; /* !! примерно */
   padding-bottom: 30px; /* проверено */
   /* for inner Flex elements */
@@ -792,51 +803,187 @@ main .map {
   background-color: white;
 }
 
-.hotels {
-  list-style: none;
+
+/*
+ * Цена: поля ввода и слайдер
+ */
+
+.find-params-cost {
+  width: 330px;
+  margin-right: 0;
+  margin-left: auto;
+  color: white;
+  text-transform: uppercase;
+}
+
+.find-params-cost-title {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 21px;
+  margin-bottom: 9px;
+}
+
+.price-inputs {
+  position: relative;
+  height: 36px; /* проверить */
+  margin-bottom: 20px;
+  border: 2px solid white;
+  border-radius: 2px;
+  font-size: 0;
+}
+
+.price-inputs::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: white;
+  transform: translate(-50%, -50%);
+}
+
+.price-inputs label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.price-inputs .price-min,
+.price-inputs .price-max {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-inputs input {
+  width: 50px;
   margin: 0;
-  padding: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: white;
+}
+
+.range-slider {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid white;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-slider:hover {
+  background: #1c4f80;
+}
+
+.range-slider-min {
+  left: 0;
+}
+
+.range-slider-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+  background: #ffffff;
+}
+
+
+/*
+ * Количество результатов и параметры поиска
+ */
+
+
+.hotels-summary-sort {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .results-count {
   color: black;
-  background-color: white;
   font-size: 21px;
   font-weight: bold;
+  line-height: 26px;
+  margin: 0;
+  margin-right: 50px;
 }
 
-.sort-results {
-  color: black;
-  background-color: white;
-  font-weight: normal;
-}
-
-.find-params-cost {
-
-}
 
 /*
  *  Виды сортировки
  */
 
-.sort-type h3 {
+.hotels-summary-sort h3 {
   color: black;
-  background-color: white;
   font-size: 12px;
   line-height: 18px;
+  margin: 0;
+  margin-left: 40px;
+  margin-right: auto;
 }
 
-.sort-type ul {
+.sort-types {
+  margin: 0;
+  margin-left: auto;
+  /*margin-right: auto;*/
+  padding: 0;
+  /* для внутренних Flex-elementov */
   display: flex;
 }
 
-.sort-type li {
+.sort-types li {
   list-style: none;
   padding-left: 17px;
   padding-right: 17px;
 }
 
-.sort-type a {
+.sort-types a {
   color: rgba(0, 0, 0, 0.3);
   background-color: white;
   font-size: 12px;
@@ -845,13 +992,13 @@ main .map {
   border-bottom: 1px dotted #81b3d2;
 }
 
-.sort-type a:hover,
-.sort-type a:focus {
+.sort-types a:hover,
+.sort-types a:focus {
   color: #81b3d2;
   border-bottom: 1px dotted #81b3d2;
 }
 
-.sort-type a:active {
+.sort-types a:active {
   color: black;
   border-bottom: 0;
 }
@@ -867,7 +1014,7 @@ main .map {
  *  Направление сортировки
  */
 
-.sort-direction ul {
+.sort-direction {
   display: flex;
 }
 
@@ -937,6 +1084,12 @@ main .map {
 /*
  *  Списки найденных гостиниц
  */
+
+.hotels {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .hotel {
   list-style: none;
