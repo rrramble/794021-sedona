@@ -6,7 +6,10 @@ body {
   font-family: "PTSans", "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   max-width: 1200px;
-  margin: 0 auto;
+  min-width: 768px;
+  width: 100%;
+  margin: 0;
+  position: relative;
 }
 
 .visually-hidden {
@@ -20,10 +23,14 @@ body {
   overflow: hidden;
 }
 
-
 /*
  * Навигация сайта
  */
+
+.nav-site {
+  width: 100%;
+  position: relative;
+}
 
 .nav-site a.logo {
   display: inline-block;
@@ -49,16 +56,17 @@ body {
 
 .nav-site li {
   flex-shrink: 1;
-  flex-basis: 241px;
-  z-index: 2;
+  width: 230px; /* 312px до фото-видео -10px margin-left, -72px padding of li */
 }
 
-.nav-site li:nth-child(-n+2) {
+.nav-site li:nth-of-type(-n+2) {
   text-align: left;
+  margin-right: 10px;
 }
 
-.nav-site li:nth-last-child(-n+2) {
+.nav-site li:nth-last-of-type(-n+2) {
   text-align: right;
+  margin-left: 10px;
 }
 
 .nav-site li:nth-of-type(2) {
@@ -101,6 +109,7 @@ body {
 
 .background-main {
   width: 100%; /* проверено */
+  min-width: 768px;
   height: 508px; /* видимая область фона */
   background-color: #766357;
   background-image:
@@ -110,10 +119,14 @@ body {
   background-position:
     center 76px, /* проверено */
     center bottom, /* !! нужно на 1px выше! */
-    center -56px; /* проверено */
+    center 20%; /* 56px проверено */
   background-repeat:
     no-repeat,
     no-repeat;
+  background-size:
+    auto,
+    contain,
+    100%;
 }
 
 
@@ -127,8 +140,8 @@ body {
 
 .reasons-summary {
   padding-top: 39px; /* Через pixel-perfect */
-  padding-left: 282px;
-  padding-right: 282px;
+  padding-left: 25%;
+  padding-right: 25%;
 }
 
 .reasons .text-leading {
@@ -164,13 +177,18 @@ body {
   display: flex;
   flex-direction: column;
   padding-top: 1px;
+  width: 100%;
 }
 
 .reason-main {
-  display: flex;
   color: white;
   background-color: #81b3d2;
-  height: 256px; /* Точный размер из за конкретной высоты фотографии */
+  min-height: 256px; /* Точный размер из за конкретной высоты фотографии */
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .reason-main:nth-of-type(1) {
@@ -178,10 +196,12 @@ body {
 }
 
 .reason-main-text {
+  flex-shrink: 1;
   padding-top: 26px; /* проверено +-1px */
-  padding-left: 50px; 
-  padding-right: 50px; 
   padding-bottom: 26px; /* !!! не замерялось, симметрично с top */
+  padding-left: 4%; 
+  padding-right: 4%; 
+  width: 33.33%;
 }
 
 .reason-main:nth-of-type(2n) .reason-main-text {
@@ -196,8 +216,6 @@ body {
   line-height: 21px; /* Проверено. */
   text-align: center;
   padding-top: 1px;
-  padding-left: 55px;
-  padding-right: 55px;
   margin-bottom: 22px;
 }
 
@@ -208,6 +226,11 @@ body {
   font-weight: normal; /* Проверено. */
   line-height: 21px; /* Проверено. */
   text-align: center;
+}
+
+.reason-main img {
+  flex-shrink: 1;
+  min-width: 512px;
 }
 
 /*
@@ -225,8 +248,8 @@ body {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .reason-secondary h3 {
@@ -236,8 +259,8 @@ body {
   font-weight: bold; /* Проверено. */
   line-height: 21px; /* Проверено. */
   text-align: center;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 5%;
+  padding-right: 5%;
   margin-bottom: 22px;
 }
 
@@ -307,6 +330,7 @@ body {
   padding-top: 57px; /* по самой верхней иконке: сувениру ; */
   padding-bottom: 70px; /* +-1 */
   order: -1;
+  width: 100%;
 }
 
 .hint {
@@ -314,8 +338,8 @@ body {
   background-color: white;
   background-repeat: no-repeat;
   background-position-x: center;
-  padding-left: 47px;
-  padding-right: 47px;
+  padding-left: 3.9%;
+  padding-right: 3.9%;
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0;
@@ -363,6 +387,8 @@ body {
  */
 
  .find-hotel {
+  display: block;
+  position: relative;
   background-color: white;
   width: 100%;
   padding-top: 50px;
@@ -378,6 +404,8 @@ body {
 .find-hotel p {
   -webkit-margin-before: 0; /* убрать ненужное наследие user-agent Chrome */
   -webkit-margin-after: 0; /* убрать ненужное наследие user-agent Chrome */
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .find-hotel .text-leading {
@@ -428,6 +456,7 @@ body {
 .find-hotel img {
   position: absolute;
   z-index: -1;
+  width: 100%;
 }
 
 .find-hotel form {
