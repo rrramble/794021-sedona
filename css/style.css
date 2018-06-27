@@ -182,7 +182,7 @@ body {
 .reason-main {
   color: white;
   background-color: #81b3d2;
-  min-height: 256px; /* Точный размер из за конкретной высоты фотографии */
+  /*min-height: 256px; *//* Точный размер из за конкретной высоты фотографии */
   width: 100%;
 
   display: flex;
@@ -199,8 +199,9 @@ body {
   padding-top: 26px; /* проверено +-1px */
   padding-bottom: 26px; /* !!! не замерялось, симметрично с top */
   padding-left: 4%; 
-  padding-right: 4%; 
-  width: 33.33%;
+  padding-right: 4%;
+  max-width: 400px;
+  min-width: 256px;
 }
 
 .reason-main:nth-of-type(2n) .reason-main-text {
@@ -229,7 +230,9 @@ body {
 
 .reason-main img {
   flex-shrink: 1;
+  max-width: 800px;
   min-width: 512px;
+  height: auto;
 }
 
 /*
