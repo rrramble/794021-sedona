@@ -45,8 +45,8 @@ body {
   margin: 0;
   padding-left: 72px;
   padding-right: 72px;
-  padding-top: 14px;
-  padding-bottom: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background: white;
   /* for inner Felx elements */
   display: flex;
@@ -55,26 +55,32 @@ body {
 
 .nav-site li {
   flex-shrink: 1;
-  width: 230px; /* 312px до фото-видео -10px margin-left, -72px padding of li */
+  width: 230px; /* 312px до фото-видео  -72px padding of li -10px */
 }
 
-.nav-site li:nth-of-type(-n+2) {
+.nav-site li:nth-of-type(-n+2) { /* селектор жестко привязан к меню из 4-х пунктов! */
   text-align: left;
   margin-right: 10px;
 }
 
-.nav-site li:nth-last-of-type(-n+2) {
+.nav-site li:nth-last-of-type(-n+2) { /* селектор жестко привязан к меню из 4-х пунктов! */
   text-align: right;
   margin-left: 10px;
 }
 
 .nav-site li:nth-of-type(2) {
   /* найти формулу: чтобы от начала до середины списка подпадало под это условие; */
-  margin-right: auto;
+  /* margin-right: auto; */
 }
 
 .nav-site li:nth-of-type(3) {
-  /* найти формулу: чтобы от середины до конца списка подпадало под это условие; */
+  /* этот класс пока не дописан и нужен в будущем для тех меню,
+     в которых более 4 пунктов меню.
+  */
+
+  /*
+   найти формулу: чтобы от середины до конца списка подпадало под это условие;
+   */
   margin-left: auto;
 }
 
@@ -118,7 +124,7 @@ body {
   background-position:
     center 76px, /* проверено */
     center bottom, /* !! нужно на 1px выше! */
-    center 20%; /* 56px проверено */
+    center 20.7%; /* проверено 56px */
   background-repeat:
     no-repeat,
     no-repeat;
@@ -150,7 +156,8 @@ body {
   font-weight: bold; /* Проверено. */
   line-height: 26px; /* Проверено. */
   text-align: center;
-  margin-bottom: 27px;
+  margin-top: 20px;
+  margin-bottom: 31px;
 }
 
 .reasons .text {
@@ -175,7 +182,6 @@ body {
 .reasons-list {
   display: flex;
   flex-direction: column;
-  padding-top: 1px;
   width: 100%;
 }
 
@@ -196,12 +202,15 @@ body {
 
 .reason-main-text {
   flex-shrink: 1;
-  padding-top: 26px; /* проверено +-1px */
+  padding-top: 47px; /* проверено +-1px */
   padding-bottom: 26px; /* !!! не замерялось, симметрично с top */
-  padding-left: 4%; 
-  padding-right: 4%;
   max-width: 400px;
   min-width: 256px;
+
+/* паддинг для h3 и для p может быть разным! поэтому не нужно задавать в parent! */
+/*  padding-left: 4%; 
+    padding-right: 4%;
+ */  
 }
 
 .reason-main:nth-of-type(2n) .reason-main-text {
@@ -215,8 +224,30 @@ body {
   font-weight: bold; /* Проверено. */
   line-height: 21px; /* Проверено. */
   text-align: center;
-  padding-top: 1px;
-  margin-bottom: 22px;
+  margin-top: 0;
+  margin-bottom: 21px;
+  margin-left: 23%;
+  margin-right: 23%;
+}
+
+.reason-main:nth-of-type(1) h3::after { /* оформление совпадает с тегом P, но по сути нумерация это часть заголовка */
+  content: "— № 1 —";
+  display: block;
+  font-size: 14px; /* Проверено. */
+  line-height: 21px; /* Проверено. */
+  padding-top: 25px;
+  font-weight: normal; /* Проверено. */
+  text-align: center;
+}
+
+.reason-main:nth-of-type(2) h3::after {
+  content: "— № 2 —";
+  display: block;
+  font-size: 14px; /* Проверено. */
+  line-height: 21px; /* Проверено. */
+  padding-top: 23px;
+  font-weight: normal; /* Проверено. */
+  text-align: center;
 }
 
 .reason-main p {
@@ -226,6 +257,8 @@ body {
   font-weight: normal; /* Проверено. */
   line-height: 21px; /* Проверено. */
   text-align: center;
+  margin-left: 12%;
+  margin-right: 12%;
 }
 
 .reason-main img {
@@ -241,8 +274,9 @@ body {
 
 .reasons-secondary {
   display: flex;
-  padding-top: 28px;
-  padding-bottom: 48px;
+  padding-top: 25px;
+  padding-bottom: 0;
+  padding-bottom: 46px;
   background-color: #eeeeee; /* Проверено. */
 }
 
@@ -250,8 +284,8 @@ body {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .reason-secondary h3 {
@@ -261,9 +295,9 @@ body {
   font-weight: bold; /* Проверено. */
   line-height: 21px; /* Проверено. */
   text-align: center;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin-bottom: 22px;
+  padding-left: 30%;
+  padding-right: 30%;
+  margin-bottom: 21px;
 }
 
 .reason-secondary p {
@@ -273,54 +307,36 @@ body {
   font-weight: normal; /* Проверено. */
   line-height: 21px; /* Проверено. */
   text-align: center;
-}
-
-.reason-main:nth-of-type(1) h3::after { /* оформление совпадает с тегом P, но по сути нумерация это часть заголовка */
-  content: "- № 1 -";
-  display: block;
-  font-size: 14px; /* Проверено. */
-  line-height: 21px; /* Проверено. */
-  padding-top: 24px;
-  font-weight: normal; /* Проверено. */
-  text-align: center;
-}
-
-.reason-main:nth-of-type(2) h3::after {
-  content: "- № 2 -";
-  display: block;
-  font-size: 14px; /* Проверено. */
-  line-height: 21px; /* Проверено. */
-  padding-top: 24px;
-  font-weight: normal; /* Проверено. */
-  text-align: center;
+  padding-left: 17%;
+  padding-right: 17%;
 }
 
 .reason-secondary:nth-of-type(1) h3::after {
-  content: "- № 3 -";
+  content: "— № 3 —";
   display: block;
   font-size: 14px; /* Проверено. */
   line-height: 21px; /* Проверено. */
-  padding-top: 24px;
+  padding-top: 25px;
   font-weight: normal; /* Проверено. */
   text-align: center;
 }
 
 .reason-secondary:nth-of-type(2) h3::after {
-  content: "- № 4 -";
+  content: "— № 4 —";
   display: block;
   font-size: 14px; /* Проверено. */
   line-height: 21px; /* Проверено. */
-  padding-top: 24px;
+  padding-top: 25px;
   font-weight: normal; /* Проверено. */
   text-align: center;
 }
 
 .reason-secondary:nth-of-type(3) h3::after {
-  content: "- № 5 -";
+  content: "— № 5 —";
   display: block;
   font-size: 14px; /* Проверено. */
   line-height: 21px; /* Проверено. */
-  padding-top: 24px;
+  padding-top: 25px;
   font-weight: normal; /* Проверено. */
   text-align: center;
 }
@@ -329,7 +345,7 @@ body {
   display: flex;
   align-items: baseline;
   background-color: white; /* Проверено, но на глаз выглядит серее. Перепроверить. */
-  padding-top: 57px; /* по самой верхней иконке: сувениру ; */
+  padding-top: 56px; /* по самой верхней иконке: сувениру ; */
   padding-bottom: 70px; /* +-1 */
   order: -1;
   width: 100%;
@@ -404,10 +420,10 @@ body {
 }
 
 .find-hotel p {
-  -webkit-margin-before: 0; /* убрать ненужное наследие user-agent Chrome */
-  -webkit-margin-after: 0; /* убрать ненужное наследие user-agent Chrome */
   margin-top: 0;
   margin-bottom: 0;
+  margin-left: 14%;
+  margin-right: 14%;
 }
 
 .find-hotel .text-leading {
@@ -417,7 +433,7 @@ body {
   font-weight: bold; /* проверено */
   line-height: 36px; /* проверено */
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .find-hotel .text {
@@ -428,7 +444,7 @@ body {
   line-height: 24px; /* проверено */
   text-align: center;
   display: inline-block;
-  margin-bottom: 48px;
+  margin-bottom: 46px;
 }
 
 .find-hotel .btn-header {
@@ -441,8 +457,8 @@ body {
   text-align: center;
   border: 0;
   width: 100%;
-  padding-top: 31px;
-  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 31px;
 }
 
 .find-hotel .btn-header:hover,
