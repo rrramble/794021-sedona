@@ -535,33 +535,34 @@ body {
   border: 2px solid #e5e5e5; /* Проверено. */
 }
 
-.find-hotel input:-ms-input-placeholder,
-.find-hotel input::-ms-input-placeholder,
 .find-hotel input::placeholder {
   color: black; /* Проверено. */
   font-size: 14px; /* Проверено. */
   opacity: 1; /* Поверил */
 }
 
-.find-hotel button.date {
-  background-image: url("../img/svg/calendar.svg");
+button.calendar {
+  /* background-image: url("../img/svg/calendar.svg"); */
+  fill: #cacaca;
   background-repeat: no-repeat;
   background-color: transparent;
   width: 24px;
   height: 24px;
   border-width: 0;
   position: absolute;
-  right: 6px;
+  right: 12px;
   top: 7px;
 }
 
-.find-hotel button.date:hover,
-.find-hotel button.date:focus {
-  background-image: url("../img/svg/calendar-hover.svg");
+button.calendar:hover path,
+button.calendar:focus path {
+  /*background-image: url("../img/svg/calendar-hover.svg");*/
+  fill: #000;
 }
 
-.find-hotel button.date:active {
-  background-image: url("../img/svg/calendar-pressed.svg");
+button.calendar:active path {
+  /* background-image: url("../img/svg/calendar-pressed.svg"); */
+  fill: #81b3d2;
 }
 
 .find-hotel .form-line-inner {
