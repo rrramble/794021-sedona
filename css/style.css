@@ -33,6 +33,7 @@ body {
 
 .nav-site a.logo {
   display: inline-block;
+  vertical-align: top;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -58,29 +59,25 @@ body {
   width: 230px; /* 312px до фото-видео  -72px padding of li -10px */
 }
 
-.nav-site li:nth-of-type(-n+2) { /* селектор жестко привязан к меню из 4-х пунктов! */
+.nav-site li:nth-of-type(1) { /* селектор жестко привязан к меню из 4-х пунктов! */
+  /* найти формулу: чтобы от начала до середины списка подпадало под это условие; */
   text-align: left;
   margin-right: 10px;
 }
 
-.nav-site li:nth-last-of-type(-n+2) { /* селектор жестко привязан к меню из 4-х пунктов! */
+.nav-site li:nth-of-type(2) { /* селектор жестко привязан к меню из 4-х пунктов! */
+  text-align: left;
+  margin-right: auto;
+}
+
+.nav-site li:nth-last-of-type(1) { /* селектор жестко привязан к меню из 4-х пунктов! */
+  /* найти формулу: чтобы от середины до конца списка подпадало под это условие; */
   text-align: right;
   margin-left: 10px;
 }
 
-.nav-site li:nth-of-type(2) {
-  /* найти формулу: чтобы от начала до середины списка подпадало под это условие; */
-  /* margin-right: auto; */
-}
-
-.nav-site li:nth-of-type(3) {
-  /* этот класс пока не дописан и нужен в будущем для тех меню,
-     в которых более 4 пунктов меню.
-  */
-
-  /*
-   найти формулу: чтобы от середины до конца списка подпадало под это условие;
-   */
+.nav-site li:nth-last-of-type(2) { /* селектор жестко привязан к меню из 4-х пунктов! */
+  text-align: right;
   margin-left: auto;
 }
 
@@ -144,7 +141,8 @@ body {
 }
 
 .reasons-summary {
-  padding-top: 39px; /* Через pixel-perfect */
+  padding-top: 34px; /* Через pixel-perfect */
+  padding-bottom: 35px;
   padding-left: 25%;
   padding-right: 25%;
 }
@@ -156,8 +154,8 @@ body {
   font-weight: bold; /* Проверено. */
   line-height: 26px; /* Проверено. */
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 31px;
+  margin-top: 26px;
+  margin-bottom: 26px;
 }
 
 .reasons .text {
@@ -167,7 +165,8 @@ body {
   font-weight: normal; /* Проверено. */
   line-height: 26px; /* Проверено. */
   text-align: center;
-  margin-bottom: 50px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 
@@ -444,6 +443,7 @@ body {
   line-height: 24px; /* проверено */
   text-align: center;
   display: inline-block;
+  vertical-align: top;
   margin-bottom: 46px;
 }
 
@@ -458,7 +458,7 @@ body {
   border: 0;
   width: 100%;
   padding-top: 30px;
-  padding-bottom: 31px;
+  padding-bottom: 30px;
 }
 
 .find-hotel .btn-header:hover,
@@ -566,11 +566,13 @@ button.calendar:active path {
 }
 
 .find-hotel .form-line-inner {
+  width: 346px;
+  position: relative;
+
+  /* for inner flex-elements */
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 346px;
-  position: relative;
 }
 
 .find-hotel input.number {
@@ -580,11 +582,17 @@ button.calendar:active path {
   line-height: 26px; /* Проверено. */
   text-transform: uppercase; /* Проверено. */
   background-color: #f2f2f2; /* Проверено. */
-  border: 2px solid #f2f2f2;
+  border: 0;
   padding-top: 6px; /* line-height 26, а высота input по макету 38. 6=(38-26)/2 */ 
   padding-bottom: 6px; 
   text-align: center;
 }
+
+.label-children {
+	margin-right: 27px;
+	margin-left: auto;
+}
+
 
 /*
  *
@@ -604,39 +612,42 @@ button.calendar:active path {
 
 .find-hotel button.dec,
 .find-hotel button.inc {
+  display: inline-block;
+  vertical-align: center;
   width: 38px; /* проверено */
-  height: 40px; /* проверено */
+  height: 38px; /* проверено */
   background-color: #f2f2f2; /* проверено */
   border-width: 0;
   padding: 0;
-}
-
-.find-hotel .dec {
-  left: 0;
-  top: 10px;
-}
-
-.find-hotel .inc {
-  right: 0;
-  top: 10px;
-}
-
+ }
 
 /*
- * горизонтальный "минус" для кнопок "уменьшить" и "увеличить"
+ * горизонтальный "минус" для кнопки "уменьшить"
  */
 
-.find-hotel .dec::before,
+.find-hotel .dec::before {
+  content: "";
+  background-color: #a9a9a9; /* Проверено */
+  width: 11px; /* Проверено */
+  height: 3px; /* Проверено */
+  display: block;
+  position: relative;
+  left: 13px; 
+}
+
+/*
+ * горизонтальный "минус" для кнопки "увеличить"
+ */
+
 .find-hotel .inc::before {
   content: "";
-  display: inline-block;
-  border-width: 0;
-  width: 12px; /* Проверено. Но не сплошной цвет: возможно 11px; */
-  height: 3px; /* Проверено */
   background-color: #a9a9a9; /* Проверено */
-  padding: 0;
-  margin: 0;
-  z-index: 2;
+  width: 11px; /* Проверено */
+  height: 3px; /* Проверено */
+  display: block;
+  position: relative;
+  left: 13px;
+  top: 7px;
 }
 
 /*
@@ -646,11 +657,13 @@ button.calendar:active path {
 .find-hotel .inc::after {
   content: "";
   display: inline-block;
-  border-width: 0;
+  vertical-align: top;
   width: 3px; /* Проверено */
-  height: 12px; /* Проверено. Но не сплошной цвет: возможно 11px; */
+  height: 11px; /* Проверено */
   background-color: #a9a9a9; /* Проверено */
-  z-index: 2;
+
+  position: relative;
+  left: -1px;
 }
 
 /*
@@ -737,6 +750,7 @@ main .map {
 
   /* если он не будет flex-элементом */
   display: inline-block;
+  vertical-align: top;
 
   /* если он будет flex-элементом */
   flex-basis: 1200px;
@@ -870,6 +884,7 @@ main .map {
 
 .price-controls label {
   display: inline-block;
+  vertical-align: top;
   font-size: 14px;
   line-height: 38px;
   vertical-align: top;
@@ -1067,6 +1082,7 @@ main .map {
 .sort-direction a,
 .sort-direction a:visited {
   display: inline-block;
+  vertical-align: top;
   width: 11px;
   height: 10px;
   text-decoration: none;
@@ -1198,6 +1214,7 @@ main .map {
 
 .hotels-list-item .hotels-list-item-rating {
   display: inline-block;
+  vertical-align: top;
   color: #666; /* проверено */
   font-size: 14px; /* проверено */
   font-weight: normal; /* проверено */
@@ -1218,6 +1235,7 @@ main .map {
 .hotels-list-item-details,
 .hotels-list-item-details:visited {
   display: inline-block;
+  vertical-align: top;
   color: white; /* проверено */
   background-color: #81b3d2; /* проверено */
   text-decoration: none;
@@ -1241,6 +1259,7 @@ main .map {
 .hotels-list-item-book-it,
 .hotels-list-item-book-it:visited {
   display: inline-block;
+  vertical-align: top;
   color: white; /* проверено */
   background-color: #766357; /* проверено */
   text-decoration: none;
@@ -1272,8 +1291,8 @@ main .map {
   background-color: rgba(254, 254, 254, 0.9); /* Проверено */
   width: 100%;
   margin: 0;
-  padding-top: 36px; /* ! до иконок соц.сетей */
-  padding-bottom: 36px; /* ! зеркально к верхнему отступу */
+  padding-top: 20px; /* ! до иконок соц.сетей */
+  padding-bottom: 20px; /* ! зеркально к верхнему отступу */
   justify-content: space-between;
 }
 
@@ -1320,11 +1339,12 @@ main .map {
 }
 
 .footer-social li:not(:last-of-type) {
-  margin-right: 8px
+  margin-right: 6px; /* проверено */
 }
 
 .footer-social a {
   display: inline-block;
+  vertical-align: top;
   color: black;
   text-decoration: none;
   width: 46px; /* Проверено. Но у иконки FB ширина 47px */
@@ -1394,6 +1414,7 @@ main .map {
 .footer-copyright a,
 .footer-copyright a:visited {
   display: inline-block;
+  vertical-align: top;
   width: 115px; /* Проверено */
   height: 41px; /* Проверено */
   text-decoration: none;
