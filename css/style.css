@@ -565,6 +565,10 @@ button.calendar:active path {
   fill: #81b3d2;
 }
 
+/*
+ * Форма: строка 'Количество взрослых и детей'
+ */
+
 .find-hotel .form-line-inner {
   width: 346px;
   position: relative;
@@ -582,7 +586,7 @@ button.calendar:active path {
   line-height: 26px; /* Проверено. */
   text-transform: uppercase; /* Проверено. */
   background-color: #f2f2f2; /* Проверено. */
-  border: 0;
+  border-width: 0;
   padding-top: 6px; /* line-height 26, а высота input по макету 38. 6=(38-26)/2 */ 
   padding-bottom: 6px; 
   text-align: center;
@@ -647,7 +651,7 @@ button.calendar:active path {
   display: block;
   position: relative;
   left: 13px;
-  top: 7px;
+  top: 8px;
 }
 
 /*
@@ -663,7 +667,8 @@ button.calendar:active path {
   background-color: #a9a9a9; /* Проверено */
 
   position: relative;
-  left: -1px;
+  left: 0;
+  top: 1px;
 }
 
 /*
