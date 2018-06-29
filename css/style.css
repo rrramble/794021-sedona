@@ -127,7 +127,7 @@ body {
     no-repeat;
   background-size:
     auto,
-    contain,
+    101%,
     100%;
 }
 
