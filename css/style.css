@@ -74,7 +74,7 @@ input[type='radio'].visually-hidden {
 
 .nav-site li:nth-of-type(4n+1) {
   /* первый элемент каждой строки меню */
-  width: calc( 100% / (2 + 2*288/240) );
+  width: calc( 100% / ( 2 + 2*288/240 ) );
   padding-right: 10px;
   text-align: left;
 }
@@ -88,14 +88,14 @@ input[type='radio'].visually-hidden {
 
 .nav-site li:nth-of-type(4n+3) {
   /* третий элемент каждой строки меню */
-  width: calc( 100%  / ( 2 + 2*240/288 ) - 1px );
+  width: calc( 100% / ( 2 + 2*240/288 ) - 1px );
   padding-left: 65px;
   text-align: right;
 }
 
 .nav-site li:nth-of-type(4n+4) {
   /* четвертый элемент каждой строки меню */
-  width: calc( 100% / (2 + 2*288/240) );
+  width: calc( 100% / ( 2 + 2*288/240 ) );
   padding-left: 10px;
   text-align: right;
 }
@@ -777,7 +777,7 @@ main .map {
   vertical-align: top;
 
   /* если он будет flex-элементом */
-  flex-width: 1200px;
+  width: 1200px;
 }
 
 
@@ -788,7 +788,7 @@ main .map {
 .find-params-form {
   background-color: #766357;
   background-image: url("../img/photo/mountains-blur.jpg");
-  background-repeat-x: repeat;
+  background-repeat: repeat-y;
   background-size: 100%;
   background-position-y: -55px; 
   border-width: 0;
@@ -1050,11 +1050,17 @@ main .map {
  */
 
 .hotels-summary-sort {
-  display: flex;
   background-color: white;
+  padding-top: 29px;
+  padding-bottom: 20px;
+  background-color: rgb(254, 254, 254); /* цвет проверен, но прозречность нет !!*/
+
+  display: flex;
   justify-content: space-between;
   align-items: baseline;
-  background-color: rgb(254, 254, 254); /* цвет проверено, но прозречность нет !!*/
+  flex-wrap: wrap;
+  word-break: break-all;
+  word-wrap: break-word;
 }
 
 .results-count {
@@ -1063,6 +1069,7 @@ main .map {
   font-weight: bold;
   line-height: 26px;
   margin: 0;
+  padding-right: 21px;
 }
 
 
@@ -1075,27 +1082,32 @@ main .map {
   font-size: 12px; /* проверено */
   line-height: 18px; /* проверено */
   margin: 0;
-  margin-left: 49px;
+  margin-left: 15px;
+  padding-left: 12px; /* визуально такой же размер, как и шрифт*/
+  padding-right: 12px; /* визуально такой же размер, как и шрифт*/
 }
 
 .sort-types {
   margin: 0;
-  margin-left: 34px;
   margin-right: auto;
-  /*margin-right: auto;*/
   padding: 0;
-  /* для внутренних Flex-элементов */
+  padding-left: 16px;
+  /* для внутренних flex-элементов */
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .sort-types li {
+  flex-shrink: 1;
+  min-width: 80px;
+  max-width: 200px;
   list-style: none;
-}
-
-.sort-types li:nth-of-type(n+2) {
-  margin-left: 43px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 1px;
+  padding-bottom: 12px; /* для переполнения: если пункты меню перейдут на другую строку */
 }
 
 .sort-types a {
@@ -1130,9 +1142,11 @@ main .map {
  */
 
 .sort-direction {
+  margin: 0;
+  margin-left: auto;
   display: flex;
   justify-content: flex-end;
-  align-items: baseline;
+  align-items: flex-end;
 }
 
 .sort-direction li {
@@ -1150,7 +1164,7 @@ main .map {
 .sort-direction a,
 .sort-direction a:visited {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   width: 11px;
   height: 10px;
   text-decoration: none;
