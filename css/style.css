@@ -1,6 +1,9 @@
 *  {
   box-sizing: border-box;
 }
+html {
+  line-height: 1.0;
+}
 
 body {
   font-family: "PTSans", "PT Sans", "Arial", sans-serif;
@@ -139,7 +142,7 @@ body {
     no-repeat;
   background-size:
     auto,
-    101%,
+    100.1249%, /* компенсация 1px в связи с ошибкой в файле фонового рисунка <= 1.499px/1200px = 0.1249% */
     100%;
 }
 
