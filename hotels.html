@@ -36,56 +36,59 @@
   <main>
     <h2 class="visually-hidden">Поиск по параметрам</h2>
     <form class="hotels-container find-params-form" action="https://echo.htmlacademy.ru" method="get">
-      <fieldset class="find-params-features" name="features">
+      <fieldset name="features">
         <legend>Инфраструктура:</legend>
-        <span class="find-params-line">
-          <input type="checkbox" name="pool" id="pool" checked>
-          <label for="pool">Бассейн</label>
-        </span>
-        <span class="find-params-line">
-          <input type="checkbox" name="parking" id="parking">
-          <label for="parking">Парковка</label>
-        </span>
-        <span class="find-params-line">
-          <input type="checkbox" name="wifi" id="wifi">
-          <label for="wifi">Wi-Fi</label>
-        </span>
+        <ul>
+          <li class="find-params-line">
+            <input class="checkbox visually-hidden" type="checkbox" name="pool" id="pool" checked>
+            <label for="pool">Бассейн</label>
+          </li>
+          <li class="find-params-line">
+            <input class="checkbox visually-hidden" type="checkbox" name="parking" id="parking">
+            <label for="parking">Парковка</label>
+          </li>
+          <li class="find-params-line">
+            <input class="checkbox visually-hidden" type="checkbox" name="wifi" id="wifi">
+            <label for="wifi">Wi-Fi</label>
+          </li>
+        </ul>
       </fieldset>
 
-      <fieldset class="find-params-housing" name="housing">
+      <fieldset name="housing">
         <legend>Тип жилья:</legend>
-        <span class="find-params-line">
-          <input type="checkbox" name="hotels-list-item" id="hotels-list-item" checked>
-          <label for="hotels-list-item">Гостиница</label>
-        </span>
-        <span class="find-params-line">
-          <input type="checkbox" name="motel" id="motel" checked>
-          <label for="motel">Мотель</label>
-        </span>
-        <span class="find-params-line">
-          <input type="checkbox" name="apartments" id="apartments" checked>
-          <label for="apartments">Апартаменты</label>
-        </span>
+        <ul>
+          <li class="find-params-line">
+            <input class="checkbox visually-hidden" type="checkbox" name="type-hotel" id="type-hotel" checked>
+            <label for="type-hotel">Гостиница</label>
+          </li>
+          <li class="find-params-line">
+            <input class="checkbox visually-hidden" type="checkbox" name="type-motel" id="type-motel" checked>
+            <label for="type-motel">Мотель</label>
+          </li>
+          <li class="find-params-line">
+            <input class="checkbox visually-hidden" type="checkbox" name="type-apartments" id="type-apartments" checked>
+            <label for="type-apartments">Апартаменты</label>
+          </li>
+        </ul>
       </fieldset>
 
-    <div class="filter-range">
-      <div class="filter-range-title">Стоимость в сутки (р):</div>
-      <div class="price-controls">
-        <label class="min-price">от <input type="text" name="min-price" value="0"></label>
-        <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
-      </div>
-      <div class="range-controls">
-        <div class="scale">
-          <div class="bar"></div>
+      <div class="filter-range">
+        <div class="filter-range-title">Стоимость в сутки (р):</div>
+        <div class="price-controls">
+          <label class="price-min" for="price-min">от</label>
+          <input type="text" name="price-min" value="0">
+          <label class="price-max" for="price-max">до</label>>
+          <input type="text" name="price-max" value="3000">
         </div>
-        <div class="range-toggle range-toggle-min"></div>
-        <div class="range-toggle range-toggle-max"></div>
+        <div class="range-controls">
+          <div class="scale">
+            <div class="bar"></div>
+          </div>
+          <div class="range-toggle range-toggle-min"></div>
+          <div class="range-toggle range-toggle-max"></div>
+        </div>
+        <button class="btn-submit" type="submit">Показать</button>
       </div>
-      <button class="btn-transparent" type="submit">Показать</button>
-    </div>
-<!-- -->
-
-
 
     </form>
 

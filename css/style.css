@@ -14,13 +14,17 @@ body {
   position: relative;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -765,8 +769,8 @@ main .map {
 .hotels-container {
   max-width: 1200px;
   width: 100%;
-  padding-left: 73px; /* проверено */
-  padding-right: 73px; /* проверено */
+  padding-left: 72px; /* проверено */
+  padding-right: 72px; /* проверено */
 
   /* если он не будет flex-элементом */
   display: inline-block;
@@ -784,49 +788,105 @@ main .map {
 .find-params-form {
   background-color: #766357;
   background-image: url("../img/photo/mountains-blur.jpg");
-  background-repeat: no-repeat;
+  background-repeat-x: repeat;
   background-size: 100%;
+  background-position-y: -55px; 
   border-width: 0;
-  padding-top: 26px; /* !! примерно */
-  padding-bottom: 30px; /* проверено */
-  /* for inner Flex elements */
+  padding-top: 29px; /* !! примерно */
+  padding-bottom: 5px; /* !! примерно */
+  /* для внутренних flex-элементов */
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
-
-.find-params-features {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.find-params-housing {
-  margin: 0;
-  margin-left: 110px; /* !!! вообще не замерено, просто на глаз */
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-}
-
- .find-params-line {
-  margin-top: 22px;
- }
-
- .find-params-line label {
-  margin-left: 14px;
- }
 
 .find-params-form fieldset {
-  border: 0;
+  width: 255px;
+  padding-left: 0;
+  padding-right: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  border-width: 0;
 }
 
-.find-params-form input[type="checkbox"] {
-  border-width: 0;
-  outline: 2px solid white;
-  border-radius: 2px;
-  background-color: transparent;
+.find-params-form fieldset:nth-last-of-type(1) {
+  margin-right: auto;
 }
+
+.find-params-form legend {
+  margin-bottom: 29px;
+}
+
+ .find-params-form label {
+  max-width: 100%;
+  word-break: break-all;
+  word-wrap: break-word;
+ }
+
+.find-params-form ul {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.find-params-form li {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.checkbox + label {
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+}
+
+.checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/svg/checkbox-off.svg");
+  background-repeat: no-repeat;
+
+  background-color: transparent;
+  border-width: 0;
+}
+
+.checkbox:checked + label::before {
+  width: 27px;
+  background-image: url("../img/svg/checkbox-on.svg");
+}
+
+.checkbox:disabled + label {
+  color: #6a6a6a;
+}
+
+.checkbox:disabled + label::before {
+  background-image: url("img/svg/checkbox-disabled-off.svg");
+}
+
+.checkbox:checked:disabled + label::before {
+  width: 27px;
+  background-image: url("img/svg/checkbox-disabled-on.svg");
+}
+
+.checkbox:focus + label::before {
+  outline: 1px dashed #ffffff;
+  outline-offset: 2px;
+}
+
 
 .find-params-form legend {
   font-size: 16px; /* Проверено */
@@ -840,41 +900,20 @@ main .map {
   color: white; /* Проверено */
 }
 
-.find-params-form input.cost {
-  font-size: 14px; /* проверено */
-  font-weight: normal; /* проверено */
-  line-height: 21px; /* проверено */
-  background-color: transparent;
-  color: white;
-  opacity: 1;
-  padding-top: 5px; /* (32 высота - 21 line-height) / 2 */
-  padding-bottom: 6px;
-  padding-left: 6px;
-  padding-right: 6px;
-  border-width: 0;
-}
-
-.find-params-form input.cost:-ms-input-placeholder,
-.find-params-form input.cost::-ms-input-placeholder,
-.find-params-form input.cost::placeholder {
-  color: white;
-}
-
-
 
 /*
  * Цена: поля ввода и слайдер
  */
 
 .filter-range {
-  width: 314px;
+  width: 318px;
   color: white;
   text-transform: uppercase;
 }
 
 .filter-range-title {
   margin-bottom: 9px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   line-height: 21px;
 }
@@ -886,16 +925,45 @@ main .map {
   font-size: 0;
   border: 2px solid #ffffff;
   border-radius: 2px;
+  /* Для внутренних flex-элементов */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.price-controls .price-min,
+.price-controls .price-max {
+  width: 86px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+  text-align: right;
+}
+
+.price-controls input {
+  width: 63px;
+  height: 21px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font: inherit;
+  background: none;
+  border: none;
 }
 
 .price-controls::after {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
   width: 2px;
   height: 22px;
   background: #ffffff;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -906,21 +974,6 @@ main .map {
   line-height: 38px;
   vertical-align: top;
   cursor: pointer;
-}
-
-.price-controls .min-price,
-.price-controls .max-price {
-  width: 90px;
-  padding-left: 65px;
-}
-
-.price-controls input {
-  width: 50px;
-  margin: 0;
-  color: white;
-  font: inherit;
-  background: none;
-  border: none;
 }
 
 .range-controls {
@@ -963,14 +1016,14 @@ main .map {
   left: 80%;
 }
 
-.btn-transparent {
+.find-params-form .btn-submit {
   display: block;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
-  padding: 6px 35px;
+  padding: 5px 34px;
 
   font-size: 14px; /* проверено */
   line-height: 21px; /* проверено */
@@ -982,21 +1035,19 @@ main .map {
   border: 2px solid #ffffff;
   border-radius: 2px;
   cursor: pointer;
+  position: relative;
+  left: -5px;
 }
 
-.btn-transparent:hover {
+.find-params-form .btn-submit:hover {
   color: black;
   background: white;
 }
 
 
-/*!!!!!!!!!!!*/
-
-
 /*
  * Количество результатов и параметры поиска
  */
-
 
 .hotels-summary-sort {
   display: flex;
