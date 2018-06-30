@@ -46,39 +46,51 @@ body {
   margin: 0;
   padding-left: 72px;
   padding-right: 72px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
   background: white;
   /* for inner Felx elements */
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .nav-site li {
-  flex-shrink: 1;
-  width: 230px; /* 312px до фото-видео  -72px padding of li -10px */
+  margin-top: 15px;
+  margin-bottom: 15px;
+  word-break: break-all;
+  word-wrap: break-word;
+  flex-wrap: wrap;
 }
 
-.nav-site li:nth-of-type(1) { /* селектор жестко привязан к меню из 4-х пунктов! */
-  /* найти формулу: чтобы от начала до середины списка подпадало под это условие; */
+.nav-site li:nth-of-type(4n+1) {
+  /* первый элемент каждой строки меню */
+  width: calc( 100% / (2 + 2*298/230) );
+  padding-right: 10px;
   text-align: left;
-  margin-right: 10px;
 }
 
-.nav-site li:nth-of-type(2) { /* селектор жестко привязан к меню из 4-х пунктов! */
+.nav-site li:nth-of-type(4n+2) {
+  /* второй элемент каждой строки меню */
+  width: calc( 100% / ( 2 + 2*230/298 ) - 1px );
+  padding-right: 65px;
   text-align: left;
-  margin-right: auto;
 }
 
-.nav-site li:nth-last-of-type(1) { /* селектор жестко привязан к меню из 4-х пунктов! */
-  /* найти формулу: чтобы от середины до конца списка подпадало под это условие; */
+.nav-site li:nth-of-type(4n+3) {
+  /* третий элемент каждой строки меню */
+  width: calc( 100%  / ( 2 + 2*230/298 ) - 1px );
+  padding-left: 65px;
   text-align: right;
-  margin-left: 10px;
 }
 
-.nav-site li:nth-last-of-type(2) { /* селектор жестко привязан к меню из 4-х пунктов! */
+.nav-site li:nth-of-type(4n+4) {
+  /* четвертый элемент каждой строки меню */
+  width: calc( 100% / (2 + 2*298/230) );
+  padding-left: 10px;
   text-align: right;
-  margin-left: auto;
 }
 
 .nav-site a,
