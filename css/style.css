@@ -70,28 +70,28 @@ body {
 
 .nav-site li:nth-of-type(4n+1) {
   /* первый элемент каждой строки меню */
-  width: calc( 100% / (2 + 2*298/230) );
+  width: calc( 100% / (2 + 2*288/240) );
   padding-right: 10px;
   text-align: left;
 }
 
 .nav-site li:nth-of-type(4n+2) {
   /* второй элемент каждой строки меню */
-  width: calc( 100% / ( 2 + 2*230/298 ) - 1px );
+  width: calc( 100% / ( 2 + 2*240/288 ) - 1px );
   padding-right: 65px;
   text-align: left;
 }
 
 .nav-site li:nth-of-type(4n+3) {
   /* третий элемент каждой строки меню */
-  width: calc( 100%  / ( 2 + 2*230/298 ) - 1px );
+  width: calc( 100%  / ( 2 + 2*240/288 ) - 1px );
   padding-left: 65px;
   text-align: right;
 }
 
 .nav-site li:nth-of-type(4n+4) {
   /* четвертый элемент каждой строки меню */
-  width: calc( 100% / (2 + 2*298/230) );
+  width: calc( 100% / (2 + 2*288/240) );
   padding-left: 10px;
   text-align: right;
 }
@@ -773,8 +773,7 @@ main .map {
   vertical-align: top;
 
   /* если он будет flex-элементом */
-  flex-basis: 1200px;
-  flex-shrink: 1;
+  flex-width: 1200px;
 }
 
 
@@ -866,8 +865,6 @@ main .map {
 /*
  * Цена: поля ввода и слайдер
  */
-
-/*!!!!!!!!!! */
 
 .filter-range {
   width: 314px;
