@@ -427,7 +427,7 @@ input[type='radio'].visually-hidden {
   position: relative;
   background-color: white;
   width: 100%;
-  padding-top: 50px;
+  padding-top: 49px;
   background-color: rgba(255, 255, 255, 0);
  }
 
@@ -444,6 +444,7 @@ input[type='radio'].visually-hidden {
   font-weight: bold; /* проверено */
   line-height: 36px; /* проверено */
   text-align: center;
+  margin-top: 0;
   margin-bottom: 24px;
 }
 
@@ -459,8 +460,6 @@ input[type='radio'].visually-hidden {
   font-weight: normal; /* проверено */
   line-height: 24px; /* проверено */
   text-align: center;
-  display: inline-block;
-  vertical-align: top;
 }
 
 .find-hotel .btn-header {
