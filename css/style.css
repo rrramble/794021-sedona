@@ -911,15 +911,15 @@ main .map {
 
 .filter-range {
   width: 318px;
-  color: white;
-  text-transform: uppercase;
 }
 
 .filter-range-title {
-  margin-bottom: 9px;
+  margin-top: -2px;
+  margin-bottom: 11px;
   font-size: 16px;
   font-weight: bold;
   line-height: 21px;
+  color: white;
 }
 
 .price-controls {
@@ -955,12 +955,11 @@ main .map {
   margin: 0;
   padding: 0;
   color: white;
-  font: inherit;
-  background: none;
+  background: transparent;
   border: none;
 }
 
-.price-controls::after {
+.price-controls::after { /* разделитель двух input */
   content: "";
   position: absolute;
   width: 2px;
@@ -974,8 +973,9 @@ main .map {
 .price-controls label {
   display: inline-block;
   vertical-align: top;
-  font-size: 14px;
-  line-height: 38px;
+  font-size: 14px; /* проверено */
+  line-height: 21px; /* проверено */
+  font-weight: normal; /* проверено */
   vertical-align: top;
   cursor: pointer;
 }
@@ -997,27 +997,37 @@ main .map {
 }
 
 .range-toggle {
-  position: absolute;
-  top: -9px;
+  box-sizing: content-box;
   width: 4px;
   height: 4px;
-  background: #ababab;
+  background-color: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
-  cursor: pointer;
-}
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.3);
 
-.range-toggle:hover {
-  background: #1c4f80;
+  position: absolute;
+  top: -9px;
+  cursor: pointer;
 }
 
 .range-toggle-min {
   left: 0;
 }
 
+.range-toggle-min:hover {
+  border-width: 9px;
+  left: -1px;
+  top: -10px;
+}
+
 .range-toggle-max {
   left: 80%;
+}
+
+.range-toggle-max:hover {
+  border-width: 9px;
+  top: -10px;
+  left: calc(80% - 1px);
 }
 
 .find-params-form .btn-submit {
