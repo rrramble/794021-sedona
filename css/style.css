@@ -1244,17 +1244,19 @@ main .map {
 
 .hotels-list-item:last-of-type {
   border-bottom: 1px solid rgb(229, 229, 229); /* цвет проверен, но прозречность нет !!*/
-  padding-bottom: 31px; /* реально у последнего элемента фотошоп показал до границы не 30, а 31*/
 }
 
 .hotels-list-item img {
   order: -1;
-  /* ошибка в макете? выровнено по верхнему краю наименования отеля,
-                     но если наименование будет с верхними выносными элементами, 
-                     например в букве "Й" то выравнивание собьется */
+
+  /* ошибка в макете?
+    В фотошопе фото гостиницы выровнено по верхнему краю наименования отеля,
+    но если наименование будет с верхними выносными элементами, например в букве "Й",
+    то выравнивание собьется
+    тот же отступ далее для уровня звезд гостиницы */
   margin-top: 5px;
-  
-  /* защита от невнимательности */
+
+  /* защита от вставки больших фотографий */
   max-width: 135px;
   min-width: 135px;
   max-height: 90px;
@@ -1263,6 +1265,7 @@ main .map {
 .hotels-list-item-text {
   margin-left: 30px;
   margin-right: auto;
+
   /* для внутренних flex-элементов */
   display: flex;
   flex-direction: column;
@@ -1336,11 +1339,11 @@ main .map {
   color: white; /* проверено */
   background-color: #81b3d2; /* проверено */
   text-decoration: none;
-  margin-right: 4px;
+  margin-right: 2px;
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 16px;
-  padding-right: 16px;
+  padding-right: 17px;
 }
 
 .hotel-go-details:hover,
@@ -1365,11 +1368,11 @@ main .map {
   color: white; /* проверено */
 
   background-color: #766357; /* проверено */
-  margin-right: 4px; /* технически не нужно, но если кнопки поменяют местами, то пригодится*/
+  margin-right: 2px; /* по макету не видно (не требуется), но если кнопки поменяют местами, то пригодится*/
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 16px;
-  padding-right: 16px;
+  padding-right: 17px;
 }
 
 .hotel-go-book-it:hover,
@@ -1385,7 +1388,15 @@ main .map {
 .stars-rating {
   margin: 0;
   margin-left: auto;
-  
+
+  /* ошибка в макете?
+    В фотошопе фото гостиницы выровнено по верхнему краю наименования отеля,
+    но если наименование будет с верхними выносными элементами, например в букве "Й",
+    то выравнивание собьется
+    тот же отступ далее для уровня звезд гостиницы */
+  margin-top: 4px;
+
+  /* для внутренних flex-элементов */  
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1470,11 +1481,11 @@ main .map {
   width: 111px;
   background-color: #f2f2f2; /* проверено */
 
-  padding-top: 5px; /* проверено */
+  padding-top: 6px; /* проверено */
   padding-bottom: 6px; /* проверено */
-  padding-left: 12px; /* проверено */
-  padding-right: 12px; /* проверено */
-  margin-top: 53px;
+  padding-left: 11px; /* проверено */
+  padding-right: 13px; /* проверено */
+  margin-top: 47px;
 
   text-align: right;
   word-break: break-all;
