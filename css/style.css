@@ -225,14 +225,9 @@ input[type='radio'].visually-hidden {
 .reason-main-text {
   flex-shrink: 1;
   padding-top: 47px; /* проверено +-1px */
-  padding-bottom: 26px; /* !!! не замерялось, симметрично с top */
+  padding-bottom: 5px;
   max-width: 400px;
   min-width: 256px;
-
-/* паддинг для h3 и для p может быть разным! поэтому не нужно задавать в parent! */
-/*  padding-left: 4%; 
-    padding-right: 4%;
- */  
 }
 
 .reason-main:nth-of-type(2n) .reason-main-text {
@@ -281,6 +276,7 @@ input[type='radio'].visually-hidden {
   text-align: center;
   margin-left: 12%;
   margin-right: 12%;
+  margin-bottom: 0;
 }
 
 .reason-main img {
@@ -441,13 +437,6 @@ input[type='radio'].visually-hidden {
   margin-right: auto;
 }
 
-.find-hotel p {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 14%;
-  margin-right: 14%;
-}
-
 .find-hotel .text-leading {
   color: black; /* проверено */
   background-color: white; /* проверено */
@@ -459,6 +448,11 @@ input[type='radio'].visually-hidden {
 }
 
 .find-hotel .text {
+  margin-top: 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 46px;
+
   color: black; /* проверено */
   background-color: white; /* проверено */
   font-size: 14px; /* проверено */
@@ -467,7 +461,6 @@ input[type='radio'].visually-hidden {
   text-align: center;
   display: inline-block;
   vertical-align: top;
-  margin-bottom: 46px;
 }
 
 .find-hotel .btn-header {
