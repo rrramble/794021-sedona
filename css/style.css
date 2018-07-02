@@ -1397,38 +1397,69 @@ main .map {
 }
 
 .stars-5 {
-  /*content: "\2605\2605\2605\2605\2605";*/
-  background-image: url("../img/svg/star.svg");
-  background-repeat: repeat-x;
-  width: calc( 18px * 5 + 1px );
+  background-image:
+    url("../img/svg/star.svg"),
+    url("../img/svg/star.svg"),
+    url("../img/svg/star.svg"),
+    url("../img/svg/star.svg"),
+    url("../img/svg/star.svg");
+  background-repeat: no-repeat;
+  background-position:
+       0 0,
+    24px 0,
+    48px 0,
+    72px 0,
+    96px 0;
+  width: 114px;
   height: 17px;
 }
 
 .stars-4 {
-  background-image: url("../img/svg/star.svg");
-  background-repeat: repeat-x;
-  width: calc( 18px * 4 + 1px );
+  background-image:
+    url("../img/svg/star.svg"),
+    url("../img/svg/star.svg"),
+    url("../img/svg/star.svg"),
+    url("../img/svg/star.svg");
+  background-repeat: no-repeat;
+  background-position:
+       0 0,
+    24px 0,
+    48px 0,
+    72px 0;
+  width: 90px;
   height: 17px;
 }
 
 .stars-3 {
-  background-image: url("../img/svg/star.svg");
-  background-repeat: repeat-x;
-  width: calc( 18px * 3 + 1px );
+  background-image:
+    url("../img/svg/star.svg"),
+    url("../img/svg/star.svg"),
+    url("../img/svg/star.svg");
+  background-repeat: no-repeat;
+  background-position:
+       0 0,
+    24px 0,
+    48px 0;
+  width: 66px;
   height: 17px;
 }
 
 .stars-2 {
-  background-image: url("../img/svg/star.svg");
-  background-repeat: repeat-x;
-  width: calc( 18px * 2 + 1px );
+  background-image:
+    url("../img/svg/star.svg"),
+    url("../img/svg/star.svg");
+  background-repeat: no-repeat;
+  background-position:
+       0 0,
+    24px 0;
+  width: 42px;
   height: 17px;
 }
 
 .stars-1 {
   background-image: url("../img/svg/star.svg");
-  background-repeat: repeat-x;
-  width: calc( 18px * 1 + 1px );
+  background-repeat: no-repeat;
+  width: 18px;
   height: 17px;
 }
 
