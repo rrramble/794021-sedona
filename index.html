@@ -110,7 +110,7 @@
           Поиск гостиницы в Седоне
         </button>
 
-        <form class="find-hotel-container form-closed" action="https://echo.htmlacademy.ru" method="get">
+        <form class="find-hotel-container" action="https://echo.htmlacademy.ru" method="get">
           <div class="form-line">
             <label for="date-checkin">Дата заезда:</label>
             <span>
@@ -209,5 +209,18 @@
       </div>
     </footer>
   </div>
+
+<script>
+    var btnShow = document.querySelector(".btn-header");
+    var form = document.querySelector(".find-hotel form");
+
+    // Обработчик нажатия на кнопку 'показать форму'
+    btnShow.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      form.classList.toggle("form-closed");
+    });
+
+  </script>
+
 </body>
 </html>

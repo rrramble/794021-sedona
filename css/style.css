@@ -514,6 +514,20 @@ form.form-closed {
   display: none;
 }
 
+form:not(.form-closed) {
+  animation-name: form-drifts;
+  animation-duration: 0.5s;
+}
+
+@keyframes form-drifts {
+  0% {
+   left: -2000px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
 .form-line {
   display: flex;
   justify-content: space-between;
