@@ -370,7 +370,6 @@ input[type='radio'].visually-hidden {
 }
 
 .hint {
-  display: block;
   background-color: white;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -423,7 +422,6 @@ input[type='radio'].visually-hidden {
  */
 
  .find-hotel {
-  display: block;
   position: relative;
   background-color: white;
   width: 100%;
@@ -432,7 +430,6 @@ input[type='radio'].visually-hidden {
  }
 
 .find-hotel-container {
-  display: block;
   width: 568px; 
   margin-left: auto;
   margin-right: auto;
@@ -803,12 +800,6 @@ main .map {
   width: 100%;
   padding-left: 72px; /* проверено */
   padding-right: 72px; /* проверено */
-
-  /* если он не будет flex-элементом */
-  display: inline-block;
-  vertical-align: top;
-
-  /* если он будет flex-элементом */
   width: 1200px;
 }
 
@@ -1268,6 +1259,7 @@ main .map {
   margin: 0;
   padding: 0;
   background-color: rgb(254, 254, 254); /* цвет проверен, но прозречность нет !!*/
+  padding-bottom: 120px;
 }
 
 .hotels-list-item {
