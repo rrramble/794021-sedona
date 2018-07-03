@@ -910,12 +910,14 @@ main .map {
 .find-params-form legend {
   font-size: 16px; /* Проверено */
   font-weight: bold; /* Проверено */
+  line-height: 21px; /* Проверено */
   color: white; /* Проверено */
 }
 
 .find-params-form label {
   font-size: 14px; /* Проверено */
   font-weight: normal; /* Проверено */
+  line-height: 21px; /* Проверено */
   color: white; /* Проверено */
 }
 
