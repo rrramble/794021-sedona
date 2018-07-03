@@ -487,22 +487,34 @@ input[type='radio'].visually-hidden {
   background-color: #503e33; /* Проверено. */
 }
 
-.find-hotel .find-hotel-map {
+.find-hotel iframe.find-hotel-map {
+  position: relative;
   width: 100%;
   margin: 0;
+  border: none;
+}
+
+.find-hotel img.find-hotel-map {
+  position: absolute;
+  z-index: -3;
+  width: 100%;
+  margin: 0;
+  border: none;
+  left: 0;
+  right: 0;
 }
 
 .find-hotel form {
   background-color: rgba(255, 255, 255, 1);
-  /*width: 568px; *//* ширина с тенью: 595px, высота с тенью: 419px */
   padding-top: 55px;
   padding-right: 55px;
   padding-left: 55px;
   padding-bottom: 55px;
   margin-bottom: 75px;
-  box-shadow: 0 15px 10px 7px rgba(0, 0, 0, 0.15); /* пока условно, размеры не замерял */
+  box-shadow: 0 15px 10px 7px rgba(0, 0, 0, 0.15); /* условно, размеры не замерял */
 
   position: absolute;
+  z-index: 1;
   left: 0;
   right: 0;
 
