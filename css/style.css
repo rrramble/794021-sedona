@@ -432,6 +432,7 @@ input[type='radio'].visually-hidden {
  }
 
 .find-hotel-container {
+  display: block;
   width: 568px; 
   margin-left: auto;
   margin-right: auto;
@@ -463,6 +464,7 @@ input[type='radio'].visually-hidden {
 }
 
 .find-hotel .btn-header {
+  display: block;
   color: white;
   background-color: #766357; /* Проверено. */
   font-size: 21px; /* Проверено. */
@@ -471,7 +473,6 @@ input[type='radio'].visually-hidden {
   text-transform: uppercase; /* Проверено. */
   text-align: center;
   border: 0;
-  width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -486,15 +487,12 @@ input[type='radio'].visually-hidden {
   background-color: #503e33; /* Проверено. */
 }
 
-.find-hotel img {
-  position: absolute;
-  z-index: -1;
+.find-hotel .find-hotel-map {
   width: 100%;
+  margin: 0;
 }
 
 .find-hotel form {
-  display: flex;
-  flex-direction: column;
   background-color: rgba(255, 255, 255, 1);
   /*width: 568px; *//* ширина с тенью: 595px, высота с тенью: 419px */
   padding-top: 55px;
@@ -503,6 +501,17 @@ input[type='radio'].visually-hidden {
   padding-bottom: 55px;
   margin-bottom: 75px;
   box-shadow: 0 15px 10px 7px rgba(0, 0, 0, 0.15); /* пока условно, размеры не замерял */
+
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+form.form-closed {
+  display: none;
 }
 
 .form-line {
@@ -1500,12 +1509,16 @@ main .map {
  */
 
 .footer-site {
-  display: flex;
+  position: absolute;
+  bottom: 0;
   background-color: rgba(254, 254, 254, 0.9); /* Проверено */
   width: 100%;
   margin: 0;
   padding-top: 20px; /* ! до иконок соц.сетей */
   padding-bottom: 20px; /* ! зеркально к верхнему отступу */
+
+
+  display: flex;
   justify-content: space-between;
 }
 
