@@ -840,7 +840,7 @@ main .map {
 }
 
 .find-params-form legend {
-  margin-bottom: 29px;
+  margin-bottom: 24px;
 }
 
  .find-params-form label {
@@ -861,7 +861,7 @@ main .map {
 .find-params-form li {
   list-style: none;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   margin-left: 0;
   margin-right: 0;
 }
