@@ -892,17 +892,13 @@ main .map {
   background-image: url("../img/svg/checkbox-on.svg");
 }
 
-.checkbox:disabled + label {
-  color: #6a6a6a;
-}
-
 .checkbox:disabled + label::before {
-  background-image: url("img/svg/checkbox-disabled-off.svg");
+  background-image: url("img/svg/checkbox-off-disabled.svg");
 }
 
 .checkbox:checked:disabled + label::before {
   width: 27px;
-  background-image: url("img/svg/checkbox-disabled-on.svg");
+  background-image: url("img/svg/checkbox-on-disabled.svg");
 }
 
 .checkbox:focus + label::before {
