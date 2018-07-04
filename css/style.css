@@ -899,12 +899,12 @@ main .map {
 }
 
 .checkbox:disabled + label::before {
-  background-image: url("img/svg/checkbox-off-disabled.svg");
+  background-image: url("..img/svg/checkbox-off-disabled.svg");
 }
 
 .checkbox:checked:disabled + label::before {
   width: 27px;
-  background-image: url("img/svg/checkbox-on-disabled.svg");
+  background-image: url("..img/svg/checkbox-on-disabled.svg");
 }
 
 .checkbox:focus + label::before {
