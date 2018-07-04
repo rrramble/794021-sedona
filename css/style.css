@@ -166,6 +166,7 @@ input[type='radio'].visually-hidden {
 }
 
 .reasons-summary {
+  background-color: white; /* Для FF/IE, иначе просвечивает серый цвето фона */
   padding-top: 34px; /* Через pixel-perfect */
   padding-bottom: 35px;
   padding-left: 25%;
@@ -425,10 +426,9 @@ input[type='radio'].visually-hidden {
 
  .find-hotel {
   position: relative;
-  background-color: white;
   width: 100%;
   padding-top: 49px;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: white;
  }
 
 .find-hotel-container {
@@ -492,6 +492,7 @@ input[type='radio'].visually-hidden {
   margin: 0;
   border: none;
   border: 0;
+  background-color: rgb(242, 242, 242); /* В макете нет. Нужно пока не загрузилась карта */
 }
 
 .find-hotel img.find-hotel-map {
@@ -502,6 +503,7 @@ input[type='radio'].visually-hidden {
   border: none;
   left: 0;
   right: 0;
+  background-color: rgb(242, 242, 242); /* В макете нет. Нужно пока не загрузилась карта */
 }
 
 .find-hotel form {
