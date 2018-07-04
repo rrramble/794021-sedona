@@ -1,6 +1,7 @@
 *  {
   box-sizing: border-box;
 }
+
 html {
   line-height: 1.0;
 }
@@ -319,7 +320,7 @@ input[type='radio'].visually-hidden {
 }
 
 .reason-secondary p {
-  color: black; /* Проверено. */
+  color: #333; /* Проверено. */
   background-color: #eeeeee; /* Проверено. */
   font-size: 14px; /* Проверено. */
   font-weight: normal; /* Проверено. */
@@ -391,7 +392,7 @@ input[type='radio'].visually-hidden {
 }
 
 .hint p {
-  color: black; /* Проверено. */
+  color: #333; /* Проверено. */
   background-color: rgba(255, 255, 255, 0);
   font-size: 14px; /* Проверено. */
   line-height: 21px; /* Проверено. */
@@ -447,17 +448,17 @@ input[type='radio'].visually-hidden {
 }
 
 .find-hotel .text {
-  margin-top: 0;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 46px;
-
-  color: black; /* проверено */
+  color: #333; /* проверено */
   background-color: white; /* проверено */
   font-size: 14px; /* проверено */
   font-weight: normal; /* проверено */
   line-height: 24px; /* проверено */
   text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 46px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .find-hotel .btn-header {
@@ -1112,6 +1113,7 @@ main .map {
   color: black;
   font-size: 12px; /* проверено */
   line-height: 18px; /* проверено */
+  font-weight: normal;
   margin: 0;
   margin-left: 15px;
   padding-left: 12px; /* визуально такой же размер, как и шрифт*/
