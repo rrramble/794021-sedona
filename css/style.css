@@ -294,19 +294,22 @@ input[type='radio'].visually-hidden {
  */
 
 .reasons-secondary {
-  display: flex;
   padding-top: 25px;
   padding-bottom: 0;
   padding-bottom: 46px;
   background-color: #eeeeee; /* Проверено. */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .reason-secondary {
-  flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 0;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 33.3%;
+  min-width: 256px;
 }
 
 .reason-secondary h3 {
@@ -319,6 +322,8 @@ input[type='radio'].visually-hidden {
   padding-left: 30%;
   padding-right: 30%;
   margin-bottom: 21px;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .reason-secondary p {
@@ -328,8 +333,10 @@ input[type='radio'].visually-hidden {
   font-weight: normal; /* Проверено. */
   line-height: 21px; /* Проверено. */
   text-align: center;
-  padding-left: 17%;
-  padding-right: 17%;
+  padding-left: 16%;
+  padding-right: 16%;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .reason-secondary:nth-of-type(1) h3::after {
