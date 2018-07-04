@@ -1,12 +1,11 @@
-    // Скрыть форму если JavaScript работоспособен
-    var form = document.querySelector(".find-hotel form");
-    form.classList.add("form-closed");
+//
+// Скрипты для проекта "Sedona"
+//
 
-    var btnShow = document.querySelector(".btn-header");
-
-    // Обработчик нажатия на кнопку 'показать форму'
-    btnShow.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      form.classList.toggle("form-closed");
-    });
+// Объект и обработчик нажатия на кнопку 'показать форму'
+var btnShow = document.querySelector(".btn-header");
+btnShow.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  form.classList.toggle("form-closed");
+});
 

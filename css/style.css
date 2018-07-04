@@ -528,7 +528,7 @@ form.form-closed {
   display: none;
 }
 
-form:not(.form-closed) {
+.find-hotel form:not(.form-closed) {
   animation-name: form-drifts;
   animation-duration: 0.5s;
 }
