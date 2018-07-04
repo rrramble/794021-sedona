@@ -13,6 +13,7 @@ body {
   min-width: 768px;
   margin: 0 auto;
   position: relative;
+  background-color: rgb(242, 242, 242)
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -567,6 +568,7 @@ form:not(.form-closed) {
   background-color: #f2f2f2; /* Проверено. */
   border: 2px solid #f2f2f2;
   width: 346px;
+  min-height: 38px;
   padding-top: 3px; /* Проверено. +-1 */
   padding-bottom: 6px; /* Проверено. +-1 */
   padding-left: 11px; /* Проверено. +-1 */
@@ -636,6 +638,7 @@ button.calendar:active path {
   text-transform: uppercase; /* Проверено. */
   background-color: #f2f2f2; /* Проверено. */
   border-width: 0;
+  min-height: 38px;
   padding-top: 6px; /* line-height 26, а высота input по макету 38. 6=(38-26)/2 */ 
   padding-bottom: 6px; 
   text-align: center;
