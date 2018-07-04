@@ -813,7 +813,6 @@ main .map {
   width: 100%;
   padding-left: 72px; /* проверено */
   padding-right: 72px; /* проверено */
-  width: 1200px;
 }
 
 
@@ -824,9 +823,9 @@ main .map {
 .find-params-form {
   background-color: #766357;
   background-image: url("../img/photo/mountains-blur.jpg");
-  background-repeat: repeat-y;
-  background-size: 100%;
-  background-position-y: -55px; 
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  background-position-y: -55px;
   border-width: 0;
   padding-top: 29px; /* !! примерно */
   padding-bottom: 5px; /* !! примерно */
@@ -1137,6 +1136,7 @@ main .map {
   margin-right: auto;
   padding: 0;
   padding-left: 16px;
+  max-width: 40%;
   /* для внутренних flex-элементов */
   display: flex;
   justify-content: flex-start;
