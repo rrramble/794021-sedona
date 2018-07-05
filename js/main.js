@@ -5,6 +5,10 @@
 // Сохранить объект формы поиска
 var form = document.querySelector(".find-hotel form");
 
+// И скрыть форму
+form.classList.add("form-closed");
+
+
 // Сохранить объекты полей ввода данных
 var dateCheckin = form.querySelector("#date-checkin");
 var dateCheckout = form.querySelector("#date-checkout");
