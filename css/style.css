@@ -58,8 +58,8 @@ input[type='radio'].visually-hidden {
   list-style: none;
   width: 100%;
   margin: 0;
-  padding-left: 72px;
-  padding-right: 72px;
+  padding-left: 6%;
+  padding-right: 6%;
   padding-top: 0;
   padding-bottom: 0;
   background: white;
@@ -77,28 +77,29 @@ input[type='radio'].visually-hidden {
   word-break: break-all;
   word-wrap: break-word;
   flex-wrap: wrap;
+  width: calc( (100% - 130px) / 4 ); /* 130px ширина логотипа, на которую не должно залезать меню*/
 }
 
 .nav-site li:nth-of-type(4n+1) {
-  width: calc( 100% / ( 2 + 2*288/240 ) );
   padding-right: 10px;
   text-align: left;
 }
 
 .nav-site li:nth-of-type(4n+2) {
-  width: calc( 100% / ( 2 + 2*240/288 ) - 1px );
-  padding-right: 65px;
+  padding-left: 9px;
+  padding-right: 10px;
+  margin-right: auto; /* свободное место для логотипа */
   text-align: left;
 }
 
 .nav-site li:nth-of-type(4n+3) {
-  width: calc( 100% / ( 2 + 2*240/288 ) - 1px );
-  padding-left: 65px;
+  padding-right: 9px;
+  padding-left: 10px;
+  margin-left: auto; /* свободное место для логотипа */
   text-align: right;
 }
 
 .nav-site li:nth-of-type(4n+4) {
-  width: calc( 100% / ( 2 + 2*288/240 ) );
   padding-left: 10px;
   text-align: right;
 }
