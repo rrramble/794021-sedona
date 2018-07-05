@@ -527,39 +527,39 @@ input[type='radio'].visually-hidden {
 
 .find-hotel form.form-closed {
   animation-name: slide-out;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
 .find-hotel form:not(.form-closed) {
   animation-name: slide-in;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
 @keyframes slide-in {
   0% {
-   display: none;
-   left: -3000px;
-  }
-  1% {
-   left: -3000px;
+    transform-origin: center top;
+    transform: scaleY(0.01);
+    opacity: 0.1;
   }
   100% {
-    left: 0;
+    transform-origin: center top;
+    transform: scaleY(1);
+    opacity: 1;
   }
 }
 
 @keyframes slide-out {
   0% {
-    left: 0;
-  }
-  99% {
-   left: -3000px;
+    transform-origin: center top;
+    transform: scaleY(1);
+    opacity: 1;
   }
   100% {
-   display: none;
-   left: -3000px;
+    transform-origin: center top;
+    transform: scaleY(0.01);
+    opacity: 0;
   }
 }
 
