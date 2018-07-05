@@ -491,6 +491,7 @@ input[type='radio'].visually-hidden {
   position: relative;
   width: 100%;
   margin: 0;
+  margin-bottom: -3px;
   border: none;
   border: 0;
   background-color: rgb(242, 242, 242);
