@@ -225,8 +225,6 @@ input[type='radio'].visually-hidden {
   flex-shrink: 1;
   padding-top: 47px;
   padding-bottom: 5px;
-  max-width: 400px;
-  min-width: 256px;
 }
 
 .reason-main:nth-of-type(2n) .reason-main-text {
@@ -280,8 +278,7 @@ input[type='radio'].visually-hidden {
 
 .reason-main img {
   flex-shrink: 1;
-  max-width: 800px;
-  min-width: 512px;
+  width: 66.66%;
   height: auto;
 }
 
@@ -305,8 +302,7 @@ input[type='radio'].visually-hidden {
   flex-shrink: 1;
   padding-left: 5px;
   padding-right: 5px;
-  width: 33.3%;
-  min-width: 256px;
+  width: 33.33%;
 }
 
 .reason-secondary h3 {
