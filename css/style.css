@@ -849,8 +849,8 @@ main .map {
 .hotels-container {
   max-width: 1200px;
   width: 100%;
-  padding-left: 72px;
-  padding-right: 72px;
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
 
