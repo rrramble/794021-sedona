@@ -225,7 +225,7 @@ input[type='radio'].visually-hidden {
 .reason-main-text {
   flex-shrink: 1;
   padding-top: 47px;
-  padding-bottom: 5px;
+  padding-bottom: 47px;
 }
 
 .reason-main:nth-of-type(2n) .reason-main-text {
